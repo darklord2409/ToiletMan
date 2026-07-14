@@ -1,0 +1,82 @@
+{
+  "title": "Dashboard",
+  "stats": {
+    "products": "Products",
+    "orders": "Orders",
+    "customers": "Customers",
+    "categories": "Categories",
+    "revenue": "Revenue (30 days)",
+    "lowStock": "Low stock",
+    "outOfStock": "Out of stock",
+    "noOrders": "No orders yet",
+    "activeCount": "{{n}} active",
+    "viewAll": "View products →",
+    "viewAllCustomers": "View customers →"
+  },
+  "recentOrders": "Recent orders",
+  "lowestStockProducts": "Lowest stock products",
+  "sales": {
+    "title": "Sales trend",
+    "rangeDays": "{{n}} days",
+    "revenueLabel": "Revenue",
+    "ordersLabel": "Orders",
+    "empty": "No orders in the selected period"
+  },
+  "popularProducts": {
+    "title": "Popular products",
+    "empty": "No sales data for the last 30 days"
+  },
+  "latestProducts": {
+    "title": "Latest products"
+  },
+  "columns": {
+    "orderNumber": "Order #",
+    "status": "Status",
+    "total": "Total",
+    "placed": "Placed",
+    "sku": "SKU",
+    "name": "Name",
+    "stock": "Stock",
+    "price": "Price",
+    "quantitySold": "Qty sold",
+    "revenue": "Revenue"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "description": "Product and catalog engagement across the storefront and Mini App.",
+    "columns": {
+      "product": "Product",
+      "sku": "SKU",
+      "category": "Category",
+      "collection": "Collection",
+      "views": "Views",
+      "favorites": "Favorites",
+      "addedToCart": "Added to cart",
+      "requests": "Requests"
+    },
+    "mostViewed": {
+      "title": "Most viewed products",
+      "empty": "No product views recorded yet"
+    },
+    "mostFavorited": {
+      "title": "Most favorited products",
+      "empty": "No favorites recorded yet"
+    },
+    "mostAddedToCart": {
+      "title": "Most added to cart",
+      "empty": "No cart activity recorded yet"
+    },
+    "mostRequested": {
+      "title": "Most requested products",
+      "empty": "No orders recorded yet"
+    },
+    "popularCollections": {
+      "title": "Popular collections",
+      "empty": "No collection activity recorded yet"
+    },
+    "popularCategories": {
+      "title": "Popular categories",
+      "empty": "No category activity recorded yet"
+    }
+  }
+}

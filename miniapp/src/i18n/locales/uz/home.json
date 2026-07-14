@@ -1,0 +1,27 @@
+{
+  "search": {
+    "placeholder": "Mahsulotlarni qidirish..."
+  },
+  "banners": {
+    "title": "Aksiyalar"
+  },
+  "categories": {
+    "title": "Kategoriyalar"
+  },
+  "topCategories": {
+    "title": "Eng ko'p sotiladiganlar"
+  },
+  "featured": {
+    "title": "Tavsiya etamiz"
+  },
+  "newArrivals": {
+    "title": "Yangi kelganlar"
+  },
+  "popular": {
+    "title": "Mashhur"
+  },
+  "sale": {
+    "title": "Chegirmalar"
+  },
+  "seeAll": "Barchasi"
+}

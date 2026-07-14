@@ -1,0 +1,15 @@
+{
+  "title": "Savat",
+  "empty": {
+    "title": "Savat bo'sh",
+    "description": "Katalogdan mahsulot qo'shing",
+    "action": "Katalogga o'tish"
+  },
+  "subtotal": "Jami",
+  "checkout": "Buyurtma berish",
+  "itemsCount_other": "{{count}} mahsulot",
+  "remove": "O'chirish",
+  "clearCart": "Savatni tozalash",
+  "confirmClear": "Savat tozalansinmi?",
+  "maxStockReached": "Mavjud maksimal miqdor"
+}

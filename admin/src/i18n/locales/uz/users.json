@@ -1,0 +1,100 @@
+{
+  "customers": {
+    "title": "Mijozlar",
+    "description": "Onlayn-do'kon va Telegram-bot mijozlari.",
+    "columns": {
+      "name": "Ism",
+      "email": "Email",
+      "phone": "Telefon",
+      "telegramId": "Telegram ID",
+      "telegramUsername": "Telegram",
+      "status": "Holati"
+    },
+    "fields": {
+      "firstName": "Ism",
+      "lastName": "Familiya",
+      "email": "Email",
+      "phone": "Telefon",
+      "telegramId": "Telegram ID",
+      "password": "Parol",
+      "passwordHelp": "O'zgartirmaslik uchun bo'sh qoldiring.",
+      "active": "Faol"
+    }
+  },
+  "adminUsers": {
+    "title": "Administratorlar",
+    "description": "Ushbu boshqaruv paneliga kirish huquqiga ega xodimlar hisoblari.",
+    "columns": {
+      "username": "Login",
+      "email": "Email",
+      "fullName": "To'liq ism",
+      "superuser": "Superfoydalanuvchi",
+      "status": "Holati",
+      "lastLogin": "Oxirgi kirish",
+      "never": "Hech qachon"
+    },
+    "fields": {
+      "username": "Login",
+      "email": "Email",
+      "fullName": "To'liq ism",
+      "password": "Parol",
+      "passwordHelp": "Yaratishda majburiy, tahrirlashda o'zgartirmaslik uchun bo'sh qoldiring.",
+      "role": "Rol",
+      "active": "Faol",
+      "superuser": "Superfoydalanuvchi"
+    },
+    "sessions": {
+      "title": "Sessiyalar",
+      "titleFor": "Sessiyalar: {{username}}",
+      "description": "Ushbu administratorning turli qurilmalardagi faol sessiyalari.",
+      "columns": {
+        "device": "Qurilma",
+        "ip": "IP-manzil",
+        "createdAt": "Boshlangan vaqti"
+      },
+      "unknown": "Noma'lum",
+      "empty": "Faol sessiyalar yo'q",
+      "confirmRevoke": "Ushbu sessiya tugatilsinmi?",
+      "confirmRevokeAll": "Ushbu foydalanuvchining barcha sessiyalari tugatilsinmi? Barcha qurilmalarda qayta kirish talab qilinadi.",
+      "revokeAll": "Barcha sessiyalarni tugatish",
+      "revokeSuccess": "Sessiya tugatildi",
+      "revokeAllSuccess": "Barcha sessiyalar tugatildi"
+    }
+  },
+  "roles": {
+    "title": "Rollar",
+    "description": "Administratorlarga tayinlanadigan RBAC rollari.",
+    "columns": {
+      "name": "Nomi",
+      "description": "Tavsif"
+    },
+    "fields": {
+      "name": "Nomi",
+      "description": "Tavsif"
+    }
+  },
+  "permissions": {
+    "title": "Ruxsatlar",
+    "description": "Rollarga berilishi mumkin bo'lgan batafsil ruxsatlar.",
+    "columns": {
+      "code": "Kod",
+      "description": "Tavsif"
+    },
+    "fields": {
+      "code": "Kod",
+      "description": "Tavsif"
+    }
+  },
+  "rolePermissions": {
+    "title": "Rol ruxsatlari",
+    "description": "Rolga ruxsat beradi.",
+    "columns": {
+      "roleId": "Rol ID",
+      "permissionId": "Ruxsat ID"
+    },
+    "fields": {
+      "role": "Rol",
+      "permission": "Ruxsat"
+    }
+  }
+}

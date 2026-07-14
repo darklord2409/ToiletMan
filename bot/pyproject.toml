@@ -1,0 +1,23 @@
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+# Deliberately left at pytest-asyncio's implicit default (matches each
+# test's own function-scoped loop) rather than "session" — setting the
+# fixture loop scope to "session" here destabilizes redis_client's
+# teardown ("Event loop is closed") in a way it doesn't in the backend's
+# own suite; not worth chasing since the alternative is just one
+# deprecation warning, not a functional problem.
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.13"
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+disallow_untyped_defs = false
+warn_unused_ignores = true

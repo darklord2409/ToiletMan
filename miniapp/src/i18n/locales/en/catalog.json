@@ -1,0 +1,32 @@
+{
+  "title": "Catalog",
+  "filters": {
+    "title": "Filters",
+    "apply": "Apply",
+    "reset": "Reset",
+    "price": "Price",
+    "priceFrom": "From",
+    "priceTo": "To",
+    "manufacturer": "Manufacturer",
+    "collection": "Collection",
+    "category": "Category"
+  },
+  "sort": {
+    "title": "Sort",
+    "newest": "Newest first",
+    "priceAsc": "Price: low to high",
+    "priceDesc": "Price: high to low",
+    "nameAsc": "Name: A-Z",
+    "featured": "Featured"
+  },
+  "empty": "No products found",
+  "resultsCount": "{{count}} found",
+  "search": {
+    "placeholder": "Search products...",
+    "recent": "Recent searches",
+    "popular": "Popular searches",
+    "clearHistory": "Clear history",
+    "noResults": "No results for “{{query}}”",
+    "cancel": "Cancel"
+  }
+}

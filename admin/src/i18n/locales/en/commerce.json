@@ -1,0 +1,205 @@
+{
+  "orders": {
+    "title": "Orders",
+    "description": "Customer orders placed through the storefront/bot.",
+    "columns": {
+      "orderNumber": "Order #",
+      "status": "Status",
+      "grandTotal": "Grand total",
+      "currency": "Currency",
+      "placed": "Placed"
+    },
+    "fields": {
+      "customer": "Customer",
+      "orderNumber": "Order number",
+      "status": "Status",
+      "subtotal": "Subtotal",
+      "discountTotal": "Discount total",
+      "taxTotal": "Tax total",
+      "shippingTotal": "Shipping total",
+      "grandTotal": "Grand total",
+      "currency": "Currency",
+      "notes": "Notes"
+    },
+    "filterByStatus": "Filter by status",
+    "openDetail": "Open order",
+    "detail": {
+      "back": "Back to orders",
+      "orderTitle": "Order #{{number}}",
+      "saveAndConfirm": "Save / confirm",
+      "title": "Order",
+      "customerCard": {
+        "title": "Customer",
+        "name": "Full name",
+        "phone": "Phone",
+        "telegramId": "Telegram ID",
+        "telegramAccount": "Telegram account"
+      },
+      "contactCard": {
+        "title": "Contact for this order",
+        "name": "Name",
+        "phone": "Phone",
+        "deliveryMethod": "Delivery method",
+        "paymentMethod": "Payment method",
+        "address": "Delivery address",
+        "comment": "Customer comment"
+      },
+      "deliveryMethod": {
+        "pickup": "Pickup",
+        "delivery": "Delivery"
+      },
+      "paymentMethod": {
+        "cash": "Cash"
+      },
+      "statusCard": {
+        "title": "Status & manager note",
+        "status": "Order status",
+        "managerNotes": "Manager note",
+        "managerNotesPlaceholder": "Visible to the customer in the Mini App and sent to them via Telegram on change"
+      },
+      "totalsCard": {
+        "title": "Order total",
+        "subtotal": "Subtotal",
+        "discount": "Discount",
+        "tax": "Tax",
+        "shipping": "Shipping",
+        "grandTotal": "Grand total",
+        "placed": "Placed"
+      },
+      "items": {
+        "title": "Order items",
+        "sku": "SKU",
+        "product": "Product",
+        "unitPrice": "Unit price",
+        "quantity": "Qty",
+        "lineTotal": "Line total"
+      }
+    }
+  },
+  "orderItems": {
+    "title": "Order Items",
+    "description": "Line items are snapshotted at purchase time.",
+    "columns": {
+      "orderId": "Order ID",
+      "sku": "SKU",
+      "productName": "Product name",
+      "qty": "Qty",
+      "unitPrice": "Unit price",
+      "lineTotal": "Line total"
+    },
+    "fields": {
+      "order": "Order",
+      "product": "Product",
+      "productName": "Product name (snapshot)",
+      "sku": "SKU (snapshot)",
+      "unitPrice": "Unit price",
+      "quantity": "Quantity",
+      "lineTotal": "Line total"
+    }
+  },
+  "carts": {
+    "title": "Carts",
+    "description": "Shopping carts, including guest sessions.",
+    "guest": "Guest",
+    "columns": {
+      "customerId": "Customer ID",
+      "status": "Status",
+      "sessionToken": "Session token",
+      "created": "Created"
+    },
+    "fields": {
+      "customer": "Customer",
+      "sessionToken": "Session token",
+      "status": "Status",
+      "statusActive": "Active",
+      "statusConverted": "Converted",
+      "statusAbandoned": "Abandoned"
+    }
+  },
+  "cartItems": {
+    "title": "Cart Items",
+    "description": "Items currently sitting in shopping carts.",
+    "columns": {
+      "cartId": "Cart ID",
+      "productId": "Product ID",
+      "qty": "Qty",
+      "unitPrice": "Unit price"
+    },
+    "fields": {
+      "cart": "Cart",
+      "product": "Product",
+      "quantity": "Quantity",
+      "unitPrice": "Unit price"
+    }
+  },
+  "promotions": {
+    "title": "Promotions",
+    "description": "Marketing campaigns that back discounts and coupons.",
+    "columns": {
+      "name": "Name",
+      "type": "Type",
+      "starts": "Starts",
+      "ends": "Ends",
+      "status": "Status"
+    },
+    "fields": {
+      "name": "Name",
+      "description": "Description",
+      "type": "Type",
+      "typePercentage": "Percentage",
+      "typeFixedAmount": "Fixed amount",
+      "typeBuyXGetY": "Buy X get Y",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "active": "Active"
+    }
+  },
+  "discounts": {
+    "title": "Discounts",
+    "description": "Discount rules attached to a promotion.",
+    "columns": {
+      "promotionId": "Promotion ID",
+      "scope": "Scope",
+      "amountType": "Amount type",
+      "value": "Value"
+    },
+    "fields": {
+      "promotion": "Promotion",
+      "scope": "Scope",
+      "scopeProduct": "Product",
+      "scopeCategory": "Category",
+      "scopeCart": "Cart",
+      "scopeShipping": "Shipping",
+      "categoryScope": "Category (if scope=category)",
+      "productScope": "Product (if scope=product)",
+      "amountType": "Amount type",
+      "amountTypePercentage": "Percentage",
+      "amountTypeFixed": "Fixed amount",
+      "value": "Value"
+    }
+  },
+  "coupons": {
+    "title": "Coupons",
+    "description": "Redeemable discount codes.",
+    "columns": {
+      "code": "Code",
+      "amountType": "Amount type",
+      "discountValue": "Discount value",
+      "usage": "Usage",
+      "status": "Status"
+    },
+    "fields": {
+      "code": "Code",
+      "promotion": "Promotion",
+      "amountType": "Amount type",
+      "amountTypePercentage": "Percentage",
+      "amountTypeFixed": "Fixed amount",
+      "discountValue": "Discount value",
+      "minOrderAmount": "Min order amount",
+      "usageLimit": "Usage limit",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "active": "Active"
+    }
+  }
+}

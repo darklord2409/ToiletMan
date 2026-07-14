@@ -1,0 +1,82 @@
+{
+  "title": "Boshqaruv paneli",
+  "stats": {
+    "products": "Mahsulotlar",
+    "orders": "Buyurtmalar",
+    "customers": "Mijozlar",
+    "categories": "Kategoriyalar",
+    "revenue": "Tushum (30 kun)",
+    "lowStock": "Kam qolgan",
+    "outOfStock": "Tugagan mahsulotlar",
+    "noOrders": "Hozircha buyurtmalar yo'q",
+    "activeCount": "{{n}} ta faol",
+    "viewAll": "Mahsulotlarni ko'rish →",
+    "viewAllCustomers": "Mijozlarni ko'rish →"
+  },
+  "recentOrders": "So'nggi buyurtmalar",
+  "lowestStockProducts": "Kam qolgan mahsulotlar",
+  "sales": {
+    "title": "Savdo dinamikasi",
+    "rangeDays": "{{n}} kun",
+    "revenueLabel": "Tushum",
+    "ordersLabel": "Buyurtmalar",
+    "empty": "Tanlangan davrda buyurtmalar bo'lmagan"
+  },
+  "popularProducts": {
+    "title": "Ommabop mahsulotlar",
+    "empty": "So'nggi 30 kunda savdo ma'lumotlari yo'q"
+  },
+  "latestProducts": {
+    "title": "Yangi mahsulotlar"
+  },
+  "columns": {
+    "orderNumber": "Buyurtma №",
+    "status": "Holati",
+    "total": "Summa",
+    "placed": "Rasmiylashtirilgan",
+    "sku": "Artikul",
+    "name": "Nomi",
+    "stock": "Qoldiq",
+    "price": "Narxi",
+    "quantitySold": "Sotilgan, dona",
+    "revenue": "Tushum"
+  },
+  "analytics": {
+    "title": "Analitika",
+    "description": "Do'kon va Mini App bo'yicha mahsulot va katalog faolligi.",
+    "columns": {
+      "product": "Mahsulot",
+      "sku": "Artikul",
+      "category": "Kategoriya",
+      "collection": "Kolleksiya",
+      "views": "Ko'rishlar",
+      "favorites": "Sevimlilar",
+      "addedToCart": "Savatga qo'shilgan",
+      "requests": "Buyurtmalar"
+    },
+    "mostViewed": {
+      "title": "Eng ko'p ko'rilgan mahsulotlar",
+      "empty": "Hozircha ko'rishlar qayd etilmagan"
+    },
+    "mostFavorited": {
+      "title": "Eng ko'p sevimlilarga qo'shilgan",
+      "empty": "Hozircha sevimlilar qayd etilmagan"
+    },
+    "mostAddedToCart": {
+      "title": "Savatga eng ko'p qo'shilgan",
+      "empty": "Hozircha savat faolligi qayd etilmagan"
+    },
+    "mostRequested": {
+      "title": "Eng ko'p buyurtma qilingan mahsulotlar",
+      "empty": "Hozircha buyurtmalar qayd etilmagan"
+    },
+    "popularCollections": {
+      "title": "Ommabop kolleksiyalar",
+      "empty": "Hozircha kolleksiya faolligi qayd etilmagan"
+    },
+    "popularCategories": {
+      "title": "Ommabop kategoriyalar",
+      "empty": "Hozircha kategoriya faolligi qayd etilmagan"
+    }
+  }
+}

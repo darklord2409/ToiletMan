@@ -1,0 +1,16 @@
+{
+  "title": "Cart",
+  "empty": {
+    "title": "Your cart is empty",
+    "description": "Add products from the catalog",
+    "action": "Go to catalog"
+  },
+  "subtotal": "Subtotal",
+  "checkout": "Checkout",
+  "itemsCount_one": "{{count}} item",
+  "itemsCount_other": "{{count}} items",
+  "remove": "Remove",
+  "clearCart": "Clear cart",
+  "confirmClear": "Clear the cart?",
+  "maxStockReached": "Maximum available reached"
+}

@@ -1,0 +1,68 @@
+{
+  "guest": {
+    "title": "Войдите через Telegram",
+    "description": "Откройте приложение из бота, чтобы видеть заказы и профиль"
+  },
+  "orders": {
+    "title": "Мои заказы",
+    "empty": "У вас пока нет заказов",
+    "status": {
+      "pending": "Ожидает подтверждения",
+      "confirmed": "Подтверждён",
+      "processing": "В обработке",
+      "shipped": "Отправлен",
+      "delivered": "Доставлен",
+      "cancelled": "Отменён",
+      "refunded": "Возврат"
+    },
+    "orderNumber": "Заказ №{{number}}",
+    "item_one": "{{count}} товар",
+    "item_few": "{{count}} товара",
+    "item_many": "{{count}} товаров",
+    "item_other": "{{count}} товара",
+    "total": "Итого",
+    "detailsTitle": "Заказ №{{number}}",
+    "placedOn": "Оформлен {{date}}",
+    "deliveryMethod": "Способ получения",
+    "contact": "Контакт",
+    "comment": "Ваш комментарий",
+    "managerNotes": "Комментарий менеджера"
+  },
+  "contacts": {
+    "title": "Контакты",
+    "name": "Имя",
+    "lastName": "Фамилия",
+    "phone": "Телефон",
+    "save": "Сохранить",
+    "saved": "Профиль обновлён"
+  },
+  "store": {
+    "title": "О магазине",
+    "address": "Адрес",
+    "phone": "Телефон",
+    "supportPhone": "Поддержка",
+    "workingHours": "Часы работы",
+    "delivery": "Доставка",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Язык",
+    "theme": "Тема оформления",
+    "themeOptions": {
+      "light": "Светлая",
+      "dark": "Тёмная",
+      "auto": "Как в Telegram"
+    },
+    "notifications": "Уведомления",
+    "notificationsHint": "Статусы заказов через Telegram"
+  },
+  "menu": {
+    "orders": "Мои заказы",
+    "settings": "Настройки",
+    "about": "О магазине",
+    "contacts": "Контакты"
+  }
+}

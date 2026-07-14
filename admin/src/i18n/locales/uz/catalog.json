@@ -1,0 +1,578 @@
+{
+  "products": {
+    "title": "Mahsulotlar",
+    "description": "Xo'jalik mollari do'koni katalogi.",
+    "columns": {
+      "sku": "Artikul",
+      "name": "Nomi",
+      "price": "Narxi",
+      "stock": "Qoldiq",
+      "status": "Holati",
+      "featured": "Tavsiya etilgan",
+      "availableQty": "Mavjud",
+      "availability": "Mavjudlik"
+    },
+    "fields": {
+      "sku": "Artikul",
+      "slug": "Slug",
+      "name": "Nomi",
+      "description": "Tavsif",
+      "category": "Kategoriya",
+      "manufacturer": "Ishlab chiqaruvchi",
+      "unit": "O'lchov birligi",
+      "price": "Narxi",
+      "compareAtPrice": "Chegirmagacha narx",
+      "costPrice": "Tannarx",
+      "stockQuantity": "Ombordagi miqdor",
+      "weightKg": "Vazni (kg)",
+      "active": "Faol",
+      "featured": "Tavsiya etilgan",
+      "barcode": "Shtrix-kod",
+      "productType": "Mahsulot turi",
+      "collection": "Kolleksiya",
+      "status": "Holati",
+      "salePrice": "Aksiya narxi",
+      "futurePrice": "Kelajakdagi narx",
+      "futurePriceActivatesAt": "Narx faollashadigan sana",
+      "currency": "Valyuta",
+      "reservedQuantity": "Zaxiradagi miqdor",
+      "unlimitedStock": "Cheksiz zaxira",
+      "lowStockThreshold": "Kam qoldiq chegarasi",
+      "canonicalUrlOverride": "Canonical URL",
+      "seo": "SEO (JSON)",
+      "nameEn": "Nomi (EN)",
+      "descriptionEn": "Tavsif (EN)",
+      "metaTitleEn": "Meta Title (EN)",
+      "metaDescriptionEn": "Meta Description (EN)",
+      "nameUz": "Nomi (UZ)",
+      "descriptionUz": "Tavsif (UZ)",
+      "metaTitleUz": "Meta Title (UZ)",
+      "metaDescriptionUz": "Meta Description (UZ)"
+    },
+    "actions": {
+      "archive": "Arxivlash",
+      "restore": "Tiklash",
+      "clone": "Klonlash",
+      "cloneTitle": "Mahsulotni klonlash",
+      "newSku": "Yangi artikul",
+      "newSlug": "Yangi slug",
+      "newName": "Yangi nomi (ixtiyoriy)",
+      "import": "Import",
+      "export": "Eksport",
+      "archiveSuccess": "Mahsulot arxivlandi.",
+      "restoreSuccess": "Mahsulot tiklandi.",
+      "cloneSuccess": "Mahsulot muvaffaqiyatli klonlandi.",
+      "newProduct": "Yangi mahsulot"
+    },
+    "bulk": {
+      "title": "Ommaviy amallar",
+      "selectedCount": "Tanlangan: {{count}}",
+      "changeStatus": "Holatni o'zgartirish",
+      "changeManufacturer": "Ishlab chiqaruvchini o'zgartirish",
+      "changeCategory": "Kategoriyani o'zgartirish",
+      "changeCollection": "Kolleksiyani o'zgartirish",
+      "adjustPrice": "Narxni o'zgartirish",
+      "delete": "Tanlanganlarni o'chirish",
+      "apply": "Qo'llash",
+      "percentage": "Foiz",
+      "fixed": "Belgilangan summa",
+      "increase": "Oshirish",
+      "decrease": "Kamaytirish",
+      "mode": "Turi",
+      "direction": "Yo'nalish",
+      "value": "Qiymat",
+      "success": "{{count}} ta mahsulot yangilandi.",
+      "selectPrompt": "Ommaviy amallarni yoqish uchun jadvalda mahsulotlarni tanlang."
+    },
+    "import": {
+      "title": "Mahsulotlarni import qilish",
+      "mode": "Import turi",
+      "modeFull": "To'liq (yaratish/yangilash)",
+      "modePriceOnly": "Faqat narx",
+      "modeStockOnly": "Faqat qoldiq",
+      "chooseFile": "Fayl tanlash (CSV/XLSX)",
+      "preview": "Oldindan ko'rish",
+      "commit": "Import qilish",
+      "atomic": "Atomik (xatoda hammasini bekor qilish)",
+      "totalRows": "Jami qatorlar: {{count}}",
+      "validRows": "To'g'ri: {{count}}",
+      "invalidRows": "Xato: {{count}}",
+      "createCount": "Yaratildi: {{count}}",
+      "updateCount": "Yangilandi: {{count}}",
+      "skipCount": "O'tkazib yuborildi: {{count}}",
+      "rowNumber": "Qator",
+      "errors": "Xatolar",
+      "action": "Amal",
+      "close": "Yopish"
+    },
+    "export": {
+      "csvAll": "CSV eksport (filtrlangan barchasi)",
+      "xlsxAll": "Excel eksport (filtrlangan barchasi)",
+      "csvSelected": "CSV eksport (tanlangan: {{count}})",
+      "xlsxSelected": "Excel eksport (tanlangan: {{count}})"
+    },
+    "tabs": {
+      "general": "Umumiy",
+      "translations": "Tarjimalar",
+      "pricing": "Narxlar",
+      "inventory": "Ombor",
+      "collections": "Kolleksiya",
+      "seo": "SEO",
+      "images": "Rasmlar",
+      "specifications": "Xususiyatlar",
+      "labels": "Belgilar",
+      "documents": "Hujjatlar",
+      "videos": "Videolar",
+      "history": "Tarix"
+    },
+    "images": {
+      "dropHint": "Rasmlarni shu yerga torting yoki tanlash uchun bosing",
+      "empty": "Hozircha rasmlar yo'q",
+      "primary": "Asosiy",
+      "setPrimary": "Asosiy qilish",
+      "crop": "Kesish",
+      "replace": "Almashtirish",
+      "zoom": "Masshtab"
+    },
+    "specifications": {
+      "title": "Xususiyatlar",
+      "empty": "Bu mahsulot turi uchun xususiyatlar belgilanmagan"
+    },
+    "labels": {
+      "hint": "Mahsulotga biriktirish yoki olib tashlash uchun belgini bosing.",
+      "empty": "Hali belgilar yaratilmagan"
+    },
+    "documents": {
+      "columns": {
+        "type": "Turi",
+        "title": "Nomi",
+        "file": "Fayl"
+      },
+      "view": "Ochish",
+      "add": "Hujjat qo'shish",
+      "empty": "Hozircha hujjatlar yo'q",
+      "chooseFile": "Fayl tanlash",
+      "types": {
+        "manual": "Qo'llanma",
+        "certificate": "Sertifikat",
+        "warranty_card": "Kafolat talon",
+        "installation_instructions": "O'rnatish bo'yicha ko'rsatma",
+        "exploded_diagram": "Yig'ish sxemasi"
+      }
+    },
+    "videos": {
+      "columns": {
+        "type": "Turi",
+        "title": "Nomi",
+        "url": "Havola"
+      },
+      "view": "Ochish",
+      "add": "Video qo'shish",
+      "empty": "Hozircha videolar yo'q",
+      "chooseFile": "Fayl tanlash",
+      "types": {
+        "youtube": "YouTube",
+        "mp4": "MP4",
+        "external": "Tashqi havola"
+      }
+    },
+    "history": {
+      "priceChange": "Narx o'zgardi: {old} → {new}",
+      "empty": "Tarix hali bo'sh"
+    }
+  },
+  "categories": {
+    "title": "Kategoriyalar",
+    "description": "O'z-o'ziga bog'langan daraxt — quyi kategoriya shunchaki ota-kategoriyaga ega kategoriya.",
+    "columns": {
+      "imageUrl": "Surat",
+      "name": "Nomi",
+      "slug": "Slug",
+      "parentId": "Ota ID",
+      "sortOrder": "Saralash tartibi",
+      "status": "Holati",
+      "featured": "Top sotuv"
+    },
+    "fields": {
+      "name": "Nomi",
+      "slug": "Slug",
+      "parentCategory": "Ota kategoriya",
+      "parentCategoryHelp": "Yuqori darajadagi kategoriya uchun bo'sh qoldiring. Ichma-ichlik cheklanmagan.",
+      "description": "Tavsif",
+      "sortOrder": "Saralash tartibi",
+      "active": "Faol",
+      "featured": "Top sotuv",
+      "featuredHelp": "Mini-ilova bosh ekranidagi «Eng ko'p sotiladiganlar» karuselida ko'rsatish (3 tagacha kategoriya).",
+      "imageUrl": "Kategoriya surati"
+    }
+  },
+  "manufacturers": {
+    "title": "Ishlab chiqaruvchilar",
+    "description": "Mahsulot yetkazib beruvchi brendlar va sotuvchilar.",
+    "columns": {
+      "name": "Nomi",
+      "slug": "Slug",
+      "website": "Veb-sayt",
+      "status": "Holati"
+    },
+    "fields": {
+      "name": "Nomi",
+      "slug": "Slug",
+      "description": "Tavsif",
+      "logoUrl": "Logotip URL",
+      "websiteUrl": "Veb-sayt URL",
+      "active": "Faol"
+    }
+  },
+  "units": {
+    "title": "O'lchov birliklari",
+    "description": "Mahsulotlarda ishlatiladigan o'lchov birliklari (dona, kg, m va h.k.).",
+    "columns": {
+      "name": "Nomi",
+      "symbol": "Belgi",
+      "status": "Holati"
+    },
+    "fields": {
+      "name": "Nomi",
+      "symbol": "Belgi",
+      "active": "Faol"
+    }
+  },
+  "productImages": {
+    "title": "Mahsulot rasmlari",
+    "description": "Mahsulot cheksiz miqdordagi rasmlarni qo'llab-quvvatlaydi.",
+    "columns": {
+      "preview": "Ko'rinish",
+      "productId": "Mahsulot ID",
+      "altText": "Alt matn",
+      "sortOrder": "Saralash tartibi",
+      "primary": "Asosiy"
+    },
+    "fields": {
+      "product": "Mahsulot",
+      "imageUrl": "Rasm URL",
+      "altText": "Alt matn",
+      "sortOrder": "Saralash tartibi",
+      "primaryImage": "Asosiy rasm"
+    }
+  },
+  "attributeDefinitions": {
+    "title": "Xususiyat ta'riflari",
+    "description": "Mahsulotlar ega bo'lishi mumkin bo'lgan maxsus xususiyatlarni belgilaydi (masalan, Kuchlanish, Rang).",
+    "columns": {
+      "code": "Kod",
+      "name": "Nomi",
+      "dataType": "Ma'lumot turi",
+      "filterable": "Filtrlanadigan"
+    },
+    "fields": {
+      "code": "Kod",
+      "name": "Nomi",
+      "dataType": "Ma'lumot turi",
+      "unit": "O'lchov birligi",
+      "filterable": "Filtrlanadigan",
+      "dataTypeString": "Satr",
+      "dataTypeNumber": "Raqam",
+      "dataTypeBoolean": "Mantiqiy",
+      "dataTypeDate": "Sana"
+    }
+  },
+  "productTypes": {
+    "title": "Mahsulot turlari",
+    "description": "Mahsulot turi mahsulotga qo'llaniladigan xususiyatlar to'plamini (atribut to'plamini) belgilaydi.",
+    "columns": {
+      "code": "Kod",
+      "name": "Nomi",
+      "attributeSetId": "Atribut to'plami ID",
+      "sortOrder": "Saralash tartibi",
+      "status": "Holati",
+      "defaultImageUrl": "Rasm"
+    },
+    "fields": {
+      "code": "Kod",
+      "name": "Nomi",
+      "attributeSet": "Atribut to'plami",
+      "sortOrder": "Saralash tartibi",
+      "active": "Faol",
+      "defaultImageUrl": "Standart rasm",
+      "nameEn": "Nomi (EN)",
+      "nameUz": "Nomi (UZ)"
+    }
+  },
+  "attributeSets": {
+    "title": "Atribut to'plamlari",
+    "description": "Mahsulot turiga biriktirilishi mumkin bo'lgan xususiyatlarning nomlangan guruhlari.",
+    "columns": {
+      "code": "Kod",
+      "name": "Nomi",
+      "description": "Tavsif"
+    },
+    "fields": {
+      "code": "Kod",
+      "name": "Nomi",
+      "description": "Tavsif"
+    },
+    "actions": {
+      "manage": "Atributlarni boshqarish"
+    }
+  },
+  "attributeSetEditor": {
+    "back": "Atribut to'plamlariga qaytish",
+    "inSetTitle": "To'plamdagi atributlar",
+    "availableTitle": "Mavjud atributlar",
+    "searchPlaceholder": "Atributlarni nomi yoki kodi bo'yicha qidirish...",
+    "empty": "Bu to'plamda hali atributlar yo'q. Ularni o'ngdan qo'shing.",
+    "noAvailable": "Barcha xususiyat ta'riflari allaqachon shu to'plamga qo'shilgan.",
+    "dragHint": "Tartibni o'zgartirish uchun torting",
+    "columns": {
+      "required": "Majburiy",
+      "visible": "Ko'rinadigan",
+      "defaultValue": "Standart qiymat"
+    },
+    "actions": {
+      "add": "Qo'shish",
+      "remove": "O'chirish",
+      "addSuccess": "Atribut to'plamga qo'shildi.",
+      "removeSuccess": "Atribut to'plamdan o'chirildi."
+    },
+    "confirmRemoveTitle": "Bu atributni to'plamdan o'chirish kerakmi?",
+    "confirmRemoveDescription": "Xususiyat ta'rifining o'zi o'chirilmaydi — faqat uning shu to'plamdagi a'zoligi."
+  },
+  "attributeSetItems": {
+    "title": "Atribut to'plami elementlari",
+    "description": "Xususiyat ta'riflarini atribut to'plamlariga bog'laydi va ularning ko'rinishini sozlaydi.",
+    "columns": {
+      "attributeSetId": "Atribut to'plami ID",
+      "attributeDefinitionId": "Xususiyat ta'rifi ID",
+      "sortOrder": "Saralash tartibi",
+      "required": "Majburiy",
+      "visible": "Ko'rinadigan",
+      "defaultValue": "Standart qiymat"
+    },
+    "fields": {
+      "attributeSet": "Atribut to'plami",
+      "attributeDefinition": "Xususiyat ta'rifi",
+      "sortOrder": "Saralash tartibi",
+      "required": "Majburiy",
+      "visible": "Ko'rinadigan",
+      "defaultValue": "Standart qiymat"
+    }
+  },
+  "attributeGroups": {
+    "title": "Atribut guruhlari",
+    "description": "Mahsulot sahifasida xususiyatlarni vizual tashkil qilish uchun guruhlar.",
+    "columns": {
+      "code": "Kod",
+      "name": "Nomi",
+      "sortOrder": "Saralash tartibi"
+    },
+    "fields": {
+      "code": "Kod",
+      "name": "Nomi",
+      "sortOrder": "Saralash tartibi",
+      "nameEn": "Nomi (EN)",
+      "nameUz": "Nomi (UZ)"
+    }
+  },
+  "referenceValues": {
+    "title": "Ma'lumotnoma qiymatlari",
+    "description": "Mahsulot xususiyatlarida ishlatiladigan umumiy ma'lumotnomalar (material, rang, mamlakat va h.k.).",
+    "columns": {
+      "referenceType": "Ma'lumotnoma turi",
+      "code": "Kod",
+      "name": "Nomi",
+      "sortOrder": "Saralash tartibi",
+      "status": "Holati"
+    },
+    "fields": {
+      "referenceType": "Ma'lumotnoma turi",
+      "code": "Kod",
+      "name": "Nomi",
+      "sortOrder": "Saralash tartibi",
+      "active": "Faol",
+      "nameEn": "Nomi (EN)",
+      "nameUz": "Nomi (UZ)"
+    },
+    "referenceTypes": {
+      "material": "Material",
+      "color": "Rang",
+      "country": "Mamlakat",
+      "finish": "Yakuniy qoplama",
+      "installation_type": "O'rnatish turi",
+      "shape": "Shakl",
+      "warranty_period": "Kafolat muddati",
+      "connection_type": "Ulanish turi",
+      "thread_size": "Rezba o'lchami",
+      "water_outlet_type": "Suv chiqish turi"
+    }
+  },
+  "collections": {
+    "title": "Kolleksiyalar",
+    "description": "Bitta ishlab chiqaruvchining umumiy dizayn yoki seriyaga ega mahsulot liniyalari.",
+    "columns": {
+      "code": "Kod",
+      "name": "Nomi",
+      "slug": "Slug",
+      "manufacturerId": "Ishlab chiqaruvchi ID",
+      "sortOrder": "Saralash tartibi",
+      "status": "Holati"
+    },
+    "fields": {
+      "manufacturer": "Ishlab chiqaruvchi",
+      "code": "Kod",
+      "slug": "Slug",
+      "name": "Nomi",
+      "description": "Tavsif",
+      "imageUrl": "Rasm URL",
+      "sortOrder": "Saralash tartibi",
+      "active": "Faol",
+      "nameEn": "Nomi (EN)",
+      "descriptionEn": "Tavsif (EN)",
+      "nameUz": "Nomi (UZ)",
+      "descriptionUz": "Tavsif (UZ)"
+    },
+    "actions": {
+      "manage": "Mahsulotlarni boshqarish"
+    },
+    "detail": {
+      "back": "Kolleksiyalarga qaytish",
+      "code": "Kod",
+      "manufacturer": "Ishlab chiqaruvchi",
+      "productsTitle": "Kolleksiyadagi mahsulotlar ({{count}})",
+      "addProducts": "Mahsulot qo'shish",
+      "removeFromCollection": "Kolleksiyadan olib tashlash",
+      "removeConfirmTitle": "Ushbu mahsulotni kolleksiyadan olib tashlaysizmi?",
+      "removeSuccess": "Mahsulot kolleksiyadan olib tashlandi.",
+      "addSuccess": "{{count}} ta mahsulot qo'shildi.",
+      "emptyDescription": "Bu kolleksiyada hali mahsulotlar yo'q.",
+      "pickerTitle": "Kolleksiyaga mahsulot qo'shish",
+      "pickerSearchPlaceholder": "Mahsulotlarni nomi, artikuli bo'yicha qidirish...",
+      "pickerEmpty": "Mahsulotlar topilmadi.",
+      "addSelected": "Tanlanganlarni qo'shish ({{count}})"
+    }
+  },
+  "productLabels": {
+    "title": "Mahsulot belgilari",
+    "description": "Mahsulot nishonlari (Yangi, Bestseller, Aksiya va h.k.).",
+    "columns": {
+      "code": "Kod",
+      "name": "Nomi",
+      "badgeColor": "Nishon rangi",
+      "sortOrder": "Saralash tartibi",
+      "status": "Holati"
+    },
+    "fields": {
+      "code": "Kod",
+      "name": "Nomi",
+      "badgeColor": "Nishon rangi",
+      "badgeColorHelp": "Ant Design rang nomi (masalan, red, gold, blue) yoki HEX kodi.",
+      "sortOrder": "Saralash tartibi",
+      "active": "Faol",
+      "nameEn": "Nomi (EN)",
+      "nameUz": "Nomi (UZ)"
+    }
+  },
+  "productLabelAssignments": {
+    "title": "Mahsulot belgilari biriktirmalari",
+    "description": "Mahsulotlarni belgilar bilan bog'laydi — mahsulot bir nechta belgiga ega bo'lishi mumkin.",
+    "columns": {
+      "productId": "Mahsulot ID",
+      "productLabelId": "Belgi ID"
+    },
+    "fields": {
+      "product": "Mahsulot",
+      "productLabel": "Mahsulot belgisi"
+    }
+  },
+  "productDocuments": {
+    "title": "Mahsulot hujjatlari",
+    "description": "Mahsulotga biriktirilgan qo'llanmalar, sertifikatlar va boshqa hujjatlar.",
+    "columns": {
+      "productId": "Mahsulot ID",
+      "title": "Sarlavha",
+      "documentType": "Hujjat turi",
+      "fileUrl": "Fayl URL",
+      "sortOrder": "Saralash tartibi"
+    },
+    "fields": {
+      "product": "Mahsulot",
+      "documentType": "Hujjat turi",
+      "title": "Sarlavha",
+      "fileUrl": "Fayl URL",
+      "mimeType": "MIME turi",
+      "sizeBytes": "Hajmi (bayt)",
+      "sortOrder": "Saralash tartibi"
+    },
+    "documentTypes": {
+      "manual": "Qo'llanma",
+      "certificate": "Sertifikat",
+      "warranty_card": "Kafolat talon",
+      "installation_instructions": "O'rnatish bo'yicha ko'rsatmalar",
+      "exploded_diagram": "Yig'ish sxemasi"
+    }
+  },
+  "productVideos": {
+    "title": "Mahsulot videolari",
+    "description": "Mahsulotga biriktirilgan videolar (YouTube, MP4 yoki tashqi havola).",
+    "columns": {
+      "productId": "Mahsulot ID",
+      "title": "Sarlavha",
+      "videoType": "Video turi",
+      "url": "URL",
+      "sortOrder": "Saralash tartibi"
+    },
+    "fields": {
+      "product": "Mahsulot",
+      "videoType": "Video turi",
+      "title": "Sarlavha",
+      "url": "URL",
+      "thumbnailUrl": "Andoza rasm URL",
+      "sortOrder": "Saralash tartibi"
+    },
+    "videoTypes": {
+      "youtube": "YouTube",
+      "mp4": "MP4",
+      "external": "Tashqi havola"
+    }
+  },
+  "productAttributes": {
+    "title": "Mahsulot xususiyatlari",
+    "description": "EAV qiymatlari — mahsulot cheksiz miqdordagi maxsus xususiyatlarga ega bo'lishi mumkin.",
+    "columns": {
+      "productId": "Mahsulot ID",
+      "attributeDefinitionId": "Xususiyat ta'rifi ID",
+      "stringValue": "Satr qiymati",
+      "numberValue": "Raqam qiymati",
+      "booleanValue": "Mantiqiy qiymat"
+    },
+    "fields": {
+      "product": "Mahsulot",
+      "attributeDefinition": "Xususiyat ta'rifi",
+      "stringValue": "Satr qiymati",
+      "numberValue": "Raqam qiymati",
+      "booleanValue": "Mantiqiy qiymat",
+      "dateValue": "Sana qiymati"
+    }
+  },
+  "productRecommendations": {
+    "title": "Mahsulot tavsiyalari",
+    "description": "Qo'lda tanlangan mahsulotlar aloqasi — aksessuarlar, o'xshash mahsulotlar yoki «birga ko'p sotib olinadi». «Xuddi shu kolleksiyada» va «o'xshash» avtomatik hisoblanadi va bu yerda tahrirlanmaydi.",
+    "columns": {
+      "productId": "Mahsulot",
+      "recommendedProductId": "Tavsiya etilgan mahsulot",
+      "relationType": "Aloqa turi",
+      "sortOrder": "Saralash tartibi"
+    },
+    "fields": {
+      "product": "Mahsulot",
+      "recommendedProduct": "Tavsiya etilgan mahsulot",
+      "relationType": "Aloqa turi",
+      "sortOrder": "Saralash tartibi"
+    },
+    "relationTypes": {
+      "related": "O'xshash mahsulot",
+      "accessory": "Aksessuar",
+      "frequently_bought_together": "Birga ko'p sotib olinadi"
+    }
+  }
+}

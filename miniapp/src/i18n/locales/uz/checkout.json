@@ -1,0 +1,39 @@
+{
+  "title": "Buyurtmani rasmiylashtirish",
+  "contact": {
+    "title": "Aloqa ma'lumotlari",
+    "name": "Ism",
+    "namePlaceholder": "Ismingiz",
+    "phone": "Telefon",
+    "phonePlaceholder": "+998 90 123 45 67"
+  },
+  "delivery": {
+    "title": "Yetkazib berish usuli",
+    "pickup": "O'zi olib ketish",
+    "delivery": "Yetkazib berish",
+    "address": "Yetkazib berish manzili",
+    "addressPlaceholder": "Manzilni kiriting"
+  },
+  "comment": "Buyurtmaga izoh",
+  "commentPlaceholder": "Ixtiyoriy",
+  "payment": {
+    "title": "To'lov usuli",
+    "cash": "Yetkazib berilganda naqd pul"
+  },
+  "summary": {
+    "title": "Sizning buyurtmangiz"
+  },
+  "submit": "Buyurtmani tasdiqlash",
+  "success": {
+    "title": "Buyurtma qabul qilindi!",
+    "description": "Buyurtma raqami {{orderNumber}}. Menejer siz bilan bog'lanadi.",
+    "viewOrder": "Buyurtmani ko'rish",
+    "continueShopping": "Xaridni davom ettirish"
+  },
+  "validation": {
+    "nameRequired": "Ismingizni kiriting",
+    "phoneRequired": "Telefon raqamingizni kiriting",
+    "addressRequired": "Yetkazib berish manzilini kiriting"
+  },
+  "emptyCartRedirect": "Savatingiz bo'sh"
+}

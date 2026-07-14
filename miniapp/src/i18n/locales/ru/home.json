@@ -1,0 +1,27 @@
+{
+  "search": {
+    "placeholder": "Поиск товаров..."
+  },
+  "banners": {
+    "title": "Акции"
+  },
+  "categories": {
+    "title": "Категории"
+  },
+  "topCategories": {
+    "title": "Хиты продаж"
+  },
+  "featured": {
+    "title": "Рекомендуем"
+  },
+  "newArrivals": {
+    "title": "Новинки"
+  },
+  "popular": {
+    "title": "Популярное"
+  },
+  "sale": {
+    "title": "Скидки"
+  },
+  "seeAll": "Все"
+}

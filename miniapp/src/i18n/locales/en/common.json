@@ -1,0 +1,44 @@
+{
+  "appName": "TipoBot",
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "profile": "Profile"
+  },
+  "actions": {
+    "addToCart": "Add to cart",
+    "buyNow": "Buy now",
+    "add": "Add",
+    "remove": "Remove",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "retry": "Retry",
+    "viewAll": "View all",
+    "share": "Share",
+    "call": "Call",
+    "search": "Search"
+  },
+  "state": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "empty": "Nothing here yet",
+    "pullToRefresh": "Pull to refresh",
+    "releaseToRefresh": "Release to refresh",
+    "refreshing": "Refreshing..."
+  },
+  "genericError": "Something went wrong. Please try again.",
+  "toast": {
+    "addedToCart": "Added to cart",
+    "addedToFavorites": "Added to favorites",
+    "removedFromFavorites": "Removed from favorites"
+  },
+  "stock": {
+    "inStock": "In stock",
+    "lowStock": "Low stock",
+    "outOfStock": "Out of stock",
+    "unlimited": "In stock"
+  }
+}

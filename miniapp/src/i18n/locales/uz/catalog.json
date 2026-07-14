@@ -1,0 +1,32 @@
+{
+  "title": "Katalog",
+  "filters": {
+    "title": "Filtrlar",
+    "apply": "Qo'llash",
+    "reset": "Tozalash",
+    "price": "Narx",
+    "priceFrom": "Dan",
+    "priceTo": "Gacha",
+    "manufacturer": "Ishlab chiqaruvchi",
+    "collection": "Kolleksiya",
+    "category": "Kategoriya"
+  },
+  "sort": {
+    "title": "Saralash",
+    "newest": "Avval yangilari",
+    "priceAsc": "Avval arzoni",
+    "priceDesc": "Avval qimmati",
+    "nameAsc": "Nomi bo'yicha A-Z",
+    "featured": "Tavsiya etilgan"
+  },
+  "empty": "Mahsulotlar topilmadi",
+  "resultsCount": "Topildi: {{count}}",
+  "search": {
+    "placeholder": "Mahsulotlarni qidirish...",
+    "recent": "So'nggi so'rovlar",
+    "popular": "Mashhur so'rovlar",
+    "clearHistory": "Tarixni tozalash",
+    "noResults": "«{{query}}» bo'yicha hech narsa topilmadi",
+    "cancel": "Bekor qilish"
+  }
+}

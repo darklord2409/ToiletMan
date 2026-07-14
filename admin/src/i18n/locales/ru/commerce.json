@@ -1,0 +1,205 @@
+{
+  "orders": {
+    "title": "Заказы",
+    "description": "Заказы клиентов, оформленные через витрину/бота.",
+    "columns": {
+      "orderNumber": "Номер заказа",
+      "status": "Статус",
+      "grandTotal": "Итоговая сумма",
+      "currency": "Валюта",
+      "placed": "Оформлен"
+    },
+    "fields": {
+      "customer": "Клиент",
+      "orderNumber": "Номер заказа",
+      "status": "Статус",
+      "subtotal": "Подытог",
+      "discountTotal": "Сумма скидки",
+      "taxTotal": "Сумма налога",
+      "shippingTotal": "Стоимость доставки",
+      "grandTotal": "Итоговая сумма",
+      "currency": "Валюта",
+      "notes": "Примечания"
+    },
+    "filterByStatus": "Фильтр по статусу",
+    "openDetail": "Открыть заказ",
+    "detail": {
+      "back": "Назад к заказам",
+      "orderTitle": "Заказ №{{number}}",
+      "saveAndConfirm": "Сохранить / подтвердить",
+      "title": "Заказ",
+      "customerCard": {
+        "title": "Клиент",
+        "name": "Имя и фамилия",
+        "phone": "Телефон",
+        "telegramId": "Telegram ID",
+        "telegramAccount": "Аккаунт Telegram"
+      },
+      "contactCard": {
+        "title": "Контакт для этого заказа",
+        "name": "Имя",
+        "phone": "Телефон",
+        "deliveryMethod": "Способ получения",
+        "paymentMethod": "Способ оплаты",
+        "address": "Адрес доставки",
+        "comment": "Комментарий клиента"
+      },
+      "deliveryMethod": {
+        "pickup": "Самовывоз",
+        "delivery": "Доставка"
+      },
+      "paymentMethod": {
+        "cash": "Наличными"
+      },
+      "statusCard": {
+        "title": "Статус и заметка менеджера",
+        "status": "Статус заказа",
+        "managerNotes": "Заметка менеджера",
+        "managerNotesPlaceholder": "Видна клиенту в Mini App и отправляется ему в Telegram при изменении"
+      },
+      "totalsCard": {
+        "title": "Сумма заказа",
+        "subtotal": "Подытог",
+        "discount": "Скидка",
+        "tax": "Налог",
+        "shipping": "Доставка",
+        "grandTotal": "Итого",
+        "placed": "Оформлен"
+      },
+      "items": {
+        "title": "Товары в заказе",
+        "sku": "Артикул",
+        "product": "Товар",
+        "unitPrice": "Цена за ед.",
+        "quantity": "Кол-во",
+        "lineTotal": "Сумма"
+      }
+    }
+  },
+  "orderItems": {
+    "title": "Позиции заказа",
+    "description": "Позиции фиксируются (снапшот) на момент покупки.",
+    "columns": {
+      "orderId": "ID заказа",
+      "sku": "Артикул",
+      "productName": "Название товара",
+      "qty": "Кол-во",
+      "unitPrice": "Цена за ед.",
+      "lineTotal": "Сумма по позиции"
+    },
+    "fields": {
+      "order": "Заказ",
+      "product": "Товар",
+      "productName": "Название товара (снапшот)",
+      "sku": "Артикул (снапшот)",
+      "unitPrice": "Цена за единицу",
+      "quantity": "Количество",
+      "lineTotal": "Сумма по позиции"
+    }
+  },
+  "carts": {
+    "title": "Корзины",
+    "description": "Корзины покупок, включая гостевые сессии.",
+    "guest": "Гость",
+    "columns": {
+      "customerId": "ID клиента",
+      "status": "Статус",
+      "sessionToken": "Токен сессии",
+      "created": "Создана"
+    },
+    "fields": {
+      "customer": "Клиент",
+      "sessionToken": "Токен сессии",
+      "status": "Статус",
+      "statusActive": "Активна",
+      "statusConverted": "Оформлена в заказ",
+      "statusAbandoned": "Брошена"
+    }
+  },
+  "cartItems": {
+    "title": "Товары в корзине",
+    "description": "Товары, которые сейчас находятся в корзинах покупок.",
+    "columns": {
+      "cartId": "ID корзины",
+      "productId": "ID товара",
+      "qty": "Кол-во",
+      "unitPrice": "Цена за ед."
+    },
+    "fields": {
+      "cart": "Корзина",
+      "product": "Товар",
+      "quantity": "Количество",
+      "unitPrice": "Цена за единицу"
+    }
+  },
+  "promotions": {
+    "title": "Акции",
+    "description": "Маркетинговые кампании, на основе которых строятся скидки и купоны.",
+    "columns": {
+      "name": "Название",
+      "type": "Тип",
+      "starts": "Начало",
+      "ends": "Окончание",
+      "status": "Статус"
+    },
+    "fields": {
+      "name": "Название",
+      "description": "Описание",
+      "type": "Тип",
+      "typePercentage": "Процент",
+      "typeFixedAmount": "Фиксированная сумма",
+      "typeBuyXGetY": "Купи X получи Y",
+      "startsAt": "Дата начала",
+      "endsAt": "Дата окончания",
+      "active": "Активна"
+    }
+  },
+  "discounts": {
+    "title": "Скидки",
+    "description": "Правила скидок, привязанные к акции.",
+    "columns": {
+      "promotionId": "ID акции",
+      "scope": "Область действия",
+      "amountType": "Тип суммы",
+      "value": "Значение"
+    },
+    "fields": {
+      "promotion": "Акция",
+      "scope": "Область действия",
+      "scopeProduct": "Товар",
+      "scopeCategory": "Категория",
+      "scopeCart": "Корзина",
+      "scopeShipping": "Доставка",
+      "categoryScope": "Категория (если область = категория)",
+      "productScope": "Товар (если область = товар)",
+      "amountType": "Тип суммы",
+      "amountTypePercentage": "Процент",
+      "amountTypeFixed": "Фиксированная сумма",
+      "value": "Значение"
+    }
+  },
+  "coupons": {
+    "title": "Купоны",
+    "description": "Купоны на скидку для активации покупателем.",
+    "columns": {
+      "code": "Код",
+      "amountType": "Тип суммы",
+      "discountValue": "Размер скидки",
+      "usage": "Использование",
+      "status": "Статус"
+    },
+    "fields": {
+      "code": "Код",
+      "promotion": "Акция",
+      "amountType": "Тип суммы",
+      "amountTypePercentage": "Процент",
+      "amountTypeFixed": "Фиксированная сумма",
+      "discountValue": "Размер скидки",
+      "minOrderAmount": "Мин. сумма заказа",
+      "usageLimit": "Лимит использований",
+      "startsAt": "Дата начала",
+      "endsAt": "Дата окончания",
+      "active": "Активен"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "banners": {
+    "title": "Баннеры",
+    "description": "Рекламные баннеры на главной странице магазина.",
+    "columns": {
+      "preview": "Превью",
+      "title": "Заголовок",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус"
+    },
+    "fields": {
+      "title": "Заголовок",
+      "imageUrl": "URL изображения",
+      "linkUrl": "URL ссылки",
+      "sortOrder": "Порядок сортировки",
+      "startsAt": "Дата начала",
+      "endsAt": "Дата окончания",
+      "active": "Активен"
+    }
+  },
+  "news": {
+    "title": "Новости",
+    "description": "Объявления магазина и записи блога.",
+    "columns": {
+      "title": "Заголовок",
+      "slug": "Слаг",
+      "status": "Статус",
+      "publishedAt": "Дата публикации",
+      "published": "Опубликовано",
+      "draft": "Черновик"
+    },
+    "fields": {
+      "title": "Заголовок",
+      "slug": "Слаг",
+      "excerpt": "Краткое содержание",
+      "content": "Содержание",
+      "coverImageUrl": "URL обложки",
+      "author": "Автор",
+      "published": "Опубликовано",
+      "publishedAt": "Дата публикации"
+    }
+  },
+  "staticPages": {
+    "title": "Статические страницы",
+    "description": "О компании, условия использования и другой статический контент.",
+    "columns": {
+      "title": "Заголовок",
+      "slug": "Слаг",
+      "status": "Статус",
+      "published": "Опубликовано",
+      "draft": "Черновик"
+    },
+    "fields": {
+      "title": "Заголовок",
+      "slug": "Слаг",
+      "content": "Содержание",
+      "published": "Опубликовано"
+    }
+  },
+  "siteSettings": {
+    "title": "Настройки сайта",
+    "description": "Настройки ключ/значение для интернет-магазина и бота.",
+    "columns": {
+      "key": "Ключ",
+      "value": "Значение",
+      "description": "Описание"
+    },
+    "fields": {
+      "key": "Ключ",
+      "value": "Значение (JSON)",
+      "description": "Описание"
+    }
+  },
+  "storeSettings": {
+    "title": "Настройки магазина",
+    "description": "Основная информация о магазине, контакты, доставка, валюта и язык по умолчанию.",
+    "sections": {
+      "general": "Основное",
+      "contacts": "Контакты",
+      "currencyLanguage": "Валюта и язык",
+      "delivery": "Доставка и режим работы"
+    },
+    "fields": {
+      "storeName": "Название магазина",
+      "logoUrl": "URL логотипа",
+      "address": "Адрес",
+      "aboutText": "Текст \"О нас\"",
+      "aboutTextHelp": "Короткий текст о магазине — показывается в разделе \"О нас\" в Telegram-боте.",
+      "phone": "Телефон",
+      "supportEmail": "Email поддержки",
+      "supportPhone": "Телефон поддержки",
+      "telegramUrl": "Telegram",
+      "whatsappUrl": "WhatsApp",
+      "instagramUrl": "Instagram",
+      "currency": "Валюта",
+      "defaultLanguage": "Язык по умолчанию",
+      "taxRate": "Ставка налога",
+      "taxIncluded": "Налог включён в цену",
+      "deliveryInfo": "Условия доставки",
+      "workingHours": "Часы работы"
+    },
+    "weekdays": {
+      "monday": "Понедельник",
+      "tuesday": "Вторник",
+      "wednesday": "Среда",
+      "thursday": "Четверг",
+      "friday": "Пятница",
+      "saturday": "Суббота",
+      "sunday": "Воскресенье"
+    },
+    "weekdayClosed": "Выходной",
+    "weekdayOpen": "Открыто"
+  },
+  "botSettings": {
+    "title": "Настройки Telegram-бота",
+    "description": "Приветствие, кнопка меню, менеджеры и шаблоны уведомлений — всё редактируется без изменения кода.",
+    "sections": {
+      "general": "Основное",
+      "welcome": "Приветствие",
+      "menuButton": "Кнопка меню",
+      "announcement": "Закреплённое объявление",
+      "managers": "Менеджеры",
+      "templates": "Шаблоны уведомлений"
+    },
+    "fields": {
+      "botName": "Имя бота",
+      "botNameHelp": "Сохраняется сразу в настоящем Telegram — так бот и выглядит для пользователей.",
+      "botUsername": "Username бота",
+      "botUsernameHelp": "Только для справки — Telegram не позволяет боту менять свой @username через API. Изменить можно только через @BotFather (/setusername). Значение здесь обновляется автоматически с настоящими данными из Telegram.",
+      "welcomeText": "Текст приветствия",
+      "welcomeImageUrl": "URL изображения приветствия",
+      "menuButtonText": "Текст кнопки меню",
+      "pinnedAnnouncement": "Текст объявления (необязательно)"
+    },
+    "managerIdsHelp": "Один Telegram ID на строку. Эти пользователи будут получать уведомление о каждом новом заказе.",
+    "addManagerId": "Добавить менеджера",
+    "removeManagerId": "Удалить",
+    "events": {
+      "order_confirmed": "Заказ подтверждён",
+      "order_processing": "Заказ в обработке",
+      "order_shipped": "Заказ отправлен",
+      "order_delivered": "Заказ доставлен",
+      "order_cancelled": "Заказ отменён",
+      "order_refunded": "Возврат по заказу",
+      "manager_contacted": "Менеджер связался с клиентом",
+      "new_order_manager_alert": "Уведомление менеджеру о новом заказе"
+    },
+    "templatesHelp": "Оставьте поле пустым, чтобы использовать стандартный текст. Доступные переменные: {order_number} для заказов, {manager_notes} для «Менеджер связался», и {customer_name}/{phone}/{products}/{total}/{currency}/{delivery}/{comment} для уведомления менеджеру.",
+    "locales": {
+      "ru": "Русский",
+      "en": "English",
+      "uz": "O'zbekcha"
+    }
+  }
+}

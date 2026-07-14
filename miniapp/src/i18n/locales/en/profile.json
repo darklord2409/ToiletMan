@@ -1,0 +1,66 @@
+{
+  "guest": {
+    "title": "Sign in via Telegram",
+    "description": "Open the app from the bot to see your orders and profile"
+  },
+  "orders": {
+    "title": "My orders",
+    "empty": "You have no orders yet",
+    "status": {
+      "pending": "Awaiting confirmation",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "orderNumber": "Order #{{number}}",
+    "item_one": "{{count}} item",
+    "item_other": "{{count}} items",
+    "total": "Total",
+    "detailsTitle": "Order #{{number}}",
+    "placedOn": "Placed on {{date}}",
+    "deliveryMethod": "Delivery method",
+    "contact": "Contact",
+    "comment": "Your comment",
+    "managerNotes": "Manager notes"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "name": "First name",
+    "lastName": "Last name",
+    "phone": "Phone",
+    "save": "Save",
+    "saved": "Profile updated"
+  },
+  "store": {
+    "title": "About the store",
+    "address": "Address",
+    "phone": "Phone",
+    "supportPhone": "Support",
+    "workingHours": "Working hours",
+    "delivery": "Delivery",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Appearance",
+    "themeOptions": {
+      "light": "Light",
+      "dark": "Dark",
+      "auto": "Same as Telegram"
+    },
+    "notifications": "Notifications",
+    "notificationsHint": "Order status updates via Telegram"
+  },
+  "menu": {
+    "orders": "My orders",
+    "settings": "Settings",
+    "about": "About the store",
+    "contacts": "Contacts"
+  }
+}

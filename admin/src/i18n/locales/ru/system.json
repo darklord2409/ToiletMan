@@ -1,0 +1,80 @@
+{
+  "auditLogs": {
+    "title": "Журнал аудита",
+    "description": "Неизменяемый журнал действий в системе (только чтение).",
+    "columns": {
+      "action": "Действие",
+      "entityType": "Тип сущности",
+      "entityId": "ID сущности",
+      "actorType": "Тип инициатора",
+      "ipAddress": "IP-адрес",
+      "when": "Когда"
+    },
+    "actions": {
+      "login": "Вход в систему",
+      "login_failed": "Неудачная попытка входа",
+      "logout": "Выход из системы",
+      "password_changed": "Пароль изменён",
+      "password_reset": "Сброс пароля",
+      "register": "Регистрация",
+      "register_telegram": "Регистрация через Telegram",
+      "product_created": "Товар создан",
+      "product_updated": "Товар обновлён",
+      "product_cloned": "Товар клонирован",
+      "bulk_status_change": "Массовое изменение статуса",
+      "bulk_manufacturer_change": "Массовое изменение производителя",
+      "bulk_category_change": "Массовое изменение категории",
+      "bulk_collection_change": "Массовое изменение коллекции",
+      "bulk_update": "Массовое обновление",
+      "bulk_delete": "Массовое удаление",
+      "bulk_price_adjust": "Массовое изменение цены",
+      "price_rollback": "Откат цены"
+    },
+    "entityTypes": {
+      "admin_user": "Администратор",
+      "customer": "Покупатель",
+      "product": "Товар"
+    },
+    "actorTypes": {
+      "admin_user": "Администратор",
+      "customer": "Покупатель",
+      "system": "Система"
+    }
+  },
+  "priceHistory": {
+    "title": "История цен",
+    "description": "История изменений цен по каждому товару. Можно откатить цену товара к любой записи из истории.",
+    "columns": {
+      "productId": "ID товара",
+      "oldPrice": "Старая цена",
+      "newPrice": "Новая цена",
+      "reason": "Причина",
+      "when": "Когда"
+    },
+    "actions": {
+      "rollback": "Откатить"
+    },
+    "confirmRollback": "Откатить цену товара к этой записи?",
+    "confirmRollbackDescription": "Текущая цена товара будет заменена на {{price}}.",
+    "rollbackSuccess": "Цена товара откатана"
+  },
+  "uploadedFiles": {
+    "title": "Медиатека",
+    "description": "Библиотека изображений товаров, логотипов, баннеров и других загруженных файлов.",
+    "empty": "Файлы ещё не загружены",
+    "columns": {
+      "fileName": "Имя файла",
+      "mimeType": "MIME-тип",
+      "sizeBytes": "Размер (байт)",
+      "entityType": "Тип сущности",
+      "uploaded": "Загружен"
+    },
+    "fields": {
+      "fileName": "Имя файла",
+      "filePath": "Путь/URL файла",
+      "mimeType": "MIME-тип",
+      "sizeBytes": "Размер (байт)",
+      "entityType": "Тип прикреплённой сущности"
+    }
+  }
+}

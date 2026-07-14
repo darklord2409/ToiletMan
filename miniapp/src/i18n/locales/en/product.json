@@ -1,0 +1,18 @@
+{
+  "specifications": "Specifications",
+  "description": "Description",
+  "documents": "Documents",
+  "videos": "Videos",
+  "related": "Related products",
+  "frequentlyBoughtTogether": "Frequently bought together",
+  "accessories": "Recommended accessories",
+  "sameCollection": "From this collection",
+  "similar": "You may also like",
+  "sku": "SKU",
+  "addToCart": "Add to cart",
+  "inCart": "In cart: {{count}}",
+  "outOfStock": "Out of stock",
+  "quantity": "Quantity",
+  "notFound": "Product not found",
+  "goBack": "Back to catalog"
+}

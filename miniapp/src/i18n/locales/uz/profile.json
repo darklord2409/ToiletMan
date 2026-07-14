@@ -1,0 +1,65 @@
+{
+  "guest": {
+    "title": "Telegram orqali kiring",
+    "description": "Buyurtmalar va profilni ko'rish uchun ilovani bot orqali oching"
+  },
+  "orders": {
+    "title": "Mening buyurtmalarim",
+    "empty": "Sizda hali buyurtmalar yo'q",
+    "status": {
+      "pending": "Tasdiqlanishini kutmoqda",
+      "confirmed": "Tasdiqlangan",
+      "processing": "Qayta ishlanmoqda",
+      "shipped": "Jo'natildi",
+      "delivered": "Yetkazildi",
+      "cancelled": "Bekor qilindi",
+      "refunded": "Qaytarildi"
+    },
+    "orderNumber": "Buyurtma №{{number}}",
+    "item_other": "{{count}} mahsulot",
+    "total": "Jami",
+    "detailsTitle": "Buyurtma №{{number}}",
+    "placedOn": "Berilgan sana: {{date}}",
+    "deliveryMethod": "Yetkazib berish usuli",
+    "contact": "Aloqa",
+    "comment": "Sizning izohingiz",
+    "managerNotes": "Menejer izohi"
+  },
+  "contacts": {
+    "title": "Kontaktlar",
+    "name": "Ism",
+    "lastName": "Familiya",
+    "phone": "Telefon",
+    "save": "Saqlash",
+    "saved": "Profil yangilandi"
+  },
+  "store": {
+    "title": "Do'kon haqida",
+    "address": "Manzil",
+    "phone": "Telefon",
+    "supportPhone": "Qo'llab-quvvatlash",
+    "workingHours": "Ish vaqti",
+    "delivery": "Yetkazib berish",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "language": "Til",
+    "theme": "Ko'rinish",
+    "themeOptions": {
+      "light": "Yorug'",
+      "dark": "Qorong'i",
+      "auto": "Telegramdagidek"
+    },
+    "notifications": "Bildirishnomalar",
+    "notificationsHint": "Telegram orqali buyurtma holati yangilanishlari"
+  },
+  "menu": {
+    "orders": "Mening buyurtmalarim",
+    "settings": "Sozlamalar",
+    "about": "Do'kon haqida",
+    "contacts": "Kontaktlar"
+  }
+}

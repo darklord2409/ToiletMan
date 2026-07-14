@@ -1,0 +1,32 @@
+{
+  "title": "Каталог",
+  "filters": {
+    "title": "Фильтры",
+    "apply": "Применить",
+    "reset": "Сбросить",
+    "price": "Цена",
+    "priceFrom": "От",
+    "priceTo": "До",
+    "manufacturer": "Производитель",
+    "collection": "Коллекция",
+    "category": "Категория"
+  },
+  "sort": {
+    "title": "Сортировка",
+    "newest": "Сначала новые",
+    "priceAsc": "Сначала дешевле",
+    "priceDesc": "Сначала дороже",
+    "nameAsc": "По названию А-Я",
+    "featured": "Рекомендуемые"
+  },
+  "empty": "Товары не найдены",
+  "resultsCount": "Найдено: {{count}}",
+  "search": {
+    "placeholder": "Поиск товаров...",
+    "recent": "Недавние запросы",
+    "popular": "Популярные запросы",
+    "clearHistory": "Очистить историю",
+    "noResults": "Ничего не найдено по запросу «{{query}}»",
+    "cancel": "Отмена"
+  }
+}

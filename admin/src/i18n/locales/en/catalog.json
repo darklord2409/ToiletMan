@@ -1,0 +1,578 @@
+{
+  "products": {
+    "title": "Products",
+    "description": "The hardware store catalog.",
+    "columns": {
+      "sku": "SKU",
+      "name": "Name",
+      "price": "Price",
+      "stock": "Stock",
+      "status": "Status",
+      "featured": "Featured",
+      "availableQty": "Available",
+      "availability": "Availability"
+    },
+    "fields": {
+      "sku": "SKU",
+      "slug": "Slug",
+      "name": "Name",
+      "description": "Description",
+      "category": "Category",
+      "manufacturer": "Manufacturer",
+      "unit": "Unit",
+      "price": "Price",
+      "compareAtPrice": "Compare-at price",
+      "costPrice": "Cost price",
+      "stockQuantity": "Stock quantity",
+      "weightKg": "Weight (kg)",
+      "active": "Active",
+      "featured": "Featured",
+      "barcode": "Barcode",
+      "productType": "Product type",
+      "collection": "Collection",
+      "status": "Status",
+      "salePrice": "Sale price",
+      "futurePrice": "Future price",
+      "futurePriceActivatesAt": "Future price activates at",
+      "currency": "Currency",
+      "reservedQuantity": "Reserved quantity",
+      "unlimitedStock": "Unlimited stock",
+      "lowStockThreshold": "Low stock threshold",
+      "canonicalUrlOverride": "Canonical URL",
+      "seo": "SEO (JSON)",
+      "nameEn": "Name (EN)",
+      "descriptionEn": "Description (EN)",
+      "metaTitleEn": "Meta title (EN)",
+      "metaDescriptionEn": "Meta description (EN)",
+      "nameUz": "Name (UZ)",
+      "descriptionUz": "Description (UZ)",
+      "metaTitleUz": "Meta title (UZ)",
+      "metaDescriptionUz": "Meta description (UZ)"
+    },
+    "actions": {
+      "archive": "Archive",
+      "restore": "Restore",
+      "clone": "Clone",
+      "cloneTitle": "Clone product",
+      "newSku": "New SKU",
+      "newSlug": "New slug",
+      "newName": "New name (optional)",
+      "import": "Import",
+      "export": "Export",
+      "archiveSuccess": "Product archived.",
+      "restoreSuccess": "Product restored.",
+      "cloneSuccess": "Product cloned successfully.",
+      "newProduct": "New product"
+    },
+    "bulk": {
+      "title": "Bulk actions",
+      "selectedCount": "{{count}} selected",
+      "changeStatus": "Change status",
+      "changeManufacturer": "Change manufacturer",
+      "changeCategory": "Change category",
+      "changeCollection": "Change collection",
+      "adjustPrice": "Adjust price",
+      "delete": "Delete selected",
+      "apply": "Apply",
+      "percentage": "Percentage",
+      "fixed": "Fixed amount",
+      "increase": "Increase",
+      "decrease": "Decrease",
+      "mode": "Mode",
+      "direction": "Direction",
+      "value": "Value",
+      "success": "{{count}} products updated.",
+      "selectPrompt": "Select products in the table to enable bulk actions."
+    },
+    "import": {
+      "title": "Import products",
+      "mode": "Import mode",
+      "modeFull": "Full (create/update)",
+      "modePriceOnly": "Price only",
+      "modeStockOnly": "Stock only",
+      "chooseFile": "Choose file (CSV/XLSX)",
+      "preview": "Preview",
+      "commit": "Import",
+      "atomic": "Atomic (roll back everything on error)",
+      "totalRows": "Total rows: {{count}}",
+      "validRows": "Valid: {{count}}",
+      "invalidRows": "Invalid: {{count}}",
+      "createCount": "Created: {{count}}",
+      "updateCount": "Updated: {{count}}",
+      "skipCount": "Skipped: {{count}}",
+      "rowNumber": "Row",
+      "errors": "Errors",
+      "action": "Action",
+      "close": "Close"
+    },
+    "export": {
+      "csvAll": "Export CSV (all filtered)",
+      "xlsxAll": "Export Excel (all filtered)",
+      "csvSelected": "Export CSV (selected: {{count}})",
+      "xlsxSelected": "Export Excel (selected: {{count}})"
+    },
+    "tabs": {
+      "general": "General",
+      "translations": "Translations",
+      "pricing": "Pricing",
+      "inventory": "Inventory",
+      "collections": "Collection",
+      "seo": "SEO",
+      "images": "Images",
+      "specifications": "Specifications",
+      "labels": "Labels",
+      "documents": "Documents",
+      "videos": "Videos",
+      "history": "History"
+    },
+    "images": {
+      "dropHint": "Drag images here, or click to select",
+      "empty": "No images yet",
+      "primary": "Primary",
+      "setPrimary": "Set as primary",
+      "crop": "Crop",
+      "replace": "Replace",
+      "zoom": "Zoom"
+    },
+    "specifications": {
+      "title": "Specifications",
+      "empty": "This product type has no specifications defined"
+    },
+    "labels": {
+      "hint": "Click a label to assign or remove it from this product.",
+      "empty": "No labels created yet"
+    },
+    "documents": {
+      "columns": {
+        "type": "Type",
+        "title": "Title",
+        "file": "File"
+      },
+      "view": "Open",
+      "add": "Add document",
+      "empty": "No documents yet",
+      "chooseFile": "Choose file",
+      "types": {
+        "manual": "Manual",
+        "certificate": "Certificate",
+        "warranty_card": "Warranty card",
+        "installation_instructions": "Installation instructions",
+        "exploded_diagram": "Exploded diagram"
+      }
+    },
+    "videos": {
+      "columns": {
+        "type": "Type",
+        "title": "Title",
+        "url": "URL"
+      },
+      "view": "Open",
+      "add": "Add video",
+      "empty": "No videos yet",
+      "chooseFile": "Choose file",
+      "types": {
+        "youtube": "YouTube",
+        "mp4": "MP4",
+        "external": "External link"
+      }
+    },
+    "history": {
+      "priceChange": "Price changed: {old} → {new}",
+      "empty": "No history yet"
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "description": "Self-referential tree — subcategories are just categories with a parent.",
+    "columns": {
+      "imageUrl": "Photo",
+      "name": "Name",
+      "slug": "Slug",
+      "parentId": "Parent ID",
+      "sortOrder": "Sort order",
+      "status": "Status",
+      "featured": "Top seller"
+    },
+    "fields": {
+      "name": "Name",
+      "slug": "Slug",
+      "parentCategory": "Parent Category",
+      "parentCategoryHelp": "Leave empty for a top-level category. Nesting is unlimited.",
+      "description": "Description",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "featured": "Top seller",
+      "featuredHelp": "Show in the \"Best sellers\" carousel on the Mini App home screen (up to 3 categories).",
+      "imageUrl": "Category photo"
+    }
+  },
+  "manufacturers": {
+    "title": "Manufacturers",
+    "description": "Brands and vendors that supply products.",
+    "columns": {
+      "name": "Name",
+      "slug": "Slug",
+      "website": "Website",
+      "status": "Status"
+    },
+    "fields": {
+      "name": "Name",
+      "slug": "Slug",
+      "description": "Description",
+      "logoUrl": "Logo URL",
+      "websiteUrl": "Website URL",
+      "active": "Active"
+    }
+  },
+  "units": {
+    "title": "Units",
+    "description": "Units of measure used by products (pcs, kg, m, ...).",
+    "columns": {
+      "name": "Name",
+      "symbol": "Symbol",
+      "status": "Status"
+    },
+    "fields": {
+      "name": "Name",
+      "symbol": "Symbol",
+      "active": "Active"
+    }
+  },
+  "productImages": {
+    "title": "Product Images",
+    "description": "A product supports unlimited images.",
+    "columns": {
+      "preview": "Preview",
+      "productId": "Product ID",
+      "altText": "Alt text",
+      "sortOrder": "Sort order",
+      "primary": "Primary"
+    },
+    "fields": {
+      "product": "Product",
+      "imageUrl": "Image URL",
+      "altText": "Alt text",
+      "sortOrder": "Sort order",
+      "primaryImage": "Primary image"
+    }
+  },
+  "attributeDefinitions": {
+    "title": "Attribute Definitions",
+    "description": "Defines the custom attributes products can carry (e.g. Voltage, Color).",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "dataType": "Data type",
+      "filterable": "Filterable"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "dataType": "Data type",
+      "unit": "Unit",
+      "filterable": "Filterable",
+      "dataTypeString": "String",
+      "dataTypeNumber": "Number",
+      "dataTypeBoolean": "Boolean",
+      "dataTypeDate": "Date"
+    }
+  },
+  "productTypes": {
+    "title": "Product Types",
+    "description": "A product type defines which attribute set (characteristic fields) applies to a product.",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "attributeSetId": "Attribute Set ID",
+      "sortOrder": "Sort order",
+      "status": "Status",
+      "defaultImageUrl": "Photo"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "attributeSet": "Attribute set",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "defaultImageUrl": "Default photo",
+      "nameEn": "Name (EN)",
+      "nameUz": "Name (UZ)"
+    }
+  },
+  "attributeSets": {
+    "title": "Attribute Sets",
+    "description": "Named groups of characteristics that can be assigned to a product type.",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description"
+    },
+    "actions": {
+      "manage": "Manage attributes"
+    }
+  },
+  "attributeSetEditor": {
+    "back": "Back to attribute sets",
+    "inSetTitle": "Attributes in this set",
+    "availableTitle": "Available attributes",
+    "searchPlaceholder": "Search attributes by name or code...",
+    "empty": "No attributes in this set yet. Add one from the right.",
+    "noAvailable": "All attribute definitions are already in this set.",
+    "dragHint": "Drag to reorder",
+    "columns": {
+      "required": "Required",
+      "visible": "Visible",
+      "defaultValue": "Default value"
+    },
+    "actions": {
+      "add": "Add",
+      "remove": "Remove",
+      "addSuccess": "Attribute added to the set.",
+      "removeSuccess": "Attribute removed from the set."
+    },
+    "confirmRemoveTitle": "Remove this attribute from the set?",
+    "confirmRemoveDescription": "The attribute definition itself won't be deleted, only its membership in this set."
+  },
+  "attributeSetItems": {
+    "title": "Attribute Set Items",
+    "description": "Links attribute definitions to attribute sets and configures how they display.",
+    "columns": {
+      "attributeSetId": "Attribute Set ID",
+      "attributeDefinitionId": "Attribute Definition ID",
+      "sortOrder": "Sort order",
+      "required": "Required",
+      "visible": "Visible",
+      "defaultValue": "Default value"
+    },
+    "fields": {
+      "attributeSet": "Attribute set",
+      "attributeDefinition": "Attribute definition",
+      "sortOrder": "Sort order",
+      "required": "Required",
+      "visible": "Visible",
+      "defaultValue": "Default value"
+    }
+  },
+  "attributeGroups": {
+    "title": "Attribute Groups",
+    "description": "Groups used to visually organize characteristics on the product page.",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "sortOrder": "Sort order"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "sortOrder": "Sort order",
+      "nameEn": "Name (EN)",
+      "nameUz": "Name (UZ)"
+    }
+  },
+  "referenceValues": {
+    "title": "Reference Values",
+    "description": "Shared lookup lists (material, color, country, etc.) used by product characteristics.",
+    "columns": {
+      "referenceType": "Reference type",
+      "code": "Code",
+      "name": "Name",
+      "sortOrder": "Sort order",
+      "status": "Status"
+    },
+    "fields": {
+      "referenceType": "Reference type",
+      "code": "Code",
+      "name": "Name",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "nameEn": "Name (EN)",
+      "nameUz": "Name (UZ)"
+    },
+    "referenceTypes": {
+      "material": "Material",
+      "color": "Color",
+      "country": "Country",
+      "finish": "Finish",
+      "installation_type": "Installation type",
+      "shape": "Shape",
+      "warranty_period": "Warranty period",
+      "connection_type": "Connection type",
+      "thread_size": "Thread size",
+      "water_outlet_type": "Water outlet type"
+    }
+  },
+  "collections": {
+    "title": "Collections",
+    "description": "Product lines from a single manufacturer grouped by a shared design or series.",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "slug": "Slug",
+      "manufacturerId": "Manufacturer ID",
+      "sortOrder": "Sort order",
+      "status": "Status"
+    },
+    "fields": {
+      "manufacturer": "Manufacturer",
+      "code": "Code",
+      "slug": "Slug",
+      "name": "Name",
+      "description": "Description",
+      "imageUrl": "Image URL",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "nameEn": "Name (EN)",
+      "descriptionEn": "Description (EN)",
+      "nameUz": "Name (UZ)",
+      "descriptionUz": "Description (UZ)"
+    },
+    "actions": {
+      "manage": "Manage products"
+    },
+    "detail": {
+      "back": "Back to collections",
+      "code": "Code",
+      "manufacturer": "Manufacturer",
+      "productsTitle": "Products in this collection ({{count}})",
+      "addProducts": "Add products",
+      "removeFromCollection": "Remove from collection",
+      "removeConfirmTitle": "Remove this product from the collection?",
+      "removeSuccess": "Product removed from the collection.",
+      "addSuccess": "{{count}} product(s) added.",
+      "emptyDescription": "This collection has no products yet.",
+      "pickerTitle": "Add products to collection",
+      "pickerSearchPlaceholder": "Search products by name, SKU...",
+      "pickerEmpty": "No products found.",
+      "addSelected": "Add selected ({{count}})"
+    }
+  },
+  "productLabels": {
+    "title": "Product Labels",
+    "description": "Product badges (New, Bestseller, Sale, etc.).",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "badgeColor": "Badge color",
+      "sortOrder": "Sort order",
+      "status": "Status"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "badgeColor": "Badge color",
+      "badgeColorHelp": "An Ant Design color name (e.g. red, gold, blue) or a HEX code.",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "nameEn": "Name (EN)",
+      "nameUz": "Name (UZ)"
+    }
+  },
+  "productLabelAssignments": {
+    "title": "Product Label Assignments",
+    "description": "Links products to labels — a product can carry multiple labels.",
+    "columns": {
+      "productId": "Product ID",
+      "productLabelId": "Product Label ID"
+    },
+    "fields": {
+      "product": "Product",
+      "productLabel": "Product label"
+    }
+  },
+  "productDocuments": {
+    "title": "Product Documents",
+    "description": "Manuals, certificates and other documents attached to a product.",
+    "columns": {
+      "productId": "Product ID",
+      "title": "Title",
+      "documentType": "Document type",
+      "fileUrl": "File URL",
+      "sortOrder": "Sort order"
+    },
+    "fields": {
+      "product": "Product",
+      "documentType": "Document type",
+      "title": "Title",
+      "fileUrl": "File URL",
+      "mimeType": "MIME type",
+      "sizeBytes": "Size (bytes)",
+      "sortOrder": "Sort order"
+    },
+    "documentTypes": {
+      "manual": "Manual",
+      "certificate": "Certificate",
+      "warranty_card": "Warranty card",
+      "installation_instructions": "Installation instructions",
+      "exploded_diagram": "Exploded diagram"
+    }
+  },
+  "productVideos": {
+    "title": "Product Videos",
+    "description": "Videos attached to a product (YouTube, MP4, or an external link).",
+    "columns": {
+      "productId": "Product ID",
+      "title": "Title",
+      "videoType": "Video type",
+      "url": "URL",
+      "sortOrder": "Sort order"
+    },
+    "fields": {
+      "product": "Product",
+      "videoType": "Video type",
+      "title": "Title",
+      "url": "URL",
+      "thumbnailUrl": "Thumbnail URL",
+      "sortOrder": "Sort order"
+    },
+    "videoTypes": {
+      "youtube": "YouTube",
+      "mp4": "MP4",
+      "external": "External link"
+    }
+  },
+  "productAttributes": {
+    "title": "Product Attributes",
+    "description": "EAV values — a product can carry unlimited custom attributes.",
+    "columns": {
+      "productId": "Product ID",
+      "attributeDefinitionId": "Attribute Definition ID",
+      "stringValue": "String value",
+      "numberValue": "Number value",
+      "booleanValue": "Boolean value"
+    },
+    "fields": {
+      "product": "Product",
+      "attributeDefinition": "Attribute definition",
+      "stringValue": "String value",
+      "numberValue": "Number value",
+      "booleanValue": "Boolean value",
+      "dateValue": "Date value"
+    }
+  },
+  "productRecommendations": {
+    "title": "Product Recommendations",
+    "description": "Manually curated links between products — accessories, similar items, or \"frequently bought together\". \"Same collection\" and \"similar\" shown to customers are computed automatically and aren't edited here.",
+    "columns": {
+      "productId": "Product",
+      "recommendedProductId": "Recommended product",
+      "relationType": "Relation type",
+      "sortOrder": "Sort order"
+    },
+    "fields": {
+      "product": "Product",
+      "recommendedProduct": "Recommended product",
+      "relationType": "Relation type",
+      "sortOrder": "Sort order"
+    },
+    "relationTypes": {
+      "related": "Related product",
+      "accessory": "Accessory",
+      "frequently_bought_together": "Frequently bought together"
+    }
+  }
+}

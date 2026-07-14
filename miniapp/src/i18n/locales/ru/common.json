@@ -1,0 +1,44 @@
+{
+  "appName": "TipoBot",
+  "nav": {
+    "home": "Главная",
+    "catalog": "Каталог",
+    "favorites": "Избранное",
+    "cart": "Корзина",
+    "profile": "Профиль"
+  },
+  "actions": {
+    "addToCart": "В корзину",
+    "buyNow": "Купить сейчас",
+    "add": "Добавить",
+    "remove": "Удалить",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "retry": "Повторить",
+    "viewAll": "Смотреть все",
+    "share": "Поделиться",
+    "call": "Позвонить",
+    "search": "Поиск"
+  },
+  "state": {
+    "loading": "Загрузка...",
+    "error": "Что-то пошло не так",
+    "empty": "Пока пусто",
+    "pullToRefresh": "Потяните, чтобы обновить",
+    "releaseToRefresh": "Отпустите, чтобы обновить",
+    "refreshing": "Обновление..."
+  },
+  "genericError": "Произошла ошибка. Попробуйте ещё раз.",
+  "toast": {
+    "addedToCart": "Добавлено в корзину",
+    "addedToFavorites": "Добавлено в избранное",
+    "removedFromFavorites": "Удалено из избранного"
+  },
+  "stock": {
+    "inStock": "В наличии",
+    "lowStock": "Заканчивается",
+    "outOfStock": "Нет в наличии",
+    "unlimited": "В наличии"
+  }
+}

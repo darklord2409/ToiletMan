@@ -1,0 +1,155 @@
+{
+  "banners": {
+    "title": "Bannerlar",
+    "description": "Do'kon bosh sahifasidagi reklama bannerlari.",
+    "columns": {
+      "preview": "Ko'rinish",
+      "title": "Sarlavha",
+      "sortOrder": "Saralash tartibi",
+      "status": "Holati"
+    },
+    "fields": {
+      "title": "Sarlavha",
+      "imageUrl": "Rasm URL",
+      "linkUrl": "Havola URL",
+      "sortOrder": "Saralash tartibi",
+      "startsAt": "Boshlanish sanasi",
+      "endsAt": "Tugash sanasi",
+      "active": "Faol"
+    }
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "description": "Do'kon e'lonlari va blog yozuvlari.",
+    "columns": {
+      "title": "Sarlavha",
+      "slug": "Slug",
+      "status": "Holati",
+      "publishedAt": "Nashr sanasi",
+      "published": "Nashr qilingan",
+      "draft": "Qoralama"
+    },
+    "fields": {
+      "title": "Sarlavha",
+      "slug": "Slug",
+      "excerpt": "Qisqacha mazmun",
+      "content": "Tarkib",
+      "coverImageUrl": "Muqova rasmi URL",
+      "author": "Muallif",
+      "published": "Nashr qilingan",
+      "publishedAt": "Nashr sanasi"
+    }
+  },
+  "staticPages": {
+    "title": "Statik sahifalar",
+    "description": "Biz haqimizda, foydalanish shartlari va boshqa statik kontent.",
+    "columns": {
+      "title": "Sarlavha",
+      "slug": "Slug",
+      "status": "Holati",
+      "published": "Nashr qilingan",
+      "draft": "Qoralama"
+    },
+    "fields": {
+      "title": "Sarlavha",
+      "slug": "Slug",
+      "content": "Tarkib",
+      "published": "Nashr qilingan"
+    }
+  },
+  "siteSettings": {
+    "title": "Sayt sozlamalari",
+    "description": "Onlayn-do'kon va bot uchun kalit/qiymat sozlamalari.",
+    "columns": {
+      "key": "Kalit",
+      "value": "Qiymat",
+      "description": "Tavsif"
+    },
+    "fields": {
+      "key": "Kalit",
+      "value": "Qiymat (JSON)",
+      "description": "Tavsif"
+    }
+  },
+  "storeSettings": {
+    "title": "Do'kon sozlamalari",
+    "description": "Do'kon haqida asosiy ma'lumot, kontaktlar, yetkazib berish, valyuta va standart til.",
+    "sections": {
+      "general": "Asosiy",
+      "contacts": "Kontaktlar",
+      "currencyLanguage": "Valyuta va til",
+      "delivery": "Yetkazib berish va ish vaqti"
+    },
+    "fields": {
+      "storeName": "Do'kon nomi",
+      "logoUrl": "Logotip URL",
+      "address": "Manzil",
+      "aboutText": "\"Biz haqimizda\" matni",
+      "aboutTextHelp": "Do'kon haqida qisqa matn — Telegram-botdagi \"Biz haqimizda\" bo'limida ko'rsatiladi.",
+      "phone": "Telefon",
+      "supportEmail": "Qo'llab-quvvatlash email",
+      "supportPhone": "Qo'llab-quvvatlash telefoni",
+      "telegramUrl": "Telegram",
+      "whatsappUrl": "WhatsApp",
+      "instagramUrl": "Instagram",
+      "currency": "Valyuta",
+      "defaultLanguage": "Standart til",
+      "taxRate": "Soliq stavkasi",
+      "taxIncluded": "Soliq narxga kiritilgan",
+      "deliveryInfo": "Yetkazib berish shartlari",
+      "workingHours": "Ish vaqti"
+    },
+    "weekdays": {
+      "monday": "Dushanba",
+      "tuesday": "Seshanba",
+      "wednesday": "Chorshanba",
+      "thursday": "Payshanba",
+      "friday": "Juma",
+      "saturday": "Shanba",
+      "sunday": "Yakshanba"
+    },
+    "weekdayClosed": "Dam olish kuni",
+    "weekdayOpen": "Ochiq"
+  },
+  "botSettings": {
+    "title": "Telegram bot sozlamalari",
+    "description": "Salomlashuv xabari, menyu tugmasi, menejerlar va bildirishnoma shablonlari — barchasi kodni o'zgartirmasdan tahrirlanadi.",
+    "sections": {
+      "general": "Asosiy",
+      "welcome": "Salomlashuv",
+      "menuButton": "Menyu tugmasi",
+      "announcement": "Mahkamlangan e'lon",
+      "managers": "Menejerlar",
+      "templates": "Bildirishnoma shablonlari"
+    },
+    "fields": {
+      "botName": "Bot nomi",
+      "botNameHelp": "To'g'ridan-to'g'ri haqiqiy Telegramga saqlanadi — foydalanuvchilar botni aynan shu nom bilan ko'radi.",
+      "botUsername": "Bot username",
+      "botUsernameHelp": "Faqat ma'lumot uchun — Telegram botga o'z @username'ini API orqali o'zgartirishga ruxsat bermaydi. Buni faqat @BotFather (/setusername) orqali qilish mumkin. Bu qiymat Telegramdagi haqiqiy ma'lumot bilan avtomatik yangilanadi.",
+      "welcomeText": "Salomlashuv matni",
+      "welcomeImageUrl": "Salomlashuv rasmi URL",
+      "menuButtonText": "Menyu tugmasi matni",
+      "pinnedAnnouncement": "E'lon matni (ixtiyoriy)"
+    },
+    "managerIdsHelp": "Har bir qatorda bitta Telegram ID. Bu foydalanuvchilar har bir yangi buyurtma haqida xabar oladi.",
+    "addManagerId": "Menejer qo'shish",
+    "removeManagerId": "O'chirish",
+    "events": {
+      "order_confirmed": "Buyurtma tasdiqlandi",
+      "order_processing": "Buyurtma qayta ishlanmoqda",
+      "order_shipped": "Buyurtma jo'natildi",
+      "order_delivered": "Buyurtma yetkazildi",
+      "order_cancelled": "Buyurtma bekor qilindi",
+      "order_refunded": "Buyurtma bo'yicha pul qaytarildi",
+      "manager_contacted": "Menejer mijoz bilan bog'landi",
+      "new_order_manager_alert": "Menejerga yangi buyurtma haqida xabar"
+    },
+    "templatesHelp": "Standart matndan foydalanish uchun maydonni bo'sh qoldiring. Mavjud o'zgaruvchilar: buyurtma hodisalari uchun {order_number}, «Menejer bog'landi» uchun {manager_notes}, menejer xabari uchun {customer_name}/{phone}/{products}/{total}/{currency}/{delivery}/{comment}.",
+    "locales": {
+      "ru": "Русский",
+      "en": "English",
+      "uz": "O'zbekcha"
+    }
+  }
+}

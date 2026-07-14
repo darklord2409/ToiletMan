@@ -1,0 +1,17 @@
+/* Small-screen (phone) adjustments for the admin shell. Ant Design's own
+   grid breakpoints top out at "hiding the sidebar behind an icon rail" —
+   these rules handle what's left: header content that doesn't fit a
+   ~375px viewport at all. */
+@media (max-width: 576px) {
+  .global-search-hint {
+    display: none;
+  }
+
+  .admin-header-actions {
+    gap: 10px !important;
+  }
+
+  .admin-user-name {
+    display: none !important;
+  }
+}

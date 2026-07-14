@@ -1,0 +1,39 @@
+{
+  "title": "Checkout",
+  "contact": {
+    "title": "Contact details",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "phone": "Phone",
+    "phonePlaceholder": "+998 90 123 45 67"
+  },
+  "delivery": {
+    "title": "Delivery method",
+    "pickup": "Pickup",
+    "delivery": "Delivery",
+    "address": "Delivery address",
+    "addressPlaceholder": "Enter your address"
+  },
+  "comment": "Order comment",
+  "commentPlaceholder": "Optional",
+  "payment": {
+    "title": "Payment method",
+    "cash": "Cash on delivery"
+  },
+  "summary": {
+    "title": "Your order"
+  },
+  "submit": "Confirm order",
+  "success": {
+    "title": "Order placed!",
+    "description": "Order number {{orderNumber}}. A manager will contact you to confirm.",
+    "viewOrder": "View order",
+    "continueShopping": "Continue shopping"
+  },
+  "validation": {
+    "nameRequired": "Enter your name",
+    "phoneRequired": "Enter your phone number",
+    "addressRequired": "Enter a delivery address"
+  },
+  "emptyCartRedirect": "Your cart is empty"
+}

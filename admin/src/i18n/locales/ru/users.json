@@ -1,0 +1,100 @@
+{
+  "customers": {
+    "title": "Клиенты",
+    "description": "Конечные покупатели интернет-магазина и Telegram-бота.",
+    "columns": {
+      "name": "Имя",
+      "email": "Email",
+      "phone": "Телефон",
+      "telegramId": "Telegram ID",
+      "telegramUsername": "Telegram",
+      "status": "Статус"
+    },
+    "fields": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "email": "Email",
+      "phone": "Телефон",
+      "telegramId": "Telegram ID",
+      "password": "Пароль",
+      "passwordHelp": "Оставьте пустым, чтобы не менять.",
+      "active": "Активен"
+    }
+  },
+  "adminUsers": {
+    "title": "Администраторы",
+    "description": "Учётные записи сотрудников с доступом к этой панели управления.",
+    "columns": {
+      "username": "Логин",
+      "email": "Email",
+      "fullName": "ФИО",
+      "superuser": "Суперпользователь",
+      "status": "Статус",
+      "lastLogin": "Последний вход",
+      "never": "Никогда"
+    },
+    "fields": {
+      "username": "Логин",
+      "email": "Email",
+      "fullName": "ФИО",
+      "password": "Пароль",
+      "passwordHelp": "Обязателен при создании, оставьте пустым при редактировании, чтобы не менять.",
+      "role": "Роль",
+      "active": "Активен",
+      "superuser": "Суперпользователь"
+    },
+    "sessions": {
+      "title": "Сессии",
+      "titleFor": "Сессии: {{username}}",
+      "description": "Активные сеансы входа этого администратора на разных устройствах.",
+      "columns": {
+        "device": "Устройство",
+        "ip": "IP-адрес",
+        "createdAt": "Начало сессии"
+      },
+      "unknown": "Неизвестно",
+      "empty": "Нет активных сессий",
+      "confirmRevoke": "Завершить эту сессию?",
+      "confirmRevokeAll": "Завершить все сессии этого пользователя? Потребуется повторный вход на всех устройствах.",
+      "revokeAll": "Завершить все сессии",
+      "revokeSuccess": "Сессия завершена",
+      "revokeAllSuccess": "Все сессии завершены"
+    }
+  },
+  "roles": {
+    "title": "Роли",
+    "description": "RBAC-роли, назначаемые администраторам.",
+    "columns": {
+      "name": "Название",
+      "description": "Описание"
+    },
+    "fields": {
+      "name": "Название",
+      "description": "Описание"
+    }
+  },
+  "permissions": {
+    "title": "Права доступа",
+    "description": "Детальные права доступа, которые можно назначать ролям.",
+    "columns": {
+      "code": "Код",
+      "description": "Описание"
+    },
+    "fields": {
+      "code": "Код",
+      "description": "Описание"
+    }
+  },
+  "rolePermissions": {
+    "title": "Права ролей",
+    "description": "Назначает право доступа роли.",
+    "columns": {
+      "roleId": "ID роли",
+      "permissionId": "ID права"
+    },
+    "fields": {
+      "role": "Роль",
+      "permission": "Право доступа"
+    }
+  }
+}

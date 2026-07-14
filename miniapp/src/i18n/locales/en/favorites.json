@@ -1,0 +1,8 @@
+{
+  "title": "Favorites",
+  "empty": {
+    "title": "No favorites yet",
+    "description": "Tap the heart on a product to save it here",
+    "action": "Go to catalog"
+  }
+}

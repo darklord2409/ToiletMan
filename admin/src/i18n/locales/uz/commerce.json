@@ -1,0 +1,205 @@
+{
+  "orders": {
+    "title": "Buyurtmalar",
+    "description": "Mijozlar tomonidan do'kon/bot orqali berilgan buyurtmalar.",
+    "columns": {
+      "orderNumber": "Buyurtma raqami",
+      "status": "Holati",
+      "grandTotal": "Umumiy summa",
+      "currency": "Valyuta",
+      "placed": "Berilgan sana"
+    },
+    "fields": {
+      "customer": "Mijoz",
+      "orderNumber": "Buyurtma raqami",
+      "status": "Holati",
+      "subtotal": "Oraliq summa",
+      "discountTotal": "Chegirma summasi",
+      "taxTotal": "Soliq summasi",
+      "shippingTotal": "Yetkazib berish narxi",
+      "grandTotal": "Umumiy summa",
+      "currency": "Valyuta",
+      "notes": "Izohlar"
+    },
+    "filterByStatus": "Holat bo'yicha filtr",
+    "openDetail": "Buyurtmani ochish",
+    "detail": {
+      "back": "Buyurtmalarga qaytish",
+      "orderTitle": "Buyurtma №{{number}}",
+      "saveAndConfirm": "Saqlash / tasdiqlash",
+      "title": "Buyurtma",
+      "customerCard": {
+        "title": "Mijoz",
+        "name": "Ism va familiya",
+        "phone": "Telefon",
+        "telegramId": "Telegram ID",
+        "telegramAccount": "Telegram akkaunti"
+      },
+      "contactCard": {
+        "title": "Ushbu buyurtma uchun aloqa",
+        "name": "Ism",
+        "phone": "Telefon",
+        "deliveryMethod": "Yetkazib berish usuli",
+        "paymentMethod": "To'lov usuli",
+        "address": "Yetkazib berish manzili",
+        "comment": "Mijoz izohi"
+      },
+      "deliveryMethod": {
+        "pickup": "Olib ketish",
+        "delivery": "Yetkazib berish"
+      },
+      "paymentMethod": {
+        "cash": "Naqd pul"
+      },
+      "statusCard": {
+        "title": "Holat va menejer izohi",
+        "status": "Buyurtma holati",
+        "managerNotes": "Menejer izohi",
+        "managerNotesPlaceholder": "Mijozga Mini App'da ko'rinadi va o'zgarganda Telegram orqali yuboriladi"
+      },
+      "totalsCard": {
+        "title": "Buyurtma summasi",
+        "subtotal": "Oraliq summa",
+        "discount": "Chegirma",
+        "tax": "Soliq",
+        "shipping": "Yetkazib berish",
+        "grandTotal": "Jami",
+        "placed": "Berilgan sana"
+      },
+      "items": {
+        "title": "Buyurtma tarkibi",
+        "sku": "Artikul",
+        "product": "Mahsulot",
+        "unitPrice": "Birlik narxi",
+        "quantity": "Miqdori",
+        "lineTotal": "Summa"
+      }
+    }
+  },
+  "orderItems": {
+    "title": "Buyurtma pozitsiyalari",
+    "description": "Pozitsiyalar xarid vaqtida saqlanadi (snapshot).",
+    "columns": {
+      "orderId": "Buyurtma ID",
+      "sku": "Artikul",
+      "productName": "Mahsulot nomi",
+      "qty": "Miqdor",
+      "unitPrice": "Birlik narxi",
+      "lineTotal": "Pozitsiya summasi"
+    },
+    "fields": {
+      "order": "Buyurtma",
+      "product": "Mahsulot",
+      "productName": "Mahsulot nomi (snapshot)",
+      "sku": "Artikul (snapshot)",
+      "unitPrice": "Birlik narxi",
+      "quantity": "Miqdor",
+      "lineTotal": "Pozitsiya summasi"
+    }
+  },
+  "carts": {
+    "title": "Savatchalar",
+    "description": "Xarid savatchalari, shu jumladan mehmon sessiyalari.",
+    "guest": "Mehmon",
+    "columns": {
+      "customerId": "Mijoz ID",
+      "status": "Holati",
+      "sessionToken": "Sessiya tokeni",
+      "created": "Yaratilgan"
+    },
+    "fields": {
+      "customer": "Mijoz",
+      "sessionToken": "Sessiya tokeni",
+      "status": "Holati",
+      "statusActive": "Faol",
+      "statusConverted": "Buyurtmaga aylantirilgan",
+      "statusAbandoned": "Tashlab qo'yilgan"
+    }
+  },
+  "cartItems": {
+    "title": "Savatcha mahsulotlari",
+    "description": "Hozirda xarid savatchalarida turgan mahsulotlar.",
+    "columns": {
+      "cartId": "Savatcha ID",
+      "productId": "Mahsulot ID",
+      "qty": "Miqdor",
+      "unitPrice": "Birlik narxi"
+    },
+    "fields": {
+      "cart": "Savatcha",
+      "product": "Mahsulot",
+      "quantity": "Miqdor",
+      "unitPrice": "Birlik narxi"
+    }
+  },
+  "promotions": {
+    "title": "Aksiyalar",
+    "description": "Chegirmalar va kuponlar asosidagi marketing kampaniyalari.",
+    "columns": {
+      "name": "Nomi",
+      "type": "Turi",
+      "starts": "Boshlanishi",
+      "ends": "Tugashi",
+      "status": "Holati"
+    },
+    "fields": {
+      "name": "Nomi",
+      "description": "Tavsif",
+      "type": "Turi",
+      "typePercentage": "Foiz",
+      "typeFixedAmount": "Belgilangan summa",
+      "typeBuyXGetY": "X ol Y bepul",
+      "startsAt": "Boshlanish sanasi",
+      "endsAt": "Tugash sanasi",
+      "active": "Faol"
+    }
+  },
+  "discounts": {
+    "title": "Chegirmalar",
+    "description": "Aksiyaga bog'langan chegirma qoidalari.",
+    "columns": {
+      "promotionId": "Aksiya ID",
+      "scope": "Qamrov",
+      "amountType": "Summa turi",
+      "value": "Qiymat"
+    },
+    "fields": {
+      "promotion": "Aksiya",
+      "scope": "Qamrov",
+      "scopeProduct": "Mahsulot",
+      "scopeCategory": "Kategoriya",
+      "scopeCart": "Savatcha",
+      "scopeShipping": "Yetkazib berish",
+      "categoryScope": "Kategoriya (agar qamrov=kategoriya)",
+      "productScope": "Mahsulot (agar qamrov=mahsulot)",
+      "amountType": "Summa turi",
+      "amountTypePercentage": "Foiz",
+      "amountTypeFixed": "Belgilangan summa",
+      "value": "Qiymat"
+    }
+  },
+  "coupons": {
+    "title": "Kuponlar",
+    "description": "Faollashtirish uchun chegirma kodlari.",
+    "columns": {
+      "code": "Kod",
+      "amountType": "Summa turi",
+      "discountValue": "Chegirma qiymati",
+      "usage": "Foydalanish",
+      "status": "Holati"
+    },
+    "fields": {
+      "code": "Kod",
+      "promotion": "Aksiya",
+      "amountType": "Summa turi",
+      "amountTypePercentage": "Foiz",
+      "amountTypeFixed": "Belgilangan summa",
+      "discountValue": "Chegirma qiymati",
+      "minOrderAmount": "Min. buyurtma summasi",
+      "usageLimit": "Foydalanish limiti",
+      "startsAt": "Boshlanish sanasi",
+      "endsAt": "Tugash sanasi",
+      "active": "Faol"
+    }
+  }
+}

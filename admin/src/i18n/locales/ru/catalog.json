@@ -1,0 +1,578 @@
+{
+  "products": {
+    "title": "Товары",
+    "description": "Каталог хозяйственного магазина.",
+    "columns": {
+      "sku": "Артикул",
+      "name": "Название",
+      "price": "Цена",
+      "stock": "Остаток",
+      "status": "Статус",
+      "featured": "Рекомендуемый",
+      "availableQty": "Доступно",
+      "availability": "Наличие"
+    },
+    "fields": {
+      "sku": "Артикул",
+      "slug": "Слаг",
+      "name": "Название",
+      "description": "Описание",
+      "category": "Категория",
+      "manufacturer": "Производитель",
+      "unit": "Единица измерения",
+      "price": "Цена",
+      "compareAtPrice": "Цена до скидки",
+      "costPrice": "Себестоимость",
+      "stockQuantity": "Количество на складе",
+      "weightKg": "Вес (кг)",
+      "active": "Активен",
+      "featured": "Рекомендуемый",
+      "barcode": "Штрихкод",
+      "productType": "Тип товара",
+      "collection": "Коллекция",
+      "status": "Статус",
+      "salePrice": "Цена по акции",
+      "futurePrice": "Будущая цена",
+      "futurePriceActivatesAt": "Дата активации будущей цены",
+      "currency": "Валюта",
+      "reservedQuantity": "Зарезервировано",
+      "unlimitedStock": "Неограниченный запас",
+      "lowStockThreshold": "Порог низкого запаса",
+      "canonicalUrlOverride": "Canonical URL",
+      "seo": "SEO (JSON)",
+      "nameEn": "Название (EN)",
+      "descriptionEn": "Описание (EN)",
+      "metaTitleEn": "Meta Title (EN)",
+      "metaDescriptionEn": "Meta Description (EN)",
+      "nameUz": "Название (UZ)",
+      "descriptionUz": "Описание (UZ)",
+      "metaTitleUz": "Meta Title (UZ)",
+      "metaDescriptionUz": "Meta Description (UZ)"
+    },
+    "actions": {
+      "archive": "Архивировать",
+      "restore": "Восстановить",
+      "clone": "Клонировать",
+      "cloneTitle": "Клонировать товар",
+      "newSku": "Новый артикул",
+      "newSlug": "Новый слаг",
+      "newName": "Новое название (необязательно)",
+      "import": "Импорт",
+      "export": "Экспорт",
+      "archiveSuccess": "Товар отправлен в архив.",
+      "restoreSuccess": "Товар восстановлен.",
+      "cloneSuccess": "Товар успешно клонирован.",
+      "newProduct": "Новый товар"
+    },
+    "bulk": {
+      "title": "Массовые действия",
+      "selectedCount": "Выбрано: {{count}}",
+      "changeStatus": "Изменить статус",
+      "changeManufacturer": "Изменить производителя",
+      "changeCategory": "Изменить категорию",
+      "changeCollection": "Изменить коллекцию",
+      "adjustPrice": "Изменить цену",
+      "delete": "Удалить выбранные",
+      "apply": "Применить",
+      "percentage": "Процент",
+      "fixed": "Фиксированная сумма",
+      "increase": "Увеличить",
+      "decrease": "Уменьшить",
+      "mode": "Тип изменения",
+      "direction": "Направление",
+      "value": "Значение",
+      "success": "Обновлено товаров: {{count}}",
+      "selectPrompt": "Выберите товары в таблице, чтобы включить массовые действия."
+    },
+    "import": {
+      "title": "Импорт товаров",
+      "mode": "Режим импорта",
+      "modeFull": "Полный (создание/обновление)",
+      "modePriceOnly": "Только цены",
+      "modeStockOnly": "Только остатки",
+      "chooseFile": "Выбрать файл (CSV/XLSX)",
+      "preview": "Предпросмотр",
+      "commit": "Импортировать",
+      "atomic": "Атомарно (отменить всё при ошибке)",
+      "totalRows": "Всего строк: {{count}}",
+      "validRows": "Корректных: {{count}}",
+      "invalidRows": "С ошибками: {{count}}",
+      "createCount": "Создано: {{count}}",
+      "updateCount": "Обновлено: {{count}}",
+      "skipCount": "Пропущено: {{count}}",
+      "rowNumber": "Строка",
+      "errors": "Ошибки",
+      "action": "Действие",
+      "close": "Закрыть"
+    },
+    "export": {
+      "csvAll": "Экспорт в CSV (все по фильтру)",
+      "xlsxAll": "Экспорт в Excel (все по фильтру)",
+      "csvSelected": "Экспорт в CSV (выбрано: {{count}})",
+      "xlsxSelected": "Экспорт в Excel (выбрано: {{count}})"
+    },
+    "tabs": {
+      "general": "Общее",
+      "translations": "Переводы",
+      "pricing": "Цены",
+      "inventory": "Склад",
+      "collections": "Коллекция",
+      "seo": "SEO",
+      "images": "Изображения",
+      "specifications": "Характеристики",
+      "labels": "Метки",
+      "documents": "Документы",
+      "videos": "Видео",
+      "history": "История"
+    },
+    "images": {
+      "dropHint": "Перетащите изображения сюда или нажмите для выбора",
+      "empty": "Изображений пока нет",
+      "primary": "Главное",
+      "setPrimary": "Сделать главным",
+      "crop": "Обрезать",
+      "replace": "Заменить",
+      "zoom": "Масштаб"
+    },
+    "specifications": {
+      "title": "Характеристики",
+      "empty": "Для данного типа товара характеристики не заданы"
+    },
+    "labels": {
+      "hint": "Нажмите на метку, чтобы присвоить или снять её с товара.",
+      "empty": "Метки ещё не созданы"
+    },
+    "documents": {
+      "columns": {
+        "type": "Тип",
+        "title": "Название",
+        "file": "Файл"
+      },
+      "view": "Открыть",
+      "add": "Добавить документ",
+      "empty": "Документов пока нет",
+      "chooseFile": "Выбрать файл",
+      "types": {
+        "manual": "Инструкция",
+        "certificate": "Сертификат",
+        "warranty_card": "Гарантийный талон",
+        "installation_instructions": "Инструкция по установке",
+        "exploded_diagram": "Схема сборки"
+      }
+    },
+    "videos": {
+      "columns": {
+        "type": "Тип",
+        "title": "Название",
+        "url": "Ссылка"
+      },
+      "view": "Открыть",
+      "add": "Добавить видео",
+      "empty": "Видео пока нет",
+      "chooseFile": "Выбрать файл",
+      "types": {
+        "youtube": "YouTube",
+        "mp4": "MP4",
+        "external": "Внешняя ссылка"
+      }
+    },
+    "history": {
+      "priceChange": "Цена изменена: {old} → {new}",
+      "empty": "История изменений пуста"
+    }
+  },
+  "categories": {
+    "title": "Категории",
+    "description": "Дерево категорий — подкатегория — это просто категория с родителем.",
+    "columns": {
+      "imageUrl": "Фото",
+      "name": "Название",
+      "slug": "Слаг",
+      "parentId": "ID родителя",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус",
+      "featured": "Топ продаж"
+    },
+    "fields": {
+      "name": "Название",
+      "slug": "Слаг",
+      "parentCategory": "Родительская категория",
+      "parentCategoryHelp": "Оставьте пустым для категории верхнего уровня. Вложенность не ограничена.",
+      "description": "Описание",
+      "sortOrder": "Порядок сортировки",
+      "active": "Активна",
+      "featured": "Топ продаж",
+      "featuredHelp": "Показывать в карусели «Хиты продаж» на главном экране мини-приложения (до 3 категорий).",
+      "imageUrl": "Фото категории"
+    }
+  },
+  "manufacturers": {
+    "title": "Производители",
+    "description": "Бренды и поставщики товаров.",
+    "columns": {
+      "name": "Название",
+      "slug": "Слаг",
+      "website": "Веб-сайт",
+      "status": "Статус"
+    },
+    "fields": {
+      "name": "Название",
+      "slug": "Слаг",
+      "description": "Описание",
+      "logoUrl": "URL логотипа",
+      "websiteUrl": "URL веб-сайта",
+      "active": "Активен"
+    }
+  },
+  "units": {
+    "title": "Единицы измерения",
+    "description": "Единицы измерения товаров (шт, кг, м и т.д.).",
+    "columns": {
+      "name": "Название",
+      "symbol": "Обозначение",
+      "status": "Статус"
+    },
+    "fields": {
+      "name": "Название",
+      "symbol": "Обозначение",
+      "active": "Активна"
+    }
+  },
+  "productImages": {
+    "title": "Изображения товаров",
+    "description": "У товара может быть неограниченное количество изображений.",
+    "columns": {
+      "preview": "Превью",
+      "productId": "ID товара",
+      "altText": "Альт. текст",
+      "sortOrder": "Порядок сортировки",
+      "primary": "Основное"
+    },
+    "fields": {
+      "product": "Товар",
+      "imageUrl": "URL изображения",
+      "altText": "Альт. текст",
+      "sortOrder": "Порядок сортировки",
+      "primaryImage": "Основное изображение"
+    }
+  },
+  "attributeDefinitions": {
+    "title": "Определения характеристик",
+    "description": "Определяет пользовательские характеристики товаров (например, Напряжение, Цвет).",
+    "columns": {
+      "code": "Код",
+      "name": "Название",
+      "dataType": "Тип данных",
+      "filterable": "Фильтруемая"
+    },
+    "fields": {
+      "code": "Код",
+      "name": "Название",
+      "dataType": "Тип данных",
+      "unit": "Единица измерения",
+      "filterable": "Фильтруемая",
+      "dataTypeString": "Строка",
+      "dataTypeNumber": "Число",
+      "dataTypeBoolean": "Логическое",
+      "dataTypeDate": "Дата"
+    }
+  },
+  "productTypes": {
+    "title": "Типы товаров",
+    "description": "Тип товара определяет набор характеристик (набор атрибутов), применяемый к товару.",
+    "columns": {
+      "code": "Код",
+      "name": "Название",
+      "attributeSetId": "ID набора атрибутов",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус",
+      "defaultImageUrl": "Фото"
+    },
+    "fields": {
+      "code": "Код",
+      "name": "Название",
+      "attributeSet": "Набор атрибутов",
+      "sortOrder": "Порядок сортировки",
+      "active": "Активен",
+      "defaultImageUrl": "Фото по умолчанию",
+      "nameEn": "Название (EN)",
+      "nameUz": "Название (UZ)"
+    }
+  },
+  "attributeSets": {
+    "title": "Наборы атрибутов",
+    "description": "Именованные группы характеристик, которые можно назначить типу товара.",
+    "columns": {
+      "code": "Код",
+      "name": "Название",
+      "description": "Описание"
+    },
+    "fields": {
+      "code": "Код",
+      "name": "Название",
+      "description": "Описание"
+    },
+    "actions": {
+      "manage": "Управлять атрибутами"
+    }
+  },
+  "attributeSetEditor": {
+    "back": "Назад к наборам атрибутов",
+    "inSetTitle": "Атрибуты в наборе",
+    "availableTitle": "Доступные атрибуты",
+    "searchPlaceholder": "Поиск атрибутов по названию или коду...",
+    "empty": "В наборе пока нет атрибутов. Добавьте их справа.",
+    "noAvailable": "Все определения характеристик уже добавлены в этот набор.",
+    "dragHint": "Перетащите для изменения порядка",
+    "columns": {
+      "required": "Обязательно",
+      "visible": "Видимо",
+      "defaultValue": "Значение по умолчанию"
+    },
+    "actions": {
+      "add": "Добавить",
+      "remove": "Удалить",
+      "addSuccess": "Атрибут добавлен в набор.",
+      "removeSuccess": "Атрибут удалён из набора."
+    },
+    "confirmRemoveTitle": "Удалить этот атрибут из набора?",
+    "confirmRemoveDescription": "Само определение характеристики не будет удалено — только его связь с этим набором."
+  },
+  "attributeSetItems": {
+    "title": "Элементы наборов атрибутов",
+    "description": "Связывает определения характеристик с наборами атрибутов и настраивает их отображение.",
+    "columns": {
+      "attributeSetId": "ID набора атрибутов",
+      "attributeDefinitionId": "ID определения характеристики",
+      "sortOrder": "Порядок сортировки",
+      "required": "Обязательно",
+      "visible": "Видимо",
+      "defaultValue": "Значение по умолчанию"
+    },
+    "fields": {
+      "attributeSet": "Набор атрибутов",
+      "attributeDefinition": "Определение характеристики",
+      "sortOrder": "Порядок сортировки",
+      "required": "Обязательно",
+      "visible": "Видимо",
+      "defaultValue": "Значение по умолчанию"
+    }
+  },
+  "attributeGroups": {
+    "title": "Группы атрибутов",
+    "description": "Группы для визуальной организации характеристик на странице товара.",
+    "columns": {
+      "code": "Код",
+      "name": "Название",
+      "sortOrder": "Порядок сортировки"
+    },
+    "fields": {
+      "code": "Код",
+      "name": "Название",
+      "sortOrder": "Порядок сортировки",
+      "nameEn": "Название (EN)",
+      "nameUz": "Название (UZ)"
+    }
+  },
+  "referenceValues": {
+    "title": "Справочные значения",
+    "description": "Общие справочники (материал, цвет, страна и т.д.), используемые в характеристиках товаров.",
+    "columns": {
+      "referenceType": "Тип справочника",
+      "code": "Код",
+      "name": "Название",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус"
+    },
+    "fields": {
+      "referenceType": "Тип справочника",
+      "code": "Код",
+      "name": "Название",
+      "sortOrder": "Порядок сортировки",
+      "active": "Активно",
+      "nameEn": "Название (EN)",
+      "nameUz": "Название (UZ)"
+    },
+    "referenceTypes": {
+      "material": "Материал",
+      "color": "Цвет",
+      "country": "Страна",
+      "finish": "Отделка",
+      "installation_type": "Тип установки",
+      "shape": "Форма",
+      "warranty_period": "Срок гарантии",
+      "connection_type": "Тип подключения",
+      "thread_size": "Размер резьбы",
+      "water_outlet_type": "Тип водовыпуска"
+    }
+  },
+  "collections": {
+    "title": "Коллекции",
+    "description": "Линейки товаров одного производителя, объединённые общим дизайном или серией.",
+    "columns": {
+      "code": "Код",
+      "name": "Название",
+      "slug": "Слаг",
+      "manufacturerId": "ID производителя",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус"
+    },
+    "fields": {
+      "manufacturer": "Производитель",
+      "code": "Код",
+      "slug": "Слаг",
+      "name": "Название",
+      "description": "Описание",
+      "imageUrl": "URL изображения",
+      "sortOrder": "Порядок сортировки",
+      "active": "Активна",
+      "nameEn": "Название (EN)",
+      "descriptionEn": "Описание (EN)",
+      "nameUz": "Название (UZ)",
+      "descriptionUz": "Описание (UZ)"
+    },
+    "actions": {
+      "manage": "Товары коллекции"
+    },
+    "detail": {
+      "back": "Назад к коллекциям",
+      "code": "Код",
+      "manufacturer": "Производитель",
+      "productsTitle": "Товары в коллекции ({{count}})",
+      "addProducts": "Добавить товары",
+      "removeFromCollection": "Убрать из коллекции",
+      "removeConfirmTitle": "Убрать этот товар из коллекции?",
+      "removeSuccess": "Товар убран из коллекции.",
+      "addSuccess": "Добавлено товаров: {{count}}.",
+      "emptyDescription": "В этой коллекции пока нет товаров.",
+      "pickerTitle": "Добавление товаров в коллекцию",
+      "pickerSearchPlaceholder": "Поиск товаров по названию, артикулу...",
+      "pickerEmpty": "Товары не найдены.",
+      "addSelected": "Добавить выбранные ({{count}})"
+    }
+  },
+  "productLabels": {
+    "title": "Метки товаров",
+    "description": "Значки товаров (Новинка, Хит продаж, Акция и т.п.).",
+    "columns": {
+      "code": "Код",
+      "name": "Название",
+      "badgeColor": "Цвет значка",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус"
+    },
+    "fields": {
+      "code": "Код",
+      "name": "Название",
+      "badgeColor": "Цвет значка",
+      "badgeColorHelp": "Название цвета Ant Design (например, red, gold, blue) или HEX-код.",
+      "sortOrder": "Порядок сортировки",
+      "active": "Активна",
+      "nameEn": "Название (EN)",
+      "nameUz": "Название (UZ)"
+    }
+  },
+  "productLabelAssignments": {
+    "title": "Назначения меток товаров",
+    "description": "Связь между товарами и метками — у товара может быть несколько меток.",
+    "columns": {
+      "productId": "ID товара",
+      "productLabelId": "ID метки"
+    },
+    "fields": {
+      "product": "Товар",
+      "productLabel": "Метка товара"
+    }
+  },
+  "productDocuments": {
+    "title": "Документы товаров",
+    "description": "Инструкции, сертификаты и другие документы, прикреплённые к товару.",
+    "columns": {
+      "productId": "ID товара",
+      "title": "Заголовок",
+      "documentType": "Тип документа",
+      "fileUrl": "URL файла",
+      "sortOrder": "Порядок сортировки"
+    },
+    "fields": {
+      "product": "Товар",
+      "documentType": "Тип документа",
+      "title": "Заголовок",
+      "fileUrl": "URL файла",
+      "mimeType": "MIME-тип",
+      "sizeBytes": "Размер (байт)",
+      "sortOrder": "Порядок сортировки"
+    },
+    "documentTypes": {
+      "manual": "Инструкция",
+      "certificate": "Сертификат",
+      "warranty_card": "Гарантийный талон",
+      "installation_instructions": "Инструкция по установке",
+      "exploded_diagram": "Схема сборки"
+    }
+  },
+  "productVideos": {
+    "title": "Видео товаров",
+    "description": "Видеоролики, прикреплённые к товару (YouTube, MP4 или внешняя ссылка).",
+    "columns": {
+      "productId": "ID товара",
+      "title": "Заголовок",
+      "videoType": "Тип видео",
+      "url": "URL",
+      "sortOrder": "Порядок сортировки"
+    },
+    "fields": {
+      "product": "Товар",
+      "videoType": "Тип видео",
+      "title": "Заголовок",
+      "url": "URL",
+      "thumbnailUrl": "URL превью",
+      "sortOrder": "Порядок сортировки"
+    },
+    "videoTypes": {
+      "youtube": "YouTube",
+      "mp4": "MP4",
+      "external": "Внешняя ссылка"
+    }
+  },
+  "productAttributes": {
+    "title": "Характеристики товаров",
+    "description": "Значения EAV — товар может иметь неограниченное количество пользовательских характеристик.",
+    "columns": {
+      "productId": "ID товара",
+      "attributeDefinitionId": "ID определения характеристики",
+      "stringValue": "Строковое значение",
+      "numberValue": "Числовое значение",
+      "booleanValue": "Логическое значение"
+    },
+    "fields": {
+      "product": "Товар",
+      "attributeDefinition": "Определение характеристики",
+      "stringValue": "Строковое значение",
+      "numberValue": "Числовое значение",
+      "booleanValue": "Логическое значение",
+      "dateValue": "Значение даты"
+    }
+  },
+  "productRecommendations": {
+    "title": "Рекомендации товаров",
+    "description": "Вручную подобранные связи между товарами — сопутствующие, похожие или «часто покупают вместе». Показ «в той же коллекции» и «похожие» рассчитывается автоматически и здесь не редактируется.",
+    "columns": {
+      "productId": "Товар",
+      "recommendedProductId": "Рекомендуемый товар",
+      "relationType": "Тип связи",
+      "sortOrder": "Порядок сортировки"
+    },
+    "fields": {
+      "product": "Товар",
+      "recommendedProduct": "Рекомендуемый товар",
+      "relationType": "Тип связи",
+      "sortOrder": "Порядок сортировки"
+    },
+    "relationTypes": {
+      "related": "Похожий товар",
+      "accessory": "Аксессуар",
+      "frequently_bought_together": "Часто покупают вместе"
+    }
+  }
+}

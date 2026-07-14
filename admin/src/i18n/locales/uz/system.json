@@ -1,0 +1,80 @@
+{
+  "auditLogs": {
+    "title": "Audit jurnali",
+    "description": "Tizim faoliyatining o'zgartirib bo'lmaydigan jurnali (faqat o'qish uchun).",
+    "columns": {
+      "action": "Amal",
+      "entityType": "Obyekt turi",
+      "entityId": "Obyekt ID",
+      "actorType": "Ijrochi turi",
+      "ipAddress": "IP-manzil",
+      "when": "Vaqti"
+    },
+    "actions": {
+      "login": "Tizimga kirish",
+      "login_failed": "Muvaffaqiyatsiz kirish urinishi",
+      "logout": "Tizimdan chiqish",
+      "password_changed": "Parol o'zgartirildi",
+      "password_reset": "Parolni tiklash",
+      "register": "Ro'yxatdan o'tish",
+      "register_telegram": "Telegram orqali ro'yxatdan o'tish",
+      "product_created": "Mahsulot yaratildi",
+      "product_updated": "Mahsulot yangilandi",
+      "product_cloned": "Mahsulot klonlandi",
+      "bulk_status_change": "Ommaviy holat o'zgarishi",
+      "bulk_manufacturer_change": "Ommaviy ishlab chiqaruvchi o'zgarishi",
+      "bulk_category_change": "Ommaviy kategoriya o'zgarishi",
+      "bulk_collection_change": "Ommaviy kolleksiya o'zgarishi",
+      "bulk_update": "Ommaviy yangilash",
+      "bulk_delete": "Ommaviy o'chirish",
+      "bulk_price_adjust": "Ommaviy narx o'zgarishi",
+      "price_rollback": "Narxni bekor qilish"
+    },
+    "entityTypes": {
+      "admin_user": "Administrator",
+      "customer": "Mijoz",
+      "product": "Mahsulot"
+    },
+    "actorTypes": {
+      "admin_user": "Administrator",
+      "customer": "Mijoz",
+      "system": "Tizim"
+    }
+  },
+  "priceHistory": {
+    "title": "Narxlar tarixi",
+    "description": "Har bir mahsulot narxi o'zgarishlari tarixi. Mahsulot narxini tarixdagi istalgan yozuvga qaytarish mumkin.",
+    "columns": {
+      "productId": "Mahsulot ID",
+      "oldPrice": "Eski narx",
+      "newPrice": "Yangi narx",
+      "reason": "Sabab",
+      "when": "Vaqti"
+    },
+    "actions": {
+      "rollback": "Qaytarish"
+    },
+    "confirmRollback": "Mahsulot narxi ushbu yozuvga qaytarilsinmi?",
+    "confirmRollbackDescription": "Mahsulotning joriy narxi {{price}} bilan almashtiriladi.",
+    "rollbackSuccess": "Mahsulot narxi qaytarildi"
+  },
+  "uploadedFiles": {
+    "title": "Media kutubxonasi",
+    "description": "Mahsulot rasmlari, logotiplar, bannerlar va boshqa fayllar uchun qayta ishlatiladigan kutubxona.",
+    "empty": "Hozircha fayllar yuklanmagan",
+    "columns": {
+      "fileName": "Fayl nomi",
+      "mimeType": "MIME turi",
+      "sizeBytes": "Hajmi (bayt)",
+      "entityType": "Obyekt turi",
+      "uploaded": "Yuklangan"
+    },
+    "fields": {
+      "fileName": "Fayl nomi",
+      "filePath": "Fayl yo'li/URL",
+      "mimeType": "MIME turi",
+      "sizeBytes": "Hajmi (bayt)",
+      "entityType": "Biriktirilgan obyekt turi"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "customers": {
+    "title": "Customers",
+    "description": "Storefront/Telegram-bot end customers.",
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "telegramId": "Telegram ID",
+      "telegramUsername": "Telegram",
+      "status": "Status"
+    },
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "telegramId": "Telegram ID",
+      "password": "Password",
+      "passwordHelp": "Leave blank to keep unchanged.",
+      "active": "Active"
+    }
+  },
+  "adminUsers": {
+    "title": "Admin Users",
+    "description": "Staff accounts with access to this admin panel.",
+    "columns": {
+      "username": "Username",
+      "email": "Email",
+      "fullName": "Full name",
+      "superuser": "Superuser",
+      "status": "Status",
+      "lastLogin": "Last login",
+      "never": "Never"
+    },
+    "fields": {
+      "username": "Username",
+      "email": "Email",
+      "fullName": "Full name",
+      "password": "Password",
+      "passwordHelp": "Required on create, leave blank to keep unchanged on edit.",
+      "role": "Role",
+      "active": "Active",
+      "superuser": "Superuser"
+    },
+    "sessions": {
+      "title": "Sessions",
+      "titleFor": "Sessions: {{username}}",
+      "description": "This admin's active login sessions across devices.",
+      "columns": {
+        "device": "Device",
+        "ip": "IP address",
+        "createdAt": "Started"
+      },
+      "unknown": "Unknown",
+      "empty": "No active sessions",
+      "confirmRevoke": "End this session?",
+      "confirmRevokeAll": "End all sessions for this user? They'll need to sign in again on every device.",
+      "revokeAll": "End all sessions",
+      "revokeSuccess": "Session ended",
+      "revokeAllSuccess": "All sessions ended"
+    }
+  },
+  "roles": {
+    "title": "Roles",
+    "description": "RBAC roles assignable to admin users.",
+    "columns": {
+      "name": "Name",
+      "description": "Description"
+    },
+    "fields": {
+      "name": "Name",
+      "description": "Description"
+    }
+  },
+  "permissions": {
+    "title": "Permissions",
+    "description": "Granular permissions that roles can be granted.",
+    "columns": {
+      "code": "Code",
+      "description": "Description"
+    },
+    "fields": {
+      "code": "Code",
+      "description": "Description"
+    }
+  },
+  "rolePermissions": {
+    "title": "Role Permissions",
+    "description": "Grants a permission to a role.",
+    "columns": {
+      "roleId": "Role ID",
+      "permissionId": "Permission ID"
+    },
+    "fields": {
+      "role": "Role",
+      "permission": "Permission"
+    }
+  }
+}

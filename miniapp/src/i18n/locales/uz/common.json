@@ -1,0 +1,44 @@
+{
+  "appName": "TipoBot",
+  "nav": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "favorites": "Sevimlilar",
+    "cart": "Savat",
+    "profile": "Profil"
+  },
+  "actions": {
+    "addToCart": "Savatga",
+    "buyNow": "Hozir sotib olish",
+    "add": "Qo'shish",
+    "remove": "O'chirish",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "confirm": "Tasdiqlash",
+    "retry": "Qayta urinish",
+    "viewAll": "Barchasini ko'rish",
+    "share": "Ulashish",
+    "call": "Qo'ng'iroq qilish",
+    "search": "Qidiruv"
+  },
+  "state": {
+    "loading": "Yuklanmoqda...",
+    "error": "Nimadir xato ketdi",
+    "empty": "Hozircha bo'sh",
+    "pullToRefresh": "Yangilash uchun torting",
+    "releaseToRefresh": "Yangilash uchun qo'yib yuboring",
+    "refreshing": "Yangilanmoqda..."
+  },
+  "genericError": "Xatolik yuz berdi. Qaytadan urinib ko'ring.",
+  "toast": {
+    "addedToCart": "Savatga qo'shildi",
+    "addedToFavorites": "Sevimlilarga qo'shildi",
+    "removedFromFavorites": "Sevimlilardan o'chirildi"
+  },
+  "stock": {
+    "inStock": "Mavjud",
+    "lowStock": "Kam qoldi",
+    "outOfStock": "Mavjud emas",
+    "unlimited": "Mavjud"
+  }
+}

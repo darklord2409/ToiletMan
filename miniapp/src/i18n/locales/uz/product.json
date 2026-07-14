@@ -1,0 +1,18 @@
+{
+  "specifications": "Xususiyatlari",
+  "description": "Tavsif",
+  "documents": "Hujjatlar",
+  "videos": "Videolar",
+  "related": "O'xshash mahsulotlar",
+  "frequentlyBoughtTogether": "Ko'pincha birga sotib olinadi",
+  "accessories": "Tavsiya etilgan aksessuarlar",
+  "sameCollection": "Shu kolleksiyadan",
+  "similar": "Sizga yoqishi mumkin",
+  "sku": "Artikul",
+  "addToCart": "Savatga",
+  "inCart": "Savatda: {{count}}",
+  "outOfStock": "Mavjud emas",
+  "quantity": "Miqdori",
+  "notFound": "Mahsulot topilmadi",
+  "goBack": "Katalogga qaytish"
+}

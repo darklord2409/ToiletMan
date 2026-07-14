@@ -1,0 +1,80 @@
+{
+  "auditLogs": {
+    "title": "Audit Logs",
+    "description": "Append-only system activity trail (read-only).",
+    "columns": {
+      "action": "Action",
+      "entityType": "Entity type",
+      "entityId": "Entity ID",
+      "actorType": "Actor type",
+      "ipAddress": "IP address",
+      "when": "When"
+    },
+    "actions": {
+      "login": "Login",
+      "login_failed": "Failed login attempt",
+      "logout": "Logout",
+      "password_changed": "Password changed",
+      "password_reset": "Password reset",
+      "register": "Registration",
+      "register_telegram": "Registered via Telegram",
+      "product_created": "Product created",
+      "product_updated": "Product updated",
+      "product_cloned": "Product cloned",
+      "bulk_status_change": "Bulk status change",
+      "bulk_manufacturer_change": "Bulk manufacturer change",
+      "bulk_category_change": "Bulk category change",
+      "bulk_collection_change": "Bulk collection change",
+      "bulk_update": "Bulk update",
+      "bulk_delete": "Bulk delete",
+      "bulk_price_adjust": "Bulk price adjustment",
+      "price_rollback": "Price rollback"
+    },
+    "entityTypes": {
+      "admin_user": "Admin user",
+      "customer": "Customer",
+      "product": "Product"
+    },
+    "actorTypes": {
+      "admin_user": "Admin user",
+      "customer": "Customer",
+      "system": "System"
+    }
+  },
+  "priceHistory": {
+    "title": "Price History",
+    "description": "Historical price changes per product. A product's price can be rolled back to any entry.",
+    "columns": {
+      "productId": "Product ID",
+      "oldPrice": "Old price",
+      "newPrice": "New price",
+      "reason": "Reason",
+      "when": "When"
+    },
+    "actions": {
+      "rollback": "Roll back"
+    },
+    "confirmRollback": "Roll the product's price back to this entry?",
+    "confirmRollbackDescription": "The product's current price will be replaced with {{price}}.",
+    "rollbackSuccess": "Product price rolled back"
+  },
+  "uploadedFiles": {
+    "title": "Media Library",
+    "description": "Reusable library for product images, logos, banners and other uploaded files.",
+    "empty": "No files uploaded yet",
+    "columns": {
+      "fileName": "File name",
+      "mimeType": "MIME type",
+      "sizeBytes": "Size (bytes)",
+      "entityType": "Entity type",
+      "uploaded": "Uploaded"
+    },
+    "fields": {
+      "fileName": "File name",
+      "filePath": "File path/URL",
+      "mimeType": "MIME type",
+      "sizeBytes": "Size (bytes)",
+      "entityType": "Attached entity type"
+    }
+  }
+}

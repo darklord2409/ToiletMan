@@ -1,0 +1,82 @@
+{
+  "title": "Панель управления",
+  "stats": {
+    "products": "Товары",
+    "orders": "Заказы",
+    "customers": "Покупатели",
+    "categories": "Категории",
+    "revenue": "Выручка за 30 дней",
+    "lowStock": "Мало на складе",
+    "outOfStock": "Нет в наличии",
+    "noOrders": "Заказов пока нет",
+    "activeCount": "{{n}} активных",
+    "viewAll": "Смотреть товары →",
+    "viewAllCustomers": "Смотреть покупателей →"
+  },
+  "recentOrders": "Последние заказы",
+  "lowestStockProducts": "Заканчивающиеся товары",
+  "sales": {
+    "title": "Динамика продаж",
+    "rangeDays": "{{n}} дней",
+    "revenueLabel": "Выручка",
+    "ordersLabel": "Заказы",
+    "empty": "Нет заказов за выбранный период"
+  },
+  "popularProducts": {
+    "title": "Популярные товары",
+    "empty": "Нет данных о продажах за последние 30 дней"
+  },
+  "latestProducts": {
+    "title": "Новые товары"
+  },
+  "columns": {
+    "orderNumber": "№ заказа",
+    "status": "Статус",
+    "total": "Сумма",
+    "placed": "Оформлен",
+    "sku": "Артикул",
+    "name": "Название",
+    "stock": "Остаток",
+    "price": "Цена",
+    "quantitySold": "Продано, шт.",
+    "revenue": "Выручка"
+  },
+  "analytics": {
+    "title": "Аналитика",
+    "description": "Вовлечённость по товарам и каталогу в витрине и Mini App.",
+    "columns": {
+      "product": "Товар",
+      "sku": "Артикул",
+      "category": "Категория",
+      "collection": "Коллекция",
+      "views": "Просмотры",
+      "favorites": "В избранном",
+      "addedToCart": "В корзине",
+      "requests": "Заказы"
+    },
+    "mostViewed": {
+      "title": "Самые просматриваемые товары",
+      "empty": "Пока нет данных о просмотрах"
+    },
+    "mostFavorited": {
+      "title": "Самые популярные в избранном",
+      "empty": "Пока нет данных об избранном"
+    },
+    "mostAddedToCart": {
+      "title": "Чаще всего добавляют в корзину",
+      "empty": "Пока нет данных о корзине"
+    },
+    "mostRequested": {
+      "title": "Самые заказываемые товары",
+      "empty": "Пока нет данных о заказах"
+    },
+    "popularCollections": {
+      "title": "Популярные коллекции",
+      "empty": "Пока нет данных по коллекциям"
+    },
+    "popularCategories": {
+      "title": "Популярные категории",
+      "empty": "Пока нет данных по категориям"
+    }
+  }
+}

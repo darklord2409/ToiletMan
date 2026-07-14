@@ -1,0 +1,155 @@
+{
+  "banners": {
+    "title": "Banners",
+    "description": "Homepage/storefront promotional banners.",
+    "columns": {
+      "preview": "Preview",
+      "title": "Title",
+      "sortOrder": "Sort order",
+      "status": "Status"
+    },
+    "fields": {
+      "title": "Title",
+      "imageUrl": "Image URL",
+      "linkUrl": "Link URL",
+      "sortOrder": "Sort order",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "active": "Active"
+    }
+  },
+  "news": {
+    "title": "News",
+    "description": "Store announcements and blog posts.",
+    "columns": {
+      "title": "Title",
+      "slug": "Slug",
+      "status": "Status",
+      "publishedAt": "Published at",
+      "published": "Published",
+      "draft": "Draft"
+    },
+    "fields": {
+      "title": "Title",
+      "slug": "Slug",
+      "excerpt": "Excerpt",
+      "content": "Content",
+      "coverImageUrl": "Cover image URL",
+      "author": "Author",
+      "published": "Published",
+      "publishedAt": "Published at"
+    }
+  },
+  "staticPages": {
+    "title": "Static Pages",
+    "description": "About Us, Terms of Service, and other static content.",
+    "columns": {
+      "title": "Title",
+      "slug": "Slug",
+      "status": "Status",
+      "published": "Published",
+      "draft": "Draft"
+    },
+    "fields": {
+      "title": "Title",
+      "slug": "Slug",
+      "content": "Content",
+      "published": "Published"
+    }
+  },
+  "siteSettings": {
+    "title": "Site Settings",
+    "description": "Key/value configuration for the storefront and bot.",
+    "columns": {
+      "key": "Key",
+      "value": "Value",
+      "description": "Description"
+    },
+    "fields": {
+      "key": "Key",
+      "value": "Value (JSON)",
+      "description": "Description"
+    }
+  },
+  "storeSettings": {
+    "title": "Store Settings",
+    "description": "Core store identity, contacts, delivery, currency and default language.",
+    "sections": {
+      "general": "General",
+      "contacts": "Contacts",
+      "currencyLanguage": "Currency & Language",
+      "delivery": "Delivery & Working Hours"
+    },
+    "fields": {
+      "storeName": "Store name",
+      "logoUrl": "Logo URL",
+      "address": "Address",
+      "aboutText": "\"About us\" text",
+      "aboutTextHelp": "A short blurb about the store — shown in the \"About us\" section in the Telegram bot.",
+      "phone": "Phone",
+      "supportEmail": "Support email",
+      "supportPhone": "Support phone",
+      "telegramUrl": "Telegram",
+      "whatsappUrl": "WhatsApp",
+      "instagramUrl": "Instagram",
+      "currency": "Currency",
+      "defaultLanguage": "Default language",
+      "taxRate": "Tax rate",
+      "taxIncluded": "Tax included in price",
+      "deliveryInfo": "Delivery terms",
+      "workingHours": "Working hours"
+    },
+    "weekdays": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "weekdayClosed": "Closed",
+    "weekdayOpen": "Open"
+  },
+  "botSettings": {
+    "title": "Telegram Bot Settings",
+    "description": "Welcome message, menu button, managers, and notification templates — all editable without code changes.",
+    "sections": {
+      "general": "General",
+      "welcome": "Welcome message",
+      "menuButton": "Menu button",
+      "announcement": "Pinned announcement",
+      "managers": "Managers",
+      "templates": "Notification templates"
+    },
+    "fields": {
+      "botName": "Bot name",
+      "botNameHelp": "Saved straight to real Telegram — this is what users actually see as the bot's name.",
+      "botUsername": "Bot username",
+      "botUsernameHelp": "Reference only — Telegram doesn't let a bot change its own @username via API. That can only be done through @BotFather (/setusername). This value is kept in sync automatically with the real one from Telegram.",
+      "welcomeText": "Welcome text",
+      "welcomeImageUrl": "Welcome image URL",
+      "menuButtonText": "Menu button text",
+      "pinnedAnnouncement": "Announcement text (optional)"
+    },
+    "managerIdsHelp": "One Telegram ID per line. These users get notified on every new order.",
+    "addManagerId": "Add manager",
+    "removeManagerId": "Remove",
+    "events": {
+      "order_confirmed": "Order confirmed",
+      "order_processing": "Order processing",
+      "order_shipped": "Order shipped",
+      "order_delivered": "Order delivered",
+      "order_cancelled": "Order cancelled",
+      "order_refunded": "Order refunded",
+      "manager_contacted": "Manager contacted customer",
+      "new_order_manager_alert": "New order alert to managers"
+    },
+    "templatesHelp": "Leave a field blank to use the default text. Available placeholders: {order_number} for order events, {manager_notes} for \"Manager contacted\", and {customer_name}/{phone}/{products}/{total}/{currency}/{delivery}/{comment} for the manager alert.",
+    "locales": {
+      "ru": "Русский",
+      "en": "English",
+      "uz": "O'zbekcha"
+    }
+  }
+}

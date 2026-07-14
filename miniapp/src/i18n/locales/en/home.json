@@ -1,0 +1,27 @@
+{
+  "search": {
+    "placeholder": "Search products..."
+  },
+  "banners": {
+    "title": "Promotions"
+  },
+  "categories": {
+    "title": "Categories"
+  },
+  "topCategories": {
+    "title": "Best sellers"
+  },
+  "featured": {
+    "title": "Featured"
+  },
+  "newArrivals": {
+    "title": "New arrivals"
+  },
+  "popular": {
+    "title": "Popular"
+  },
+  "sale": {
+    "title": "On sale"
+  },
+  "seeAll": "See all"
+}

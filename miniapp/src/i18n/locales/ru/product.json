@@ -1,0 +1,18 @@
+{
+  "specifications": "Характеристики",
+  "description": "Описание",
+  "documents": "Документы",
+  "videos": "Видео",
+  "related": "Похожие товары",
+  "frequentlyBoughtTogether": "Часто покупают вместе",
+  "accessories": "Рекомендуемые аксессуары",
+  "sameCollection": "Из этой коллекции",
+  "similar": "Вам может понравиться",
+  "sku": "Артикул",
+  "addToCart": "В корзину",
+  "inCart": "В корзине: {{count}}",
+  "outOfStock": "Нет в наличии",
+  "quantity": "Количество",
+  "notFound": "Товар не найден",
+  "goBack": "Назад к каталогу"
+}

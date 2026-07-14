@@ -1,0 +1,39 @@
+{
+  "title": "Оформление заказа",
+  "contact": {
+    "title": "Контактные данные",
+    "name": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "phone": "Телефон",
+    "phonePlaceholder": "+998 90 123 45 67"
+  },
+  "delivery": {
+    "title": "Способ получения",
+    "pickup": "Самовывоз",
+    "delivery": "Доставка",
+    "address": "Адрес доставки",
+    "addressPlaceholder": "Введите адрес"
+  },
+  "comment": "Комментарий к заказу",
+  "commentPlaceholder": "Необязательно",
+  "payment": {
+    "title": "Способ оплаты",
+    "cash": "Наличными при получении"
+  },
+  "summary": {
+    "title": "Ваш заказ"
+  },
+  "submit": "Подтвердить заказ",
+  "success": {
+    "title": "Заказ оформлен!",
+    "description": "Номер заказа {{orderNumber}}. Менеджер свяжется с вами для подтверждения.",
+    "viewOrder": "Посмотреть заказ",
+    "continueShopping": "Продолжить покупки"
+  },
+  "validation": {
+    "nameRequired": "Введите имя",
+    "phoneRequired": "Введите номер телефона",
+    "addressRequired": "Введите адрес доставки"
+  },
+  "emptyCartRedirect": "Ваша корзина пуста"
+}
