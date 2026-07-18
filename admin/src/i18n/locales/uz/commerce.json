@@ -156,16 +156,22 @@
   },
   "discounts": {
     "title": "Chegirmalar",
-    "description": "Aksiyaga bog'langan chegirma qoidalari.",
+    "description": "Barcha mahsulotlarga, bir nechta kategoriyaga, bitta kategoriyaga yoki bitta mahsulotga chegirmalar.",
     "columns": {
-      "promotionId": "Aksiya ID",
+      "name": "Nomi",
       "scope": "Qamrov",
-      "amountType": "Summa turi",
-      "value": "Qiymat"
+      "categoryId": "Kategoriya ID",
+      "productId": "Mahsulot ID",
+      "amount": "Hajmi",
+      "status": "Holati",
+      "starts": "Boshlanishi",
+      "ends": "Tugashi"
     },
     "fields": {
+      "name": "Nomi",
       "promotion": "Aksiya",
       "scope": "Qamrov",
+      "scopeAll": "Barcha mahsulotlar",
       "scopeProduct": "Mahsulot",
       "scopeCategory": "Kategoriya",
       "scopeCart": "Savatcha",
@@ -175,7 +181,24 @@
       "amountType": "Summa turi",
       "amountTypePercentage": "Foiz",
       "amountTypeFixed": "Belgilangan summa",
-      "value": "Qiymat"
+      "value": "Qiymat",
+      "active": "Faol",
+      "startsAt": "Boshlanish sanasi",
+      "endsAt": "Tugash sanasi"
+    },
+    "createModal": {
+      "openButton": "Yangi chegirma",
+      "title": "Yangi chegirma",
+      "namePlaceholder": "masalan, Yozgi chegirma",
+      "target": "Qo'llaniladi",
+      "categoriesLabel": "Kategoriyalar",
+      "categoriesPlaceholder": "Bir yoki bir nechta kategoriyani tanlang",
+      "productPlaceholder": "Mahsulotni tanlang",
+      "valueRequired": "Chegirma qiymatini kiriting",
+      "categoryRequired": "Kamida bitta kategoriyani tanlang",
+      "productRequired": "Mahsulotni tanlang",
+      "submit": "Yaratish",
+      "success": "Chegirma yaratildi"
     }
   },
   "coupons": {

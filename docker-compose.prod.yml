@@ -1,0 +1,125 @@
+name: tipobot
+
+# Production stack: built images only (no source bind-mounts, no dev
+# servers), restart policies, and health checks. Postgres/Redis are not
+# published to the host — only backend/admin/miniapp need to be reachable,
+# and until a domain + reverse proxy (see DEPLOYMENT.md) are set up, those
+# three are published directly on the ports below for direct testing.
+#
+# Run with:
+#   docker compose -f docker-compose.prod.yml --env-file .env up -d --build
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - tipobot_network
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - tipobot_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.prod
+    image: tipobot-backend-prod
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_HOST: postgres
+      REDIS_HOST: redis
+      ENVIRONMENT: production
+      DEBUG: "false"
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - backend_uploads:/app/uploads
+    networks:
+      - tipobot_network
+
+  bot:
+    build:
+      context: .
+      dockerfile: bot/Dockerfile.prod
+    image: tipobot-bot-prod
+    restart: always
+    env_file:
+      - .env
+    environment:
+      REDIS_HOST: redis
+      BACKEND_HOST: backend
+      BACKEND_PORT: 8000
+      BACKEND_BASE_URL: http://backend:8000/api/v1
+      ENVIRONMENT: production
+    depends_on:
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_started
+    networks:
+      - tipobot_network
+
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile.prod
+    image: tipobot-admin-prod
+    restart: always
+    ports:
+      - "${ADMIN_PORT:-5173}:80"
+    depends_on:
+      - backend
+    networks:
+      - tipobot_network
+
+  miniapp:
+    build:
+      context: ./miniapp
+      dockerfile: Dockerfile.prod
+    image: tipobot-miniapp-prod
+    restart: always
+    ports:
+      - "${MINIAPP_PORT:-5174}:80"
+    depends_on:
+      - backend
+    networks:
+      - tipobot_network
+
+networks:
+  tipobot_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  backend_uploads:

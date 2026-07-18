@@ -8,6 +8,7 @@ from app.repositories.catalog.product import ProductRepository
 from app.repositories.catalog.product_image import ProductImageRepository
 from app.repositories.users.favorite import FavoriteRepository
 from app.schemas.storefront.favorites import FavoriteResponse
+from app.services.commerce.discount_engine import DiscountEngine
 from app.services.storefront._shared import build_product_summary
 
 
@@ -16,6 +17,7 @@ class StorefrontFavoritesService:
         self.favorite_repo = FavoriteRepository(session)
         self.product_repo = ProductRepository(session)
         self.image_repo = ProductImageRepository(session)
+        self.discount_engine = DiscountEngine(session)
 
     async def list_favorites(self, customer_id: uuid.UUID) -> list[FavoriteResponse]:
         favorites, _ = await self.favorite_repo.list_all(
@@ -29,7 +31,9 @@ class StorefrontFavoritesService:
             responses.append(
                 FavoriteResponse(
                     id=favorite.id,
-                    product=await build_product_summary(self.image_repo, product),
+                    product=await build_product_summary(
+                        self.image_repo, product, self.discount_engine
+                    ),
                     created_at=favorite.created_at,
                 )
             )
@@ -46,7 +50,7 @@ class StorefrontFavoritesService:
         )
         return FavoriteResponse(
             id=favorite.id,
-            product=await build_product_summary(self.image_repo, product),
+            product=await build_product_summary(self.image_repo, product, self.discount_engine),
             created_at=favorite.created_at,
         )
 

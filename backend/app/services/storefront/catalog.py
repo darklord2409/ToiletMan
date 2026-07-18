@@ -36,6 +36,7 @@ from app.schemas.storefront.catalog import (
     ResolvedReferenceValue,
 )
 from app.services.catalog.product import ProductService
+from app.services.commerce.discount_engine import DiscountEngine
 
 
 class StorefrontCatalogService:
@@ -64,6 +65,7 @@ class StorefrontCatalogService:
         self.banner_repo = BannerRepository(session)
         self.recommendation_repo = ProductRecommendationRepository(session)
         self.analytics_event_repo = ProductAnalyticsEventRepository(session)
+        self.discount_engine = DiscountEngine(session)
 
     async def _to_list_items(self, products: list[Any]) -> list[ProductListItem]:
         image_map = await self.image_repo.get_primary_image_map([p.id for p in products])
@@ -85,6 +87,9 @@ class StorefrontCatalogService:
                 list_item.primary_image_url = default_image_by_type.get(product.product_type_id)
             else:
                 list_item.primary_image_url = None
+            await self.discount_engine.apply(
+                list_item, product_id=product.id, category_id=product.category_id
+            )
             results.append(list_item)
         return results
 
@@ -265,8 +270,13 @@ class StorefrontCatalogService:
 
         recommendations = await self.get_recommendations(product)
 
+        product_read = ProductRead.model_validate(product)
+        await self.discount_engine.apply(
+            product_read, product_id=product.id, category_id=product.category_id
+        )
+
         return ProductDetailResponse(
-            product=ProductRead.model_validate(product),
+            product=product_read,
             images=list(images),
             documents=list(documents),
             videos=list(videos),

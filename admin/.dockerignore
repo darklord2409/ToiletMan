@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+.env
+.env.*
+npm-debug.log
+e2e/.auth
+playwright-report
+test-results

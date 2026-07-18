@@ -132,6 +132,7 @@ export function ProductCard({ product, isFavorite, onToggleFavorite, style }: Pr
       </div>
       <div style={{ padding: "10px 10px 12px", display: "flex", flexDirection: "column", gap: 6 }}>
         <span
+          data-testid="product-name"
           style={{
             fontSize: 13,
             lineHeight: 1.35,

@@ -14,6 +14,7 @@ from app.repositories.catalog.product_image import ProductImageRepository
 from app.repositories.commerce.cart import CartRepository
 from app.repositories.commerce.cart_item import CartItemRepository
 from app.schemas.storefront.cart import CartResponse
+from app.services.commerce.discount_engine import DiscountEngine
 from app.services.storefront._shared import build_product_summary
 
 
@@ -29,6 +30,7 @@ class StorefrontCartService:
         self.product_repo = ProductRepository(session)
         self.image_repo = ProductImageRepository(session)
         self.analytics_event_repo = ProductAnalyticsEventRepository(session)
+        self.discount_engine = DiscountEngine(session)
 
     async def _get_or_create_cart(self, customer_id: uuid.UUID) -> Cart:
         result = await self.session.execute(
@@ -66,7 +68,9 @@ class StorefrontCartService:
                 {
                     "id": item.id,
                     "product_id": item.product_id,
-                    "product": await build_product_summary(self.image_repo, product),
+                    "product": await build_product_summary(
+                        self.image_repo, product, self.discount_engine
+                    ),
                     "quantity": item.quantity,
                     "unit_price": item.unit_price,
                     "line_total": line_total,
@@ -110,9 +114,12 @@ class StorefrontCartService:
         new_quantity = (existing.quantity if existing else 0) + quantity
         self._check_stock(product, new_quantity)
 
+        unit_price, _ = await self.discount_engine.effective_price(
+            product_id=product.id, category_id=product.category_id, price=product.price
+        )
         if existing:
             await self.cart_item_repo.update(
-                existing, {"quantity": new_quantity, "unit_price": product.price}
+                existing, {"quantity": new_quantity, "unit_price": unit_price}
             )
         else:
             await self.cart_item_repo.create(
@@ -120,7 +127,7 @@ class StorefrontCartService:
                     "cart_id": cart.id,
                     "product_id": product_id,
                     "quantity": quantity,
-                    "unit_price": product.price,
+                    "unit_price": unit_price,
                 }
             )
         return await self._to_response(cart)

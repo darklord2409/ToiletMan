@@ -28,12 +28,17 @@ export function ResourceSelect({
   onChange,
   placeholder,
   id,
+  mode,
 }: {
   resource: NonNullable<FormFieldConfig["optionsResource"]>;
   value: unknown;
   onChange: (value: unknown) => void;
   placeholder?: string;
   id?: string;
+  // "multiple" lets a single field target several rows at once (e.g. a
+  // discount aimed at several categories in one go) — value/onChange then
+  // carry a string[] instead of a bare string.
+  mode?: "multiple";
 }) {
   const { data, isLoading } = useQuery({
     queryKey: ["form-options", resource.endpoint],
@@ -54,7 +59,8 @@ export function ResourceSelect({
   return (
     <Select
       id={id}
-      value={value as string | undefined}
+      mode={mode}
+      value={value as string | string[] | undefined}
       onChange={onChange}
       loading={isLoading}
       allowClear

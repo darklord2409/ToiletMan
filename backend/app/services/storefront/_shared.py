@@ -3,9 +3,12 @@ from typing import Any
 from app.repositories.catalog.product_image import ProductImageRepository
 from app.schemas.catalog.product import ProductRead
 from app.schemas.storefront.catalog import ProductSummary
+from app.services.commerce.discount_engine import DiscountEngine
 
 
-async def build_product_summary(image_repo: ProductImageRepository, product: Any) -> ProductSummary:
+async def build_product_summary(
+    image_repo: ProductImageRepository, product: Any, discount_engine: DiscountEngine
+) -> ProductSummary:
     """Shared by the cart and favorites services: a lightweight product
     projection (used identically by both) that goes through `ProductRead`
     for `availability_status`/`available_quantity` — those are
@@ -19,7 +22,7 @@ async def build_product_summary(image_repo: ProductImageRepository, product: Any
             filters={"product_id": product.id}, limit=1, sort_by="sort_order"
         )
     read = ProductRead.model_validate(product)
-    return ProductSummary(
+    summary = ProductSummary(
         id=read.id,
         sku=read.sku,
         slug=read.slug,
@@ -29,3 +32,5 @@ async def build_product_summary(image_repo: ProductImageRepository, product: Any
         primary_image_url=images[0].url if images else None,
         availability_status=read.availability_status,
     )
+    await discount_engine.apply(summary, product_id=product.id, category_id=product.category_id)
+    return summary

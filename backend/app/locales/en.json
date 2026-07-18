@@ -24,6 +24,8 @@
   "errors.product_not_available": "This product isn't available for order",
   "errors.insufficient_stock": "Not enough stock for this product",
   "errors.category_self_parent": "A category cannot be its own parent",
+  "errors.discount_category_required": "Select a category for a category-scoped discount",
+  "errors.discount_product_required": "Select a product for a product-scoped discount",
   "errors.import_unsupported_format": "Unsupported import file format. Use CSV or XLSX.",
   "validation.password_min_length": "Password must be at least {min_length} characters long",
   "validation.password_requires_uppercase": "Password must contain at least one uppercase letter",

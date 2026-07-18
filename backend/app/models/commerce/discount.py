@@ -1,8 +1,9 @@
 import uuid
+from datetime import datetime
 from decimal import Decimal
 from typing import TYPE_CHECKING
 
-from sqlalchemy import CheckConstraint, ForeignKey, Index, Numeric
+from sqlalchemy import Boolean, CheckConstraint, DateTime, ForeignKey, Index, Numeric, String
 from sqlalchemy import Enum as SAEnum
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -24,9 +25,14 @@ class Discount(Entity, Base):
         Index("ix_discounts_promotion_id", "promotion_id"),
     )
 
-    promotion_id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True), ForeignKey("promotions.id", ondelete="CASCADE"), nullable=False
+    # Optional: a Discount is fully self-sufficient (own is_active/date
+    # window below) so admins can create one directly without first setting
+    # up a Promotion — grouping several under a named Promotion is an
+    # optional extra, not a requirement.
+    promotion_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("promotions.id", ondelete="CASCADE")
     )
+    name: Mapped[str | None] = mapped_column(String(150))
     category_id: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True), ForeignKey("categories.id", ondelete="CASCADE")
     )
@@ -40,7 +46,10 @@ class Discount(Entity, Base):
         SAEnum(AmountType, name="amount_type"), nullable=False
     )
     value: Mapped[Decimal] = mapped_column(Numeric(12, 2), nullable=False)
+    is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    starts_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    ends_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
-    promotion: Mapped["Promotion"] = relationship(back_populates="discounts")
+    promotion: Mapped["Promotion | None"] = relationship(back_populates="discounts")
     category: Mapped["Category | None"] = relationship()
     product: Mapped["Product | None"] = relationship()

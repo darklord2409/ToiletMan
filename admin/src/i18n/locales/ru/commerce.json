@@ -156,16 +156,22 @@
   },
   "discounts": {
     "title": "Скидки",
-    "description": "Правила скидок, привязанные к акции.",
+    "description": "Скидки на все товары, несколько категорий, одну категорию или один товар.",
     "columns": {
-      "promotionId": "ID акции",
+      "name": "Название",
       "scope": "Область действия",
-      "amountType": "Тип суммы",
-      "value": "Значение"
+      "categoryId": "ID категории",
+      "productId": "ID товара",
+      "amount": "Размер",
+      "status": "Статус",
+      "starts": "Начало",
+      "ends": "Окончание"
     },
     "fields": {
+      "name": "Название",
       "promotion": "Акция",
       "scope": "Область действия",
+      "scopeAll": "Все товары",
       "scopeProduct": "Товар",
       "scopeCategory": "Категория",
       "scopeCart": "Корзина",
@@ -175,7 +181,24 @@
       "amountType": "Тип суммы",
       "amountTypePercentage": "Процент",
       "amountTypeFixed": "Фиксированная сумма",
-      "value": "Значение"
+      "value": "Значение",
+      "active": "Активна",
+      "startsAt": "Дата начала",
+      "endsAt": "Дата окончания"
+    },
+    "createModal": {
+      "openButton": "Новая скидка",
+      "title": "Новая скидка",
+      "namePlaceholder": "например, Летняя распродажа",
+      "target": "Применяется к",
+      "categoriesLabel": "Категории",
+      "categoriesPlaceholder": "Выберите одну или несколько категорий",
+      "productPlaceholder": "Выберите товар",
+      "valueRequired": "Укажите размер скидки",
+      "categoryRequired": "Выберите хотя бы одну категорию",
+      "productRequired": "Выберите товар",
+      "submit": "Создать",
+      "success": "Скидка создана"
     }
   },
   "coupons": {

@@ -1,0 +1,160 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create CI .env
+        run: |
+          cat > .env <<'EOF'
+          ENVIRONMENT=local
+          DEBUG=true
+          LOG_LEVEL=INFO
+          SECRET_KEY=ci-only-secret-not-for-production
+          POSTGRES_USER=tipobot
+          POSTGRES_PASSWORD=tipobot
+          POSTGRES_DB=tipobot
+          POSTGRES_HOST=postgres
+          POSTGRES_PORT=5432
+          REDIS_HOST=redis
+          REDIS_PORT=6379
+          REDIS_PASSWORD=
+          BOT_TOKEN=000000:CI-fake-token-not-real
+          WEBAPP_URL=
+          BACKEND_PORT=8000
+          ADMIN_PORT=5173
+          MINIAPP_PORT=5174
+          EOF
+
+      - name: Build and start backend + its dependencies
+        run: docker compose up -d --build postgres redis backend
+
+      - name: Wait for backend to become healthy
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8000/api/v1/health >/dev/null; then
+              echo "backend is up"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "backend never became healthy" >&2
+          docker compose logs backend
+          exit 1
+
+      - name: ruff
+        run: docker compose exec -T backend ruff check .
+
+      - name: mypy
+        run: docker compose exec -T backend mypy app
+
+      - name: pytest
+        run: docker compose exec -T backend pytest -q
+
+      - name: Show logs on failure
+        if: failure()
+        run: docker compose logs backend postgres redis
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v
+
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create CI .env
+        run: |
+          cat > .env <<'EOF'
+          ENVIRONMENT=local
+          DEBUG=true
+          LOG_LEVEL=INFO
+          SECRET_KEY=ci-only-secret-not-for-production
+          POSTGRES_USER=tipobot
+          POSTGRES_PASSWORD=tipobot
+          POSTGRES_DB=tipobot
+          POSTGRES_HOST=postgres
+          POSTGRES_PORT=5432
+          REDIS_HOST=redis
+          REDIS_PORT=6379
+          REDIS_PASSWORD=
+          BOT_TOKEN=000000:CI-fake-token-not-real
+          WEBAPP_URL=
+          BACKEND_PORT=8000
+          ADMIN_PORT=5173
+          MINIAPP_PORT=5174
+          EOF
+
+      - name: Build and start bot + its dependencies
+        run: docker compose up -d --build postgres redis backend bot
+
+      - name: Wait for backend to become healthy
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8000/api/v1/health >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose logs backend
+          exit 1
+
+      - name: ruff
+        run: docker compose exec -T bot ruff check .
+
+      - name: mypy
+        run: docker compose exec -T bot mypy app
+
+      - name: pytest
+        run: docker compose exec -T bot pytest -q
+
+      - name: Show logs on failure
+        if: failure()
+        run: docker compose logs bot backend
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v
+
+  admin:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: admin
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: admin/package-lock.json
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm run lint
+      - run: npm run build
+
+  miniapp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: miniapp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: miniapp/package-lock.json
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm run lint
+      - run: npm run build

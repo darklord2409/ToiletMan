@@ -31,7 +31,7 @@ export type OrderStatus =
   | "cancelled"
   | "refunded";
 export type PromotionType = "percentage" | "fixed_amount" | "buy_x_get_y";
-export type DiscountScope = "product" | "category" | "cart" | "shipping";
+export type DiscountScope = "all" | "product" | "category" | "cart" | "shipping";
 export type AmountType = "percentage" | "fixed_amount";
 export type ActorType = "customer" | "admin_user" | "system";
 export type DeliveryMethod = "pickup" | "delivery";
@@ -338,12 +338,16 @@ export interface Promotion extends Timestamped {
 }
 
 export interface Discount extends Timestamped {
-  promotion_id: string;
+  name: string | null;
+  promotion_id: string | null;
   category_id: string | null;
   product_id: string | null;
   scope: DiscountScope;
   amount_type: AmountType;
   value: string;
+  is_active: boolean;
+  starts_at: string | null;
+  ends_at: string | null;
 }
 
 export interface Coupon extends Timestamped {

@@ -156,16 +156,22 @@
   },
   "discounts": {
     "title": "Discounts",
-    "description": "Discount rules attached to a promotion.",
+    "description": "Discounts on all products, several categories, one category, or a single product.",
     "columns": {
-      "promotionId": "Promotion ID",
+      "name": "Name",
       "scope": "Scope",
-      "amountType": "Amount type",
-      "value": "Value"
+      "categoryId": "Category ID",
+      "productId": "Product ID",
+      "amount": "Amount",
+      "status": "Status",
+      "starts": "Starts",
+      "ends": "Ends"
     },
     "fields": {
+      "name": "Name",
       "promotion": "Promotion",
       "scope": "Scope",
+      "scopeAll": "All products",
       "scopeProduct": "Product",
       "scopeCategory": "Category",
       "scopeCart": "Cart",
@@ -175,7 +181,24 @@
       "amountType": "Amount type",
       "amountTypePercentage": "Percentage",
       "amountTypeFixed": "Fixed amount",
-      "value": "Value"
+      "value": "Value",
+      "active": "Active",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at"
+    },
+    "createModal": {
+      "openButton": "New discount",
+      "title": "New discount",
+      "namePlaceholder": "e.g. Summer sale",
+      "target": "Applies to",
+      "categoriesLabel": "Categories",
+      "categoriesPlaceholder": "Select one or more categories",
+      "productPlaceholder": "Select a product",
+      "valueRequired": "Enter a discount value",
+      "categoryRequired": "Select at least one category",
+      "productRequired": "Select a product",
+      "submit": "Create",
+      "success": "Discount created"
     }
   },
   "coupons": {

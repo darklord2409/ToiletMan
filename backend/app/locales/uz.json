@@ -24,6 +24,8 @@
   "errors.product_not_available": "Mahsulot buyurtma uchun mavjud emas",
   "errors.insufficient_stock": "Omborda mahsulot yetarli emas",
   "errors.category_self_parent": "Kategoriya o'zining ota-kategoriyasi bo'la olmaydi",
+  "errors.discount_category_required": "Kategoriya doirasidagi chegirma uchun kategoriyani tanlang",
+  "errors.discount_product_required": "Mahsulot doirasidagi chegirma uchun mahsulotni tanlang",
   "errors.import_unsupported_format": "Import fayl formati qo'llab-quvvatlanmaydi. CSV yoki XLSX dan foydalaning.",
   "validation.password_min_length": "Parol kamida {min_length} ta belgidan iborat bo‘lishi kerak",
   "validation.password_requires_uppercase": "Parolda kamida bitta bosh harf bo‘lishi kerak",

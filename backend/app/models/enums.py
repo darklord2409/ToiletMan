@@ -61,6 +61,7 @@ class PromotionType(str, enum.Enum):
 
 
 class DiscountScope(str, enum.Enum):
+    ALL = "all"
     PRODUCT = "product"
     CATEGORY = "category"
     CART = "cart"

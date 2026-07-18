@@ -21,3 +21,4 @@ miniapp/e2e/.auth/
 .pytest_cache/
 .ruff_cache/
 /catalog/
+/backups/

@@ -1,0 +1,10 @@
+# Adds test/lint/type-check tooling on top of the production dependency
+# set — used by the dev image (docker-compose.yml) so `pytest`/`ruff`/`mypy`
+# stay runnable inside the same container that serves the app locally.
+# The prod image (Dockerfile.prod) installs only requirements.txt.
+-r requirements.txt
+
+pytest==8.3.4
+pytest-asyncio==0.25.2
+mypy==1.14.1
+ruff==0.8.6

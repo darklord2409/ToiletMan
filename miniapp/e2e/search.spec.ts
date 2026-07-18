@@ -3,7 +3,7 @@ import { expect, test } from "./fixtures";
 test("search finds products by typing and remembers the query in history", async ({ readyPage: page }) => {
   await page.goto("/catalog");
   const firstCard = page.getByTestId("product-card").first();
-  const productName = (await firstCard.locator("span").first().textContent())?.trim() ?? "";
+  const productName = (await firstCard.getByTestId("product-name").textContent())?.trim() ?? "";
   expect(productName.length).toBeGreaterThan(0);
 
   await page.goto("/search");

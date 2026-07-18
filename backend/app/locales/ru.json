@@ -24,6 +24,8 @@
   "errors.product_not_available": "Товар недоступен для заказа",
   "errors.insufficient_stock": "Недостаточно товара на складе",
   "errors.category_self_parent": "Категория не может быть родителем самой себя",
+  "errors.discount_category_required": "Укажите категорию для скидки с областью действия «категория»",
+  "errors.discount_product_required": "Укажите товар для скидки с областью действия «товар»",
   "errors.import_unsupported_format": "Неподдерживаемый формат файла импорта. Используйте CSV или XLSX.",
   "validation.password_min_length": "Пароль должен содержать не менее {min_length} символов",
   "validation.password_requires_uppercase": "Пароль должен содержать хотя бы одну заглавную букву",
