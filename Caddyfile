@@ -1,0 +1,7 @@
+shop.toiletman.uz {
+    reverse_proxy miniapp:80
+}
+
+admin.toiletman.uz {
+    reverse_proxy admin:80
+}

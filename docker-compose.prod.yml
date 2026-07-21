@@ -115,6 +115,25 @@ services:
     networks:
       - tipobot_network
 
+  # Reverse proxy + automatic Let's Encrypt HTTPS for the real domain. The
+  # admin/miniapp ports above stay published too (harmless overlap) as a
+  # fallback until the domain is confirmed working end-to-end -- safe to
+  # remove them once DNS + certs are verified, per DEPLOYMENT.md.
+  caddy:
+    image: caddy:2-alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+    depends_on:
+      - admin
+      - miniapp
+    networks:
+      - tipobot_network
+
 networks:
   tipobot_network:
     driver: bridge
@@ -123,3 +142,4 @@ volumes:
   postgres_data:
   redis_data:
   backend_uploads:
+  caddy_data:
