@@ -16,7 +16,11 @@ toiletman.uz {
     handle /media/* {
         reverse_proxy backend:8000
     }
-    handle /api/* {
+    # Only /api/v1/* (the real FastAPI backend, called client-side for
+    # anonymous storefront data) goes to the backend -- the website's own
+    # BFF routes live at /api/auth/*, /api/cart, /api/checkout, /api/orders/*
+    # (no /v1) and must fall through to the website container instead.
+    handle /api/v1/* {
         reverse_proxy backend:8000
     }
     reverse_proxy website:3000
