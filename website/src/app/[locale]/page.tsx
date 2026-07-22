@@ -6,6 +6,7 @@ import { getBanners, getCategoryTree, getStoreSettings, listProducts } from "@/l
 import { buildPageMetadata } from "@/lib/seo";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
 import { CategoryCard } from "@/components/catalog/CategoryCard";
+import { HeroCarousel } from "@/components/marketing/HeroCarousel";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -32,29 +33,38 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "home" });
   const tCatalog = await getTranslations({ locale, namespace: "catalog" });
 
-  const [categories, featured] = await Promise.all([
+  const [categories, featured, banners] = await Promise.all([
     getCategoryTree(),
     listProducts({ is_featured: true, page_size: 8 }),
+    getBanners(),
   ]);
-  // Banners fetched for future use (hero carousel) -- not rendered yet in
-  // this MVP pass, kept as a single call so the page doesn't re-fetch later.
-  await getBanners();
 
   const topCategories = categories.slice(0, 4);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10">
-      <section className="rounded-l bg-wathet px-6 py-16 text-center dark:bg-wathet-dark">
-        <h1 className="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{t("heroTitle")}</h1>
-        <p className="mx-auto mt-4 max-w-xl text-slate-600 dark:text-slate-300">{t("heroSubtitle")}</p>
-        <Link
-          href={`/${locale}/catalog`}
-          className="mt-6 inline-block rounded-l bg-brand px-6 py-3 font-semibold text-white hover:opacity-90 dark:bg-brand-dark"
-        >
-          {t("heroCta")}
-        </Link>
-      </section>
+    <div>
+      {banners.length > 0 ? (
+        <HeroCarousel
+          banners={banners}
+          locale={locale as Locale}
+          title={t("heroTitle")}
+          subtitle={t("heroSubtitle")}
+          ctaLabel={t("heroCta")}
+        />
+      ) : (
+        <section className="bg-wathet px-6 py-16 text-center dark:bg-wathet-dark">
+          <h1 className="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{t("heroTitle")}</h1>
+          <p className="mx-auto mt-4 max-w-xl text-slate-600 dark:text-slate-300">{t("heroSubtitle")}</p>
+          <Link
+            href={`/${locale}/catalog`}
+            className="mt-6 inline-block rounded-l bg-brand px-6 py-3 font-semibold text-white hover:opacity-90 dark:bg-brand-dark"
+          >
+            {t("heroCta")}
+          </Link>
+        </section>
+      )}
 
+      <div className="mx-auto max-w-6xl px-4 py-10">
       {topCategories.length > 0 ? (
         <section className="mt-14">
           <h2 className="mb-4 text-xl font-bold">{t("featuredCategories")}</h2>
@@ -88,6 +98,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="text-lg font-semibold text-brand dark:text-brand-dark">{t("whyUsSupport")}</div>
         </div>
       </section>
+      </div>
     </div>
   );
 }
