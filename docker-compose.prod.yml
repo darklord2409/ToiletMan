@@ -119,6 +119,15 @@ services:
     build:
       context: ./website
       dockerfile: Dockerfile.prod
+      # next build's generateStaticParams/sitemap.ts/robots.ts all call the
+      # backend at BUILD time (to prebuild category/product pages) -- a
+      # plain `docker build` stage has no network access to other compose
+      # services by default, so this joins the same network explicitly.
+      # Requires `backend` to already be up when building this image.
+      network: tipobot_network
+      args:
+        BACKEND_INTERNAL_URL: http://backend:8000
+        NEXT_PUBLIC_SITE_URL: https://toiletman.uz
     image: tipobot-website-prod
     restart: always
     environment:
