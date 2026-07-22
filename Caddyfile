@@ -9,11 +9,14 @@ admin.toiletman.uz {
 # The website container's own Next.js server doesn't proxy /api or /media
 # the way admin/miniapp's nginx.conf does -- Caddy has to do it directly
 # here instead, matched before the catch-all so it doesn't swallow them.
+# Plain `handle` (not `handle_path`) -- handle_path strips the matched
+# prefix before proxying, but the backend's StaticFiles/router mounts are
+# at /media and /api/v1 themselves, so the prefix must reach them intact.
 toiletman.uz {
-    handle_path /media/* {
+    handle /media/* {
         reverse_proxy backend:8000
     }
-    handle_path /api/* {
+    handle /api/* {
         reverse_proxy backend:8000
     }
     reverse_proxy website:3000
