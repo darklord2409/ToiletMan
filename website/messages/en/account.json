@@ -1,0 +1,14 @@
+{
+  "loginTitle": "Log in",
+  "registerTitle": "Sign up",
+  "email": "Email",
+  "password": "Password",
+  "name": "Name",
+  "phone": "Phone",
+  "submit": "Continue",
+  "noAccount": "No account yet?",
+  "haveAccount": "Already have an account?",
+  "myOrders": "My orders",
+  "orderNumber": "Order #{number}",
+  "logout": "Log out"
+}

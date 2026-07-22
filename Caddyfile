@@ -5,3 +5,20 @@ shop.toiletman.uz {
 admin.toiletman.uz {
     reverse_proxy admin:80
 }
+
+# The website container's own Next.js server doesn't proxy /api or /media
+# the way admin/miniapp's nginx.conf does -- Caddy has to do it directly
+# here instead, matched before the catch-all so it doesn't swallow them.
+toiletman.uz {
+    handle_path /media/* {
+        reverse_proxy backend:8000
+    }
+    handle_path /api/* {
+        reverse_proxy backend:8000
+    }
+    reverse_proxy website:3000
+}
+
+www.toiletman.uz {
+    redir https://toiletman.uz{uri} permanent
+}

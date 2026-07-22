@@ -1,0 +1,31 @@
+{
+  "brand": "ToiletMan",
+  "nav": {
+    "home": "Главная",
+    "catalog": "Каталог",
+    "about": "О нас",
+    "contact": "Контакты",
+    "delivery": "Доставка и оплата",
+    "search": "Поиск",
+    "cart": "Корзина",
+    "account": "Кабинет",
+    "login": "Войти",
+    "register": "Регистрация"
+  },
+  "footer": {
+    "rights": "Все права защищены.",
+    "info": "Информация",
+    "contacts": "Контакты"
+  },
+  "actions": {
+    "viewAll": "Смотреть все",
+    "readMore": "Подробнее",
+    "back": "Назад",
+    "loading": "Загрузка..."
+  },
+  "locales": {
+    "ru": "Русский",
+    "en": "English",
+    "uz": "O'zbekcha"
+  }
+}

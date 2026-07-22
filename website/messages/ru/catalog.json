@@ -1,0 +1,18 @@
+{
+  "title": "Каталог",
+  "allCategories": "Все категории",
+  "searchPlaceholder": "Найти товар...",
+  "searchResultsFor": "Результаты по запросу \"{query}\"",
+  "sort": {
+    "label": "Сортировка",
+    "newest": "Сначала новые",
+    "priceAsc": "Сначала дешевле",
+    "priceDesc": "Сначала дороже",
+    "name": "По названию"
+  },
+  "empty": "Товары не найдены",
+  "inStock": "В наличии",
+  "lowStock": "Заканчивается",
+  "outOfStock": "Нет в наличии",
+  "discountBadge": "-{percent}%"
+}

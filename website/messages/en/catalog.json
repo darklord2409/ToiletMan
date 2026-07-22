@@ -1,0 +1,18 @@
+{
+  "title": "Catalog",
+  "allCategories": "All categories",
+  "searchPlaceholder": "Search products...",
+  "searchResultsFor": "Results for \"{query}\"",
+  "sort": {
+    "label": "Sort",
+    "newest": "Newest first",
+    "priceAsc": "Price: low to high",
+    "priceDesc": "Price: high to low",
+    "name": "Name"
+  },
+  "empty": "No products found",
+  "inStock": "In stock",
+  "lowStock": "Low stock",
+  "outOfStock": "Out of stock",
+  "discountBadge": "-{percent}%"
+}

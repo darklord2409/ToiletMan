@@ -195,6 +195,19 @@ class StorefrontCatalogService:
 
         return build(None)
 
+    async def get_product_detail_by_slug(self, slug: str) -> ProductDetailResponse:
+        # Public website product URLs need clean slugs, not UUIDs; slug is
+        # already unique on Product, so this is just an alternate lookup key
+        # feeding into the same detail-building logic as get_product_detail.
+        items, _ = await self.product_service.list(
+            filters={"slug": slug, "status": ProductStatus.ACTIVE}, limit=1
+        )
+        if not items:
+            raise NotFoundError(
+                key="errors.not_found", params={"entity": translate("resource.products")}
+            )
+        return await self.get_product_detail(items[0].id)
+
     async def get_product_detail(self, product_id: uuid.UUID) -> ProductDetailResponse:
         product = await self.get_product(product_id)
         # Anonymous-only: this endpoint has no auth dependency (product

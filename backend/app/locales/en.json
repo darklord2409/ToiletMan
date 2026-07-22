@@ -132,6 +132,8 @@
   "swagger.storefront.products_filters": "Price range and facets (manufacturer/collection/category) among active products",
   "swagger.storefront.product_detail": "Get one active product by ID — for the Mini App storefront",
   "swagger.storefront.product_full_detail": "Full product detail in one call: images, documents, videos, specs, labels, related products",
+  "swagger.storefront.pages": "List of published static pages — for the public website",
+  "swagger.storefront.page_detail": "One published static page by slug — for the public website",
   "swagger.storefront.cart_get": "Get (or create) the current customer's active cart",
   "swagger.storefront.cart_add_item": "Add a product to the cart (or increase quantity), snapshotting the current price",
   "swagger.storefront.cart_update_item": "Change a cart item's quantity",

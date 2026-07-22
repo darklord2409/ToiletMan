@@ -1,0 +1,15 @@
+{
+  "cartTitle": "Корзина",
+  "emptyCart": "Корзина пуста",
+  "quantity": "Количество",
+  "remove": "Удалить",
+  "subtotal": "Итого",
+  "checkoutTitle": "Оформление заказа",
+  "contactName": "Имя",
+  "contactPhone": "Телефон",
+  "deliveryMethod": "Способ доставки",
+  "address": "Адрес",
+  "comment": "Комментарий к заказу",
+  "placeOrder": "Оформить заказ",
+  "orderPlaced": "Заказ оформлен"
+}

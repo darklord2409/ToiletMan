@@ -132,6 +132,8 @@
   "swagger.storefront.products_filters": "Faol mahsulotlar orasidagi narx oralig'i va fasetlar (ishlab chiqaruvchi/kolleksiya/kategoriya)",
   "swagger.storefront.product_detail": "ID bo'yicha bitta faol mahsulotni olish — Mini App vitrinasi uchun",
   "swagger.storefront.product_full_detail": "Bitta so'rovda to'liq mahsulot kartochkasi: rasmlar, hujjatlar, videolar, xususiyatlar, belgilar, o'xshash mahsulotlar",
+  "swagger.storefront.pages": "Nashr etilgan statik sahifalar ro'yxati — ochiq sayt uchun",
+  "swagger.storefront.page_detail": "Slug bo'yicha bitta nashr etilgan statik sahifa — ochiq sayt uchun",
   "swagger.storefront.cart_get": "Joriy mijozning faol savatini olish (yoki yaratish)",
   "swagger.storefront.cart_add_item": "Savatga mahsulot qo'shish (yoki miqdorini oshirish), joriy narxni saqlagan holda",
   "swagger.storefront.cart_update_item": "Savatdagi mahsulot miqdorini o'zgartirish",

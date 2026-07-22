@@ -1,0 +1,14 @@
+{
+  "loginTitle": "Kirish",
+  "registerTitle": "Ro'yxatdan o'tish",
+  "email": "Email",
+  "password": "Parol",
+  "name": "Ism",
+  "phone": "Telefon",
+  "submit": "Davom etish",
+  "noAccount": "Akkauntingiz yo'qmi?",
+  "haveAccount": "Akkauntingiz bormi?",
+  "myOrders": "Buyurtmalarim",
+  "orderNumber": "Buyurtma №{number}",
+  "logout": "Chiqish"
+}

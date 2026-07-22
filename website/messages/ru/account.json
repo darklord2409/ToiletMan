@@ -1,0 +1,14 @@
+{
+  "loginTitle": "Вход",
+  "registerTitle": "Регистрация",
+  "email": "Email",
+  "password": "Пароль",
+  "name": "Имя",
+  "phone": "Телефон",
+  "submit": "Продолжить",
+  "noAccount": "Нет аккаунта?",
+  "haveAccount": "Уже есть аккаунт?",
+  "myOrders": "Мои заказы",
+  "orderNumber": "Заказ №{number}",
+  "logout": "Выйти"
+}

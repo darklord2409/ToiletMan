@@ -193,6 +193,18 @@ async def get_products_filters(
 
 
 @router.get(
+    "/products/by-slug/{slug}/detail",
+    response_model=ProductDetailResponse,
+    status_code=status.HTTP_200_OK,
+    summary=translate("swagger.storefront.product_full_detail"),
+)
+async def get_product_detail_by_slug(
+    slug: str, service: StorefrontCatalogService = Depends(get_storefront_catalog_service)
+) -> ProductDetailResponse:
+    return await service.get_product_detail_by_slug(slug)
+
+
+@router.get(
     "/products/{item_id}",
     response_model=ProductRead,
     status_code=status.HTTP_200_OK,

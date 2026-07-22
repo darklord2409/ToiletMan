@@ -1,0 +1,18 @@
+{
+  "title": "Katalog",
+  "allCategories": "Barcha kategoriyalar",
+  "searchPlaceholder": "Mahsulot qidirish...",
+  "searchResultsFor": "\"{query}\" bo'yicha natijalar",
+  "sort": {
+    "label": "Saralash",
+    "newest": "Avval yangilari",
+    "priceAsc": "Avval arzonlari",
+    "priceDesc": "Avval qimmatlari",
+    "name": "Nomi bo'yicha"
+  },
+  "empty": "Mahsulotlar topilmadi",
+  "inStock": "Mavjud",
+  "lowStock": "Tugab bormoqda",
+  "outOfStock": "Mavjud emas",
+  "discountBadge": "-{percent}%"
+}

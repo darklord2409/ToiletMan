@@ -1,0 +1,15 @@
+{
+  "cartTitle": "Savat",
+  "emptyCart": "Savat bo'sh",
+  "quantity": "Miqdori",
+  "remove": "O'chirish",
+  "subtotal": "Jami",
+  "checkoutTitle": "Buyurtma rasmiylashtirish",
+  "contactName": "Ism",
+  "contactPhone": "Telefon",
+  "deliveryMethod": "Yetkazib berish usuli",
+  "address": "Manzil",
+  "comment": "Buyurtmaga izoh",
+  "placeOrder": "Buyurtma berish",
+  "orderPlaced": "Buyurtma qabul qilindi"
+}

@@ -1,0 +1,15 @@
+{
+  "cartTitle": "Cart",
+  "emptyCart": "Your cart is empty",
+  "quantity": "Quantity",
+  "remove": "Remove",
+  "subtotal": "Subtotal",
+  "checkoutTitle": "Checkout",
+  "contactName": "Name",
+  "contactPhone": "Phone",
+  "deliveryMethod": "Delivery method",
+  "address": "Address",
+  "comment": "Order comment",
+  "placeOrder": "Place order",
+  "orderPlaced": "Order placed"
+}

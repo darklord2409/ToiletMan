@@ -1,0 +1,31 @@
+{
+  "brand": "ToiletMan",
+  "nav": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "delivery": "Yetkazib berish va to'lov",
+    "search": "Qidiruv",
+    "cart": "Savat",
+    "account": "Kabinet",
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish"
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan.",
+    "info": "Ma'lumot",
+    "contacts": "Aloqa"
+  },
+  "actions": {
+    "viewAll": "Barchasini ko'rish",
+    "readMore": "Batafsil",
+    "back": "Orqaga",
+    "loading": "Yuklanmoqda..."
+  },
+  "locales": {
+    "ru": "Русский",
+    "en": "English",
+    "uz": "O'zbekcha"
+  }
+}
