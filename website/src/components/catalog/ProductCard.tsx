@@ -25,9 +25,9 @@ export function ProductCard({
   return (
     <Link
       href={`/${locale}/product/${product.slug}`}
-      className="group flex flex-col overflow-hidden rounded-l border border-box bg-white transition hover:shadow-md dark:border-box-dark dark:bg-box-dark/40"
+      className="group flex flex-col overflow-hidden rounded-l border border-line bg-surface-raised transition hover:border-brand/50 hover:shadow-lg hover:shadow-brand/10"
     >
-      <div className="relative aspect-square w-full overflow-hidden bg-box dark:bg-box-dark">
+      <div className="relative aspect-square w-full overflow-hidden bg-box">
         {image ? (
           <Image
             src={image}

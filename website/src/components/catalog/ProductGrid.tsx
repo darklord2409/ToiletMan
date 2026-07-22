@@ -14,7 +14,7 @@ export function ProductGrid({
   emptyLabel?: string;
 }) {
   if (products.length === 0) {
-    return emptyLabel ? <p className="py-10 text-center text-slate-400">{emptyLabel}</p> : null;
+    return emptyLabel ? <p className="py-10 text-center text-ink-muted">{emptyLabel}</p> : null;
   }
 
   return (

@@ -95,7 +95,7 @@ export default async function ProductPage({
         />
         <div>
           <h1 className="text-2xl font-bold">{name}</h1>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-ink-muted">
             {t("sku")}: {product.sku}
           </p>
           <div className="mt-4">
@@ -121,7 +121,7 @@ export default async function ProductPage({
                 href={settings.telegram_url}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm font-medium text-brand hover:underline dark:text-brand-dark"
+                className="text-sm font-medium text-brand-light hover:underline"
               >
                 {t("buyInBot")}
               </a>
@@ -131,7 +131,7 @@ export default async function ProductPage({
           {description ? (
             <div className="mt-8">
               <h2 className="mb-2 text-lg font-semibold">{t("description")}</h2>
-              <p className="whitespace-pre-line text-slate-600 dark:text-slate-300">{description}</p>
+              <p className="whitespace-pre-line text-ink-muted">{description}</p>
             </div>
           ) : null}
 

@@ -10,23 +10,23 @@ export function OrderDetailView({ locale, orderId }: { locale: Locale; orderId: 
   const t = useTranslations("account");
   const { data: order, isLoading } = useOrder(orderId);
 
-  if (isLoading) return <p className="text-slate-400">…</p>;
-  if (!order) return <p className="text-slate-400">—</p>;
+  if (isLoading) return <p className="text-ink-muted">…</p>;
+  if (!order) return <p className="text-ink-muted">—</p>;
 
   return (
     <div>
-      <Link href={`/${locale}/account`} className="mb-4 inline-block text-sm text-brand hover:underline dark:text-brand-dark">
+      <Link href={`/${locale}/account`} className="mb-4 inline-block text-sm text-brand-light hover:underline">
         ← {t("myOrders")}
       </Link>
       <h1 className="mb-1 text-2xl font-bold">{t("orderNumber", { number: order.order_number })}</h1>
-      <p className="mb-6 text-sm text-slate-400">{order.status}</p>
+      <p className="mb-6 text-sm text-ink-muted">{order.status}</p>
 
-      <ul className="divide-y divide-box dark:divide-box-dark">
+      <ul className="divide-y divide-line">
         {order.items.map((item) => (
           <li key={item.id} className="flex items-center justify-between py-3">
             <div>
               <p className="font-medium">{item.product_name}</p>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-ink-muted">
                 {item.quantity} × {formatMoney(item.unit_price, order.currency)}
               </p>
             </div>
@@ -35,7 +35,7 @@ export function OrderDetailView({ locale, orderId }: { locale: Locale; orderId: 
         ))}
       </ul>
 
-      <div className="mt-4 flex items-center justify-between border-t border-box pt-4 text-lg font-bold dark:border-box-dark">
+      <div className="mt-4 flex items-center justify-between border-t border-line pt-4 text-lg font-bold">
         <span>{t("myOrders")}</span>
         <span>{formatMoney(order.grand_total, order.currency)}</span>
       </div>

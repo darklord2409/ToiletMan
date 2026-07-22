@@ -39,7 +39,7 @@ export function AddToCartButton({
       type="button"
       onClick={handleClick}
       disabled={disabled || addToCart.isPending}
-      className="mt-6 inline-flex items-center rounded-l bg-brand px-6 py-3 font-semibold text-white hover:opacity-90 disabled:opacity-50 dark:bg-brand-dark"
+      className="mt-6 inline-flex items-center rounded-l bg-brand-button px-6 py-3 font-semibold text-white shadow-lg shadow-brand/20 hover:opacity-90 disabled:opacity-50"
     >
       {added ? "✓" : label}
     </button>

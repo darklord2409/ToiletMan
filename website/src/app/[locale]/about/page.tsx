@@ -30,7 +30,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     <div className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="mb-6 text-3xl font-bold">{t("nav.about")}</h1>
       {text ? (
-        <p className="whitespace-pre-line text-lg leading-relaxed text-slate-600 dark:text-slate-300">{text}</p>
+        <p className="whitespace-pre-line text-lg leading-relaxed text-ink-muted">{text}</p>
       ) : null}
     </div>
   );

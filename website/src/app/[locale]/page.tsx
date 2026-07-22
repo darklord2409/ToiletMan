@@ -52,12 +52,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ctaLabel={t("heroCta")}
         />
       ) : (
-        <section className="bg-wathet px-6 py-16 text-center dark:bg-wathet-dark">
-          <h1 className="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{t("heroTitle")}</h1>
-          <p className="mx-auto mt-4 max-w-xl text-slate-600 dark:text-slate-300">{t("heroSubtitle")}</p>
+        <section className="bg-brand-gradient px-6 py-16 text-center">
+          <h1 className="mx-auto max-w-2xl text-3xl font-bold text-white sm:text-4xl">{t("heroTitle")}</h1>
+          <p className="mx-auto mt-4 max-w-xl text-ink-muted">{t("heroSubtitle")}</p>
           <Link
             href={`/${locale}/catalog`}
-            className="mt-6 inline-block rounded-l bg-brand px-6 py-3 font-semibold text-white hover:opacity-90 dark:bg-brand-dark"
+            className="mt-6 inline-block rounded-l bg-brand-button px-6 py-3 font-semibold text-white hover:opacity-90"
           >
             {t("heroCta")}
           </Link>
@@ -87,15 +87,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
       ) : null}
 
-      <section className="mt-14 grid gap-6 rounded-l bg-box p-8 text-center dark:bg-box-dark sm:grid-cols-3">
+      <section className="mt-14 grid gap-6 rounded-l bg-brand-gradient-soft p-8 text-center ring-1 ring-line sm:grid-cols-3">
         <div>
-          <div className="text-lg font-semibold text-brand dark:text-brand-dark">{t("whyUsDelivery")}</div>
+          <div className="text-lg font-semibold text-brand-light">{t("whyUsDelivery")}</div>
         </div>
         <div>
-          <div className="text-lg font-semibold text-brand dark:text-brand-dark">{t("whyUsQuality")}</div>
+          <div className="text-lg font-semibold text-brand-light">{t("whyUsQuality")}</div>
         </div>
         <div>
-          <div className="text-lg font-semibold text-brand dark:text-brand-dark">{t("whyUsSupport")}</div>
+          <div className="text-lg font-semibold text-brand-light">{t("whyUsSupport")}</div>
         </div>
       </section>
       </div>

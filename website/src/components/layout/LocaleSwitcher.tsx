@@ -23,8 +23,8 @@ export function LocaleSwitcher({
           href={`/${locale}/${rest}`}
           className={
             locale === currentLocale
-              ? "rounded px-1.5 py-1 text-brand dark:text-brand-dark"
-              : "rounded px-1.5 py-1 text-slate-400 hover:text-brand dark:hover:text-brand-dark"
+              ? "rounded px-1.5 py-1 text-brand-light"
+              : "rounded px-1.5 py-1 text-ink-muted hover:text-brand-light"
           }
         >
           {locale}

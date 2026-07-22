@@ -14,12 +14,12 @@ export function ProductGallery({
   const active = images[activeIndex];
 
   if (images.length === 0) {
-    return <div className="aspect-square w-full rounded-l bg-box dark:bg-box-dark" />;
+    return <div className="aspect-square w-full rounded-l bg-box" />;
   }
 
   return (
     <div>
-      <div className="relative aspect-square w-full overflow-hidden rounded-l bg-box dark:bg-box-dark">
+      <div className="relative aspect-square w-full overflow-hidden rounded-l bg-box">
         <Image
           src={active.url}
           alt={active.alt_text || productName}
@@ -37,8 +37,8 @@ export function ProductGallery({
               type="button"
               onClick={() => setActiveIndex(index)}
               className={
-                "relative h-16 w-16 shrink-0 overflow-hidden rounded-l bg-box dark:bg-box-dark " +
-                (index === activeIndex ? "ring-2 ring-brand dark:ring-brand-dark" : "opacity-70")
+                "relative h-16 w-16 shrink-0 overflow-hidden rounded-l bg-box " +
+                (index === activeIndex ? "ring-2 ring-brand" : "opacity-70")
               }
             >
               <Image src={image.url} alt="" fill sizes="64px" className="object-cover" />

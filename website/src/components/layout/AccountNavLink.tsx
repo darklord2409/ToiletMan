@@ -17,7 +17,7 @@ export function AccountNavLink({
   return (
     <Link
       href={me ? `/${locale}/account` : `/${locale}/login`}
-      className="rounded-l bg-box px-3 py-1.5 text-sm font-medium hover:bg-wathet dark:bg-box-dark dark:hover:bg-wathet-dark"
+      className="rounded-l bg-brand-button px-3 py-1.5 text-sm font-medium text-white hover:opacity-90"
     >
       {me ? accountLabel : loginLabel}
     </Link>

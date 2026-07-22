@@ -27,11 +27,9 @@ export default async function DeliveryPage({ params }: { params: Promise<{ local
     <div className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="mb-6 text-3xl font-bold">{t("nav.delivery")}</h1>
       {settings.delivery_info ? (
-        <p className="whitespace-pre-line text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-          {settings.delivery_info}
-        </p>
+        <p className="whitespace-pre-line text-lg leading-relaxed text-ink-muted">{settings.delivery_info}</p>
       ) : (
-        <p className="text-slate-400">—</p>
+        <p className="text-ink-muted">—</p>
       )}
     </div>
   );

@@ -52,13 +52,13 @@ export function RegisterForm({ locale }: { locale: Locale }) {
       <button
         type="submit"
         disabled={register.isPending}
-        className="w-full rounded-l bg-brand px-4 py-2 font-semibold text-white hover:opacity-90 disabled:opacity-50 dark:bg-brand-dark"
+        className="w-full rounded-l bg-brand-button px-4 py-2 font-semibold text-white hover:opacity-90 disabled:opacity-50"
       >
         {t("submit")}
       </button>
-      <p className="text-center text-sm text-slate-500">
+      <p className="text-center text-sm text-ink-muted">
         {t("haveAccount")}{" "}
-        <Link href={`/${locale}/login`} className="text-brand hover:underline dark:text-brand-dark">
+        <Link href={`/${locale}/login`} className="text-brand-light hover:underline">
           {t("loginTitle")}
         </Link>
       </p>

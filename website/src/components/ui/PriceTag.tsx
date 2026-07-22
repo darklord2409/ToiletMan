@@ -18,13 +18,13 @@ export function PriceTag({
         className={
           (size === "large" ? "text-2xl" : "text-base") +
           " font-bold " +
-          (discounted ? "text-red-600 dark:text-red-400" : "text-brand dark:text-brand-dark")
+          (discounted ? "text-red-400" : "text-brand-light")
         }
       >
         {formatMoney(price, currency)}
       </span>
       {discounted && compareAtPrice ? (
-        <span className={(size === "large" ? "text-sm" : "text-xs") + " text-slate-400 line-through"}>
+        <span className={(size === "large" ? "text-sm" : "text-xs") + " text-ink-muted line-through"}>
           {formatMoney(compareAtPrice, currency)}
         </span>
       ) : null}

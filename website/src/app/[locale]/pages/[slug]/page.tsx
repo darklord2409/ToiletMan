@@ -36,9 +36,7 @@ export default async function StaticContentPage({
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="mb-6 text-3xl font-bold">{page.title}</h1>
-      <div className="whitespace-pre-line text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-        {page.content}
-      </div>
+      <div className="whitespace-pre-line text-lg leading-relaxed text-ink-muted">{page.content}</div>
     </div>
   );
 }

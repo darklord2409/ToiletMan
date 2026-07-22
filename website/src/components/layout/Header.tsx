@@ -11,9 +11,9 @@ export async function Header({ locale, settings }: { locale: Locale; settings: P
   const logo = absoluteMediaUrl(settings.logo_url);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-box bg-surface/95 backdrop-blur dark:border-box-dark dark:bg-surface-dark/95">
+    <header className="sticky top-0 z-30 border-b border-line bg-surface/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href={`/${locale}`} className="flex items-center gap-2 text-lg font-bold text-brand dark:text-brand-dark">
+        <Link href={`/${locale}`} className="flex items-center gap-2 text-lg font-bold text-brand-light">
           {logo ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={logo} alt={settings.store_name} className="h-8 w-8 rounded-l object-cover" />
@@ -21,17 +21,17 @@ export async function Header({ locale, settings }: { locale: Locale; settings: P
           {settings.store_name || t("brand")}
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          <Link href={`/${locale}/catalog`} className="hover:text-brand dark:hover:text-brand-dark">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-ink-muted md:flex">
+          <Link href={`/${locale}/catalog`} className="hover:text-brand-light">
             {t("nav.catalog")}
           </Link>
-          <Link href={`/${locale}/about`} className="hover:text-brand dark:hover:text-brand-dark">
+          <Link href={`/${locale}/about`} className="hover:text-brand-light">
             {t("nav.about")}
           </Link>
-          <Link href={`/${locale}/delivery`} className="hover:text-brand dark:hover:text-brand-dark">
+          <Link href={`/${locale}/delivery`} className="hover:text-brand-light">
             {t("nav.delivery")}
           </Link>
-          <Link href={`/${locale}/contact`} className="hover:text-brand dark:hover:text-brand-dark">
+          <Link href={`/${locale}/contact`} className="hover:text-brand-light">
             {t("nav.contact")}
           </Link>
         </nav>
@@ -40,7 +40,7 @@ export async function Header({ locale, settings }: { locale: Locale; settings: P
           <LocaleSwitcher currentLocale={locale} locales={locales} />
           <Link
             href={`/${locale}/cart`}
-            className="rounded-l bg-box px-3 py-1.5 text-sm font-medium hover:bg-wathet dark:bg-box-dark dark:hover:bg-wathet-dark"
+            className="rounded-l bg-box px-3 py-1.5 text-sm font-medium text-ink hover:bg-line"
           >
             {t("nav.cart")}
           </Link>

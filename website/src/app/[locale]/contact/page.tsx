@@ -31,9 +31,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <dl className="space-y-4 text-lg">
         {settings.phone ? (
           <div>
-            <dt className="text-sm text-slate-400">{t("nav.contact")}</dt>
+            <dt className="text-sm text-ink-muted">{t("nav.contact")}</dt>
             <dd>
-              <a href={`tel:${settings.phone}`} className="text-brand hover:underline dark:text-brand-dark">
+              <a href={`tel:${settings.phone}`} className="text-brand-light hover:underline">
                 {settings.phone}
               </a>
             </dd>
@@ -41,12 +41,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         ) : null}
         {settings.support_email ? (
           <div>
-            <dt className="text-sm text-slate-400">Email</dt>
+            <dt className="text-sm text-ink-muted">Email</dt>
             <dd>
-              <a
-                href={`mailto:${settings.support_email}`}
-                className="text-brand hover:underline dark:text-brand-dark"
-              >
+              <a href={`mailto:${settings.support_email}`} className="text-brand-light hover:underline">
                 {settings.support_email}
               </a>
             </dd>
@@ -54,7 +51,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         ) : null}
         {settings.address ? (
           <div>
-            <dt className="text-sm text-slate-400">Address</dt>
+            <dt className="text-sm text-ink-muted">Address</dt>
             <dd>{settings.address}</dd>
           </div>
         ) : null}
@@ -67,8 +64,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               const hours = settings.working_hours?.[day];
               if (!hours) return null;
               return (
-                <tr key={day} className="border-b border-box dark:border-box-dark">
-                  <td className="py-1.5 pr-4 capitalize text-slate-500">{day}</td>
+                <tr key={day} className="border-b border-line">
+                  <td className="py-1.5 pr-4 capitalize text-ink-muted">{day}</td>
                   <td className="py-1.5">{hours.closed ? "—" : `${hours.open} – ${hours.close}`}</td>
                 </tr>
               );

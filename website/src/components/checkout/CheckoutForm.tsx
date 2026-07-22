@@ -32,7 +32,7 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
     }
   }, [me, meLoading, locale, router]);
 
-  if (meLoading || !me) return <p className="text-slate-400">…</p>;
+  if (meLoading || !me) return <p className="text-ink-muted">…</p>;
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -69,13 +69,13 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
           onChange={(e) => setContactPhone(e.target.value)}
         />
         <label className="block text-sm">
-          <span className="mb-1 block font-medium text-slate-600 dark:text-slate-300">
+          <span className="mb-1 block font-medium text-ink-muted">
             {t("deliveryMethod")}
           </span>
           <select
             value={deliveryMethod}
             onChange={(e) => setDeliveryMethod(e.target.value as DeliveryMethod)}
-            className="w-full rounded-l border border-box bg-white px-3 py-2 dark:border-box-dark dark:bg-box-dark"
+            className="w-full rounded-l border border-line bg-box px-3 py-2 text-ink"
           >
             <option value="pickup">Pickup</option>
             <option value="delivery">Delivery</option>
@@ -90,16 +90,16 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
           />
         ) : null}
         <label className="block text-sm">
-          <span className="mb-1 block font-medium text-slate-600 dark:text-slate-300">{t("comment")}</span>
+          <span className="mb-1 block font-medium text-ink-muted">{t("comment")}</span>
           <textarea
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows={3}
-            className="w-full rounded-l border border-box bg-white px-3 py-2 dark:border-box-dark dark:bg-box-dark"
+            className="w-full rounded-l border border-line bg-box px-3 py-2 text-ink"
           />
         </label>
 
-        <div className="flex items-center justify-between border-t border-box pt-4 text-lg font-bold dark:border-box-dark">
+        <div className="flex items-center justify-between border-t border-line pt-4 text-lg font-bold">
           <span>{t("subtotal")}</span>
           <span>{formatMoney(cart.data?.subtotal ?? "0")}</span>
         </div>
@@ -109,7 +109,7 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
         <button
           type="submit"
           disabled={checkout.isPending || !cart.data?.items.length}
-          className="w-full rounded-l bg-brand py-3 font-semibold text-white hover:opacity-90 disabled:opacity-50 dark:bg-brand-dark"
+          className="w-full rounded-l bg-brand-button py-3 font-semibold text-white hover:opacity-90 disabled:opacity-50"
         >
           {t("placeOrder")}
         </button>

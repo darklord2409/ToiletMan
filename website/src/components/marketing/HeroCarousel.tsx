@@ -53,7 +53,8 @@ export function HeroCarousel({
                 className="object-cover"
               />
             ) : null}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-surface via-[#0A0F1E]/60 to-[#0A0F1E]/10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0A0F1E]/70 via-transparent to-brand/30" />
           </div>
         );
       })}
@@ -63,7 +64,7 @@ export function HeroCarousel({
         <p className="mt-5 max-w-xl text-lg text-white/90 drop-shadow sm:text-xl">{subtitle}</p>
         <Link
           href={`/${locale}/catalog`}
-          className="mt-8 inline-block rounded-l bg-brand px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:opacity-90 dark:bg-brand-dark"
+          className="mt-8 inline-block rounded-l bg-brand-button px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-brand/30 transition hover:opacity-90"
         >
           {ctaLabel}
         </Link>

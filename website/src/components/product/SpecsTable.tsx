@@ -21,8 +21,8 @@ export function SpecsTable({ attributes, locale }: { attributes: ResolvedAttribu
     <table className="w-full text-sm">
       <tbody>
         {attributes.map((attribute) => (
-          <tr key={attribute.attribute_definition_id} className="border-b border-box last:border-0 dark:border-box-dark">
-            <td className="py-2 pr-4 text-slate-500">{attribute.translations[locale]?.name ?? attribute.name}</td>
+          <tr key={attribute.attribute_definition_id} className="border-b border-line last:border-0">
+            <td className="py-2 pr-4 text-ink-muted">{attribute.translations[locale]?.name ?? attribute.name}</td>
             <td className="py-2 font-medium">{displayValue(attribute, locale)}</td>
           </tr>
         ))}

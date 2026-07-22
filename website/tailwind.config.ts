@@ -1,8 +1,9 @@
 import type { Config } from "tailwindcss";
 
-// Brand palette ported 1:1 from miniapp/src/styles/global.css's antd-mobile
-// CSS variables, so the new public site reads as the same brand as the
-// Telegram Mini App even though it shares no component code with it.
+// Dark, blue-gradient palette matching the ToiletMan logo (light "TOILET"
+// wordmark + vivid blue "MAN"): this is a committed single dark theme for
+// the marketing site, not a light/dark toggle -- distinct from the
+// Mini App's teal/aqua antd-mobile palette, which stays as-is over there.
 const config: Config = {
   darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],
@@ -10,21 +11,25 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#0089a8",
-          dark: "#2bb6d4",
-        },
-        wathet: {
-          DEFAULT: "#e1f3f7",
-          dark: "#0b2e36",
+          DEFAULT: "#2F8FF0", // matches the logo's "MAN" blue
+          light: "#6AB3FF",
+          dark: "#1B5FC7",
         },
         surface: {
-          DEFAULT: "#f6fafb",
-          dark: "#10181b",
+          DEFAULT: "#0A0F1E", // page background -- near-black navy
+          raised: "#111A30", // cards/sections one step up
         },
-        box: {
-          DEFAULT: "#eef5f7",
-          dark: "#172226",
+        box: "#16213E", // secondary surface (inputs, muted panels)
+        line: "#223056", // borders/dividers
+        ink: {
+          DEFAULT: "#F2F5FA", // primary text on dark
+          muted: "#94A3C4", // secondary text on dark
         },
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(135deg, #0A0F1E 0%, #14285A 55%, #2F8FF0 120%)",
+        "brand-gradient-soft": "linear-gradient(135deg, #111A30 0%, #17264D 100%)",
+        "brand-button": "linear-gradient(135deg, #6AB3FF 0%, #2F8FF0 55%, #1B5FC7 100%)",
       },
       borderRadius: {
         l: "14px",

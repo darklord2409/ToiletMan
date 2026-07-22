@@ -19,8 +19,8 @@ export function CategoryNav({
         href={`/${locale}/catalog`}
         className={
           !activeSlug
-            ? "block rounded-l bg-wathet px-3 py-2 font-semibold text-brand dark:bg-wathet-dark dark:text-brand-dark"
-            : "block rounded-l px-3 py-2 hover:bg-box dark:hover:bg-box-dark"
+            ? "block rounded-l bg-brand/15 px-3 py-2 font-semibold text-brand-light"
+            : "block rounded-l px-3 py-2 text-ink hover:bg-box"
         }
       >
         {allLabel}
@@ -31,22 +31,22 @@ export function CategoryNav({
             href={`/${locale}/category/${category.slug}`}
             className={
               activeSlug === category.slug
-                ? "block rounded-l bg-wathet px-3 py-2 font-semibold text-brand dark:bg-wathet-dark dark:text-brand-dark"
-                : "block rounded-l px-3 py-2 hover:bg-box dark:hover:bg-box-dark"
+                ? "block rounded-l bg-brand/15 px-3 py-2 font-semibold text-brand-light"
+                : "block rounded-l px-3 py-2 text-ink hover:bg-box"
             }
           >
             {category.name}
           </Link>
           {category.children.length > 0 ? (
-            <div className="ml-3 space-y-0.5 border-l border-box pl-2 dark:border-box-dark">
+            <div className="ml-3 space-y-0.5 border-l border-line pl-2">
               {category.children.map((child) => (
                 <Link
                   key={child.id}
                   href={`/${locale}/category/${child.slug}`}
                   className={
                     activeSlug === child.slug
-                      ? "block rounded-l px-3 py-1.5 font-semibold text-brand dark:text-brand-dark"
-                      : "block rounded-l px-3 py-1.5 text-slate-500 hover:bg-box dark:hover:bg-box-dark"
+                      ? "block rounded-l px-3 py-1.5 font-semibold text-brand-light"
+                      : "block rounded-l px-3 py-1.5 text-ink-muted hover:bg-box"
                   }
                 >
                   {child.name}

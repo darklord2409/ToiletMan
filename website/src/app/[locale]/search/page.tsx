@@ -48,9 +48,9 @@ export default async function SearchPage({
           name="q"
           defaultValue={query}
           placeholder={t("searchPlaceholder")}
-          className="w-full max-w-md rounded-l border border-box bg-white px-4 py-2 dark:border-box-dark dark:bg-box-dark"
+          className="w-full max-w-md rounded-l border border-line bg-box px-4 py-2 text-ink placeholder:text-ink-muted/60"
         />
-        <button type="submit" className="rounded-l bg-brand px-4 py-2 font-semibold text-white dark:bg-brand-dark">
+        <button type="submit" className="rounded-l bg-brand-button px-4 py-2 font-semibold text-white">
           🔍
         </button>
       </form>

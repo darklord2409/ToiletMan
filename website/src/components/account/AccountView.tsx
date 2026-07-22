@@ -22,7 +22,7 @@ export function AccountView({ locale }: { locale: Locale }) {
     }
   }, [me, meLoading, locale, router]);
 
-  if (meLoading || !me) return <p className="text-slate-400">…</p>;
+  if (meLoading || !me) return <p className="text-ink-muted">…</p>;
 
   return (
     <div>
@@ -31,7 +31,7 @@ export function AccountView({ locale }: { locale: Locale }) {
           <h1 className="text-2xl font-bold">
             {me.first_name || me.email || me.phone}
           </h1>
-          {me.email ? <p className="text-sm text-slate-400">{me.email}</p> : null}
+          {me.email ? <p className="text-sm text-ink-muted">{me.email}</p> : null}
         </div>
         <button
           type="button"
@@ -47,12 +47,12 @@ export function AccountView({ locale }: { locale: Locale }) {
       </div>
 
       <h2 className="mb-3 text-lg font-semibold">{t("myOrders")}</h2>
-      <ul className="divide-y divide-box dark:divide-box-dark">
+      <ul className="divide-y divide-line">
         {(orders.data?.items ?? []).map((order) => (
           <li key={order.id}>
             <Link
               href={`/${locale}/account/orders/${order.id}`}
-              className="flex items-center justify-between py-3 hover:text-brand dark:hover:text-brand-dark"
+              className="flex items-center justify-between py-3 hover:text-brand-light"
             >
               <span>{t("orderNumber", { number: order.order_number })}</span>
               <span className="font-semibold">{formatMoney(order.grand_total, order.currency)}</span>

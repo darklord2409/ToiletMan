@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Committed dark theme (not a light/dark toggle) -- matches the logo's
+   navy/blue identity regardless of the visitor's system preference. */
 :root {
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
+  color-scheme: dark;
 }
 
 body {
-  @apply bg-surface text-slate-800 dark:bg-surface-dark dark:text-slate-100;
+  @apply bg-surface text-ink;
+}
+
+::selection {
+  @apply bg-brand/40 text-white;
 }

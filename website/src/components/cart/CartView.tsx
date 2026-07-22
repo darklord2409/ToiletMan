@@ -18,16 +18,16 @@ export function CartView({ locale }: { locale: Locale }) {
   const removeItem = useRemoveCartItem();
 
   if (meLoading || cart.isLoading) {
-    return <p className="text-slate-400">…</p>;
+    return <p className="text-ink-muted">…</p>;
   }
 
   if (!me) {
     return (
-      <div className="rounded-l bg-box p-8 text-center dark:bg-box-dark">
+      <div className="rounded-l bg-box p-8 text-center">
         <p className="mb-4">{t("emptyCart")}</p>
         <Link
           href={`/${locale}/login?next=/${locale}/cart`}
-          className="rounded-l bg-brand px-4 py-2 font-semibold text-white dark:bg-brand-dark"
+          className="rounded-l bg-brand-button px-4 py-2 font-semibold text-white"
         >
           {locale === "ru" ? "Войти" : locale === "uz" ? "Kirish" : "Log in"}
         </Link>
@@ -36,24 +36,24 @@ export function CartView({ locale }: { locale: Locale }) {
   }
 
   if (cart.isError && cart.error instanceof ClientApiError && cart.error.status === 401) {
-    return <p className="text-slate-400">{t("emptyCart")}</p>;
+    return <p className="text-ink-muted">{t("emptyCart")}</p>;
   }
 
   const items = cart.data?.items ?? [];
 
   if (items.length === 0) {
-    return <p className="py-10 text-center text-slate-400">{t("emptyCart")}</p>;
+    return <p className="py-10 text-center text-ink-muted">{t("emptyCart")}</p>;
   }
 
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold">{t("cartTitle")}</h1>
-      <ul className="divide-y divide-box dark:divide-box-dark">
+      <ul className="divide-y divide-line">
         {items.map((item) => {
           const image = absoluteMediaUrl(item.product.primary_image_url);
           return (
             <li key={item.id} className="flex items-center gap-4 py-4">
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-l bg-box dark:bg-box-dark">
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-l bg-box">
                 {image ? <Image src={image} alt={item.product.name} fill sizes="64px" className="object-cover" /> : null}
               </div>
               <div className="flex-1">
@@ -73,7 +73,7 @@ export function CartView({ locale }: { locale: Locale }) {
                           updateItem.mutate({ itemId: item.id, quantity });
                         }
                       }}
-                      className="w-16 rounded border border-box bg-white px-2 py-1 dark:border-box-dark dark:bg-box-dark"
+                      className="w-16 rounded border border-line bg-box px-2 py-1 text-ink"
                     />
                   </label>
                   <button
@@ -91,14 +91,14 @@ export function CartView({ locale }: { locale: Locale }) {
         })}
       </ul>
 
-      <div className="mt-6 flex items-center justify-between border-t border-box pt-4 text-lg font-bold dark:border-box-dark">
+      <div className="mt-6 flex items-center justify-between border-t border-line pt-4 text-lg font-bold">
         <span>{t("subtotal")}</span>
         <span>{formatMoney(cart.data?.subtotal ?? "0")}</span>
       </div>
 
       <Link
         href={`/${locale}/checkout`}
-        className="mt-6 block w-full rounded-l bg-brand py-3 text-center font-semibold text-white hover:opacity-90 dark:bg-brand-dark"
+        className="mt-6 block w-full rounded-l bg-brand-button py-3 text-center font-semibold text-white hover:opacity-90"
       >
         {t("checkoutTitle")}
       </Link>

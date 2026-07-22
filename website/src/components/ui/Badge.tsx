@@ -8,9 +8,9 @@ export function Badge({
   tone?: "brand" | "danger" | "muted";
 }) {
   const toneClasses = {
-    brand: "bg-brand text-white",
+    brand: "bg-brand-button text-white",
     danger: "bg-red-600 text-white",
-    muted: "bg-box text-slate-500 dark:bg-box-dark dark:text-slate-300",
+    muted: "bg-box text-ink-muted",
   }[tone];
 
   return (

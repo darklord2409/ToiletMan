@@ -9,7 +9,7 @@ export function CategoryCard({ category, locale }: { category: CategoryTreeNode;
   return (
     <Link
       href={`/${locale}/category/${category.slug}`}
-      className="group relative flex aspect-[4/3] items-end overflow-hidden rounded-l bg-box dark:bg-box-dark"
+      className="group relative flex aspect-[4/3] items-end overflow-hidden rounded-l border border-line bg-box"
     >
       {image ? (
         <Image
@@ -20,7 +20,7 @@ export function CategoryCard({ category, locale }: { category: CategoryTreeNode;
           className="object-cover transition group-hover:scale-105"
         />
       ) : null}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1E]/80 via-[#0A0F1E]/20 to-brand/10" />
       <span className="relative z-10 p-3 text-sm font-semibold text-white">{category.name}</span>
     </Link>
   );
