@@ -123,8 +123,12 @@ services:
       # backend at BUILD time (to prebuild category/product pages) -- a
       # plain `docker build` stage has no network access to other compose
       # services by default, so this joins the same network explicitly.
-      # Requires `backend` to already be up when building this image.
-      network: tipobot_network
+      # Requires `backend` to already be up when building this image. Must
+      # be the actual runtime network name (project-name-prefixed), not the
+      # short name from the networks: section below -- the legacy builder
+      # (required for build.network at all -- buildkit rejects it outright)
+      # doesn't resolve that alias itself.
+      network: tipobot_tipobot_network
       args:
         BACKEND_INTERNAL_URL: http://backend:8000
         NEXT_PUBLIC_SITE_URL: https://toiletman.uz
