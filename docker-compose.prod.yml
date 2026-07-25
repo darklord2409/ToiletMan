@@ -140,6 +140,14 @@ services:
       NEXT_PUBLIC_MEDIA_BASE_URL: /media
       NEXT_PUBLIC_SITE_URL: https://toiletman.uz
       NODE_ENV: production
+      # Next's standalone server.js binds to $HOSTNAME if set, defaulting to
+      # 0.0.0.0 only when it's unset -- Docker sets HOSTNAME to the
+      # container ID for every container, so without this override the
+      # server only listens on the container's own docker-network IP, not
+      # 127.0.0.1. External traffic via Caddy still worked (it targets that
+      # same IP), but the HEALTHCHECK below (curl against localhost) never
+      # could, leaving this container permanently marked unhealthy.
+      HOSTNAME: "0.0.0.0"
     ports:
       - "${WEBSITE_PORT:-3000}:3000"
     depends_on:
