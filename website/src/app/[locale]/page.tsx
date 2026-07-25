@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/locales";
-import { getBanners, getCategoryTree, getStoreSettings, listProducts } from "@/lib/storefront";
+import { flattenCategories, getBanners, getCategoryTree, getStoreSettings, listProducts } from "@/lib/storefront";
 import { buildPageMetadata } from "@/lib/seo";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
 import { CategoryCard } from "@/components/catalog/CategoryCard";
@@ -39,7 +39,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     getBanners(),
   ]);
 
-  const topCategories = categories.slice(0, 4);
+  // All shoppable (leaf) categories, not just the 3 top-level umbrella
+  // groups -- lets visitors jump straight to a specific category from the
+  // home page instead of drilling down through parents first.
+  const allCategories = flattenCategories(categories)
+    .filter((category) => category.children.length === 0)
+    .sort((a, b) => a.sort_order - b.sort_order);
 
   return (
     <div>
@@ -65,11 +70,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       )}
 
       <div className="mx-auto max-w-6xl px-4 py-10">
-      {topCategories.length > 0 ? (
+      {allCategories.length > 0 ? (
         <section className="mt-14">
           <h2 className="mb-4 text-xl font-bold">{t("featuredCategories")}</h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {topCategories.map((category) => (
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {allCategories.map((category) => (
               <CategoryCard key={category.id} category={category} locale={locale as Locale} />
             ))}
           </div>
