@@ -3,6 +3,7 @@ import type {
   Banner,
   CatalogFiltersResponse,
   CategoryTreeNode,
+  Manufacturer,
   PaginatedResponse,
   ProductDetailResponse,
   ProductListItem,
@@ -12,6 +13,13 @@ import type {
 
 export function getStoreSettings() {
   return publicGet<PublicStoreSettings>("/settings/public", { revalidate: 300 });
+}
+
+export function getManufacturers() {
+  return publicGet<PaginatedResponse<Manufacturer>>("/storefront/manufacturers", {
+    searchParams: { page_size: 50 },
+    revalidate: 3600,
+  });
 }
 
 export function getBanners() {

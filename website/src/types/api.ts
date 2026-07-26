@@ -11,6 +11,15 @@ export interface CategoryTreeNode {
   children: CategoryTreeNode[];
 }
 
+export interface Manufacturer {
+  id: string;
+  name: string;
+  slug: string;
+  description: string | null;
+  logo_url: string | null;
+  website_url: string | null;
+}
+
 export interface ProductTranslation {
   name?: string;
   description?: string;
