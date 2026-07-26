@@ -7,7 +7,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const locale = locales.includes(requested as Locale) ? (requested as Locale) : undefined;
   if (!locale) notFound();
 
-  const [common, home, catalog, product, checkout, account, about, delivery] = await Promise.all([
+  const [common, home, catalog, product, checkout, account, about, delivery, contact] = await Promise.all([
     import(`../../messages/${locale}/common.json`),
     import(`../../messages/${locale}/home.json`),
     import(`../../messages/${locale}/catalog.json`),
@@ -16,6 +16,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     import(`../../messages/${locale}/account.json`),
     import(`../../messages/${locale}/about.json`),
     import(`../../messages/${locale}/delivery.json`),
+    import(`../../messages/${locale}/contact.json`),
   ]);
 
   return {
@@ -29,6 +30,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       account: account.default,
       about: about.default,
       delivery: delivery.default,
+      contact: contact.default,
     },
   };
 });
