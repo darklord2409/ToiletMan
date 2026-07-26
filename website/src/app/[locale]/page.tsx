@@ -32,11 +32,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   const tCatalog = await getTranslations({ locale, namespace: "catalog" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
+  const tAbout = await getTranslations({ locale, namespace: "about" });
 
-  const [categories, featured, banners] = await Promise.all([
+  const [categories, featured, banners, productsPage] = await Promise.all([
     getCategoryTree(),
     listProducts({ is_featured: true, page_size: 8 }),
     getBanners(),
+    listProducts({ page_size: 1 }),
   ]);
 
   // All shoppable (leaf) categories, not just the 3 top-level umbrella
@@ -46,15 +49,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     .filter((category) => category.children.length === 0)
     .sort((a, b) => a.sort_order - b.sort_order);
 
+  const heroStats = [
+    { value: `${productsPage.meta.total_items}+`, label: tAbout("statsProducts") },
+    { value: `${allCategories.length}+`, label: tAbout("statsCategories") },
+    { value: tAbout("statsDelivery"), label: tAbout("statsDeliveryLabel") },
+  ];
+
   return (
     <div>
       {banners.length > 0 ? (
         <HeroCarousel
           banners={banners}
           locale={locale as Locale}
+          kicker={t("heroKicker")}
           title={t("heroTitle")}
           subtitle={t("heroSubtitle")}
           ctaLabel={t("heroCta")}
+          secondaryCtaLabel={tCommon("nav.about")}
+          secondaryCtaHref={`/${locale}/about`}
+          stats={heroStats}
         />
       ) : (
         <section className="bg-brand-gradient px-6 py-16 text-center">
